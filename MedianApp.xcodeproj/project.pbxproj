@@ -26,6 +26,7 @@
 		A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12119776E8A00E9A757 /* AMMClassCircle.m */; };
 		A25CA12719776E8A00E9A757 /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12319776E8A00E9A757 /* AMMClassStore.m */; };
 		A25CA12819776E8A00E9A757 /* SchoolClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12519776E8A00E9A757 /* SchoolClass.m */; };
+		A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		A25CA12319776E8A00E9A757 /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassStore.m; sourceTree = "<group>"; };
 		A25CA12419776E8A00E9A757 /* SchoolClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolClass.h; sourceTree = "<group>"; };
 		A25CA12519776E8A00E9A757 /* SchoolClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolClass.m; sourceTree = "<group>"; };
+		A25CA12C19776F9D00E9A757 /* AMMSemesterTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSemesterTVC.h; sourceTree = "<group>"; };
+		A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSemesterTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,20 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				A25CA0F519776E0100E9A757 /* AMMAppDelegate.h */,
-				A25CA12019776E8A00E9A757 /* AMMClassCircle.h */,
-				A25CA12119776E8A00E9A757 /* AMMClassCircle.m */,
-				A25CA12219776E8A00E9A757 /* AMMClassStore.h */,
-				A25CA12319776E8A00E9A757 /* AMMClassStore.m */,
-				A25CA12419776E8A00E9A757 /* SchoolClass.h */,
-				A25CA12519776E8A00E9A757 /* SchoolClass.m */,
 				A25CA0F619776E0100E9A757 /* AMMAppDelegate.m */,
-				A25CA11B19776E5900E9A757 /* AMMSchoolClassCell.h */,
-				A25CA11C19776E5900E9A757 /* AMMSchoolClassCell.m */,
-				A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */,
-				A25CA11519776E3700E9A757 /* Assignment.h */,
-				A25CA11619776E3700E9A757 /* Assignment.m */,
-				A25CA11719776E3700E9A757 /* AssignmentCategory.h */,
-				A25CA11819776E3700E9A757 /* AssignmentCategory.m */,
+				A25CA12A19776EA900E9A757 /* Models */,
+				A25CA12919776EA300E9A757 /* Views */,
+				A25CA12B19776EB300E9A757 /* Controllers */,
 				A25CA0F819776E0100E9A757 /* Images.xcassets */,
 				A25CA0ED19776E0100E9A757 /* Supporting Files */,
 			);
@@ -175,6 +168,42 @@
 				A25CA10819776E0100E9A757 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A25CA12919776EA300E9A757 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA11B19776E5900E9A757 /* AMMSchoolClassCell.h */,
+				A25CA11C19776E5900E9A757 /* AMMSchoolClassCell.m */,
+				A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */,
+				A25CA12019776E8A00E9A757 /* AMMClassCircle.h */,
+				A25CA12119776E8A00E9A757 /* AMMClassCircle.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A25CA12A19776EA900E9A757 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA12219776E8A00E9A757 /* AMMClassStore.h */,
+				A25CA12319776E8A00E9A757 /* AMMClassStore.m */,
+				A25CA12419776E8A00E9A757 /* SchoolClass.h */,
+				A25CA12519776E8A00E9A757 /* SchoolClass.m */,
+				A25CA11519776E3700E9A757 /* Assignment.h */,
+				A25CA11619776E3700E9A757 /* Assignment.m */,
+				A25CA11719776E3700E9A757 /* AssignmentCategory.h */,
+				A25CA11819776E3700E9A757 /* AssignmentCategory.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A25CA12B19776EB300E9A757 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA12C19776F9D00E9A757 /* AMMSemesterTVC.h */,
+				A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +306,7 @@
 				A25CA0F719776E0100E9A757 /* AMMAppDelegate.m in Sources */,
 				A25CA11E19776E5900E9A757 /* AMMSchoolClassCell.m in Sources */,
 				A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */,
+				A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */,
 				A25CA11919776E3700E9A757 /* Assignment.m in Sources */,
 				A25CA11A19776E3700E9A757 /* AssignmentCategory.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,

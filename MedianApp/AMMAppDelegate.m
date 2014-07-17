@@ -7,6 +7,7 @@
 //
 
 #import "AMMAppDelegate.h"
+#import "AMMSemesterTVC.h"
 
 @implementation AMMAppDelegate
 
