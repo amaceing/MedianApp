@@ -8,6 +8,8 @@
 
 #import "AMMSemesterTVC.h"
 #import "AMMClassStore.h"
+#import "AMMSchoolClassCell.h"
+#import "AMMClassCircle.h"
 
 @interface AMMSemesterTVC ()
 
@@ -29,16 +31,49 @@
     [super viewDidLoad];
     
     //Custom viewDidLoad methods
+    self.navigationItem.title = @"Classes";
+    
+    //Loading custom cells and registering for reuse
     UINib *nib = [UINib nibWithNibName:@"AMMSchoolClassCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"AMMSchoolClassCell"];
     
+    //Color Setup
+    [self setColorValuesForNavBar];
+
+    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"E" style:UIBarButtonItemStylePlain target:self action:@selector(editTable:)];
+    self.navigationItem.rightBarButtonItem = edit;
     
+    //Empty footer to not have empty cells
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    //Spaces for separator lines
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 15)];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+- (void)setColorValuesForNavBar
+{
+    self.navigationController.navigationBar.barTintColor =
+    [UIColor colorWithRed:30/255.0 green:178/255.0 blue:192/255.0 alpha:1];
+    self.navigationController.navigationBar.translucent = YES;
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                     [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                                     [UIFont fontWithName:@"Lato-Light" size:21.0], NSFontAttributeName,
+                                                                     nil]];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorColor = [UIColor lightGrayColor];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +82,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)editTable:(id)sender
+{
+    SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Add" daysOfWeek:@"Days" timeOfDay:@"Time"];
+    [[AMMClassStore classStore] addClass:dummy];
+    NSInteger row = [[[AMMClassStore classStore] allClasses] indexOfObject:dummy];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
+
+- (AMMClassCircle *)makeCircleForCell:(double)grade
+{
+    CGRect circleRect = CGRectMake(5, 20, 85, 85);
+    AMMClassCircle *classCircle = [[AMMClassCircle alloc] initWithFrame:circleRect];
+    classCircle.grade = grade;
+    return classCircle;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -64,11 +117,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMSchoolClassCell" forIndexPath:indexPath];
+    AMMSchoolClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMSchoolClassCell" forIndexPath:indexPath];
+    SchoolClass *display = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
     
     // Configure the cell...
     
+    //Creating circle
+    AMMClassCircle *classCirc = [self makeCircleForCell:display.grade];
+    [cell.contentView addSubview:classCirc];
+    
+    cell.schoolClassNameLabel.text = display.name;
+    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", display.daysOfWeek, display.timeOfDay];
+    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", display.grade];
+    
     return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90;
 }
 
 

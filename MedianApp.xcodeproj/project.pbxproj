@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22A181D197781E500A45540 /* Lato-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1812197781E500A45540 /* Lato-Bla.ttf */; };
+		A22A181E197781E500A45540 /* Lato-BlaIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1813197781E500A45540 /* Lato-BlaIta.ttf */; };
+		A22A181F197781E500A45540 /* Lato-Bol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1814197781E500A45540 /* Lato-Bol.ttf */; };
+		A22A1820197781E500A45540 /* Lato-BolIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1815197781E500A45540 /* Lato-BolIta.ttf */; };
+		A22A1821197781E500A45540 /* Lato-Hai.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1816197781E500A45540 /* Lato-Hai.ttf */; };
+		A22A1822197781E500A45540 /* Lato-HaiIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1817197781E500A45540 /* Lato-HaiIta.ttf */; };
+		A22A1823197781E500A45540 /* Lato-Lig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1818197781E500A45540 /* Lato-Lig.ttf */; };
+		A22A1824197781E500A45540 /* Lato-LigIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1819197781E500A45540 /* Lato-LigIta.ttf */; };
+		A22A1825197781E500A45540 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A181A197781E500A45540 /* Lato-Reg.ttf */; };
+		A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A181B197781E500A45540 /* Lato-RegIta.ttf */; };
+		A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A22A181C197781E500A45540 /* SIL Open Font License.txt */; };
 		A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
 		A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E819776E0100E9A757 /* CoreGraphics.framework */; };
 		A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
@@ -40,6 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A22A1812197781E500A45540 /* Lato-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bla.ttf"; path = "../../../App/Median/Median/lato/Lato-Bla.ttf"; sourceTree = "<group>"; };
+		A22A1813197781E500A45540 /* Lato-BlaIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlaIta.ttf"; path = "../../../App/Median/Median/lato/Lato-BlaIta.ttf"; sourceTree = "<group>"; };
+		A22A1814197781E500A45540 /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bol.ttf"; path = "../../../App/Median/Median/lato/Lato-Bol.ttf"; sourceTree = "<group>"; };
+		A22A1815197781E500A45540 /* Lato-BolIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BolIta.ttf"; path = "../../../App/Median/Median/lato/Lato-BolIta.ttf"; sourceTree = "<group>"; };
+		A22A1816197781E500A45540 /* Lato-Hai.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hai.ttf"; path = "../../../App/Median/Median/lato/Lato-Hai.ttf"; sourceTree = "<group>"; };
+		A22A1817197781E500A45540 /* Lato-HaiIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HaiIta.ttf"; path = "../../../App/Median/Median/lato/Lato-HaiIta.ttf"; sourceTree = "<group>"; };
+		A22A1818197781E500A45540 /* Lato-Lig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Lig.ttf"; path = "../../../App/Median/Median/lato/Lato-Lig.ttf"; sourceTree = "<group>"; };
+		A22A1819197781E500A45540 /* Lato-LigIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LigIta.ttf"; path = "../../../App/Median/Median/lato/Lato-LigIta.ttf"; sourceTree = "<group>"; };
+		A22A181A197781E500A45540 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Reg.ttf"; path = "../../../App/Median/Median/lato/Lato-Reg.ttf"; sourceTree = "<group>"; };
+		A22A181B197781E500A45540 /* Lato-RegIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-RegIta.ttf"; path = "../../../App/Median/Median/lato/Lato-RegIta.ttf"; sourceTree = "<group>"; };
+		A22A181C197781E500A45540 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SIL Open Font License.txt"; path = "../../../App/Median/Median/lato/SIL Open Font License.txt"; sourceTree = "<group>"; };
 		A25CA0E319776E0100E9A757 /* MedianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25CA0E619776E0100E9A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25CA0E819776E0100E9A757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +119,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A22A1811197781C000A45540 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A22A1812197781E500A45540 /* Lato-Bla.ttf */,
+				A22A1813197781E500A45540 /* Lato-BlaIta.ttf */,
+				A22A1814197781E500A45540 /* Lato-Bol.ttf */,
+				A22A1815197781E500A45540 /* Lato-BolIta.ttf */,
+				A22A1816197781E500A45540 /* Lato-Hai.ttf */,
+				A22A1817197781E500A45540 /* Lato-HaiIta.ttf */,
+				A22A1818197781E500A45540 /* Lato-Lig.ttf */,
+				A22A1819197781E500A45540 /* Lato-LigIta.ttf */,
+				A22A181A197781E500A45540 /* Lato-Reg.ttf */,
+				A22A181B197781E500A45540 /* Lato-RegIta.ttf */,
+				A22A181C197781E500A45540 /* SIL Open Font License.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A25CA0DA19776E0100E9A757 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +172,7 @@
 			children = (
 				A25CA0F519776E0100E9A757 /* AMMAppDelegate.h */,
 				A25CA0F619776E0100E9A757 /* AMMAppDelegate.m */,
+				A22A1811197781C000A45540 /* Resources */,
 				A25CA12A19776EA900E9A757 /* Models */,
 				A25CA12919776EA300E9A757 /* Views */,
 				A25CA12B19776EB300E9A757 /* Controllers */,
@@ -282,9 +323,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22A181D197781E500A45540 /* Lato-Bla.ttf in Resources */,
 				A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */,
+				A22A1820197781E500A45540 /* Lato-BolIta.ttf in Resources */,
+				A22A181F197781E500A45540 /* Lato-Bol.ttf in Resources */,
 				A25CA0F119776E0100E9A757 /* InfoPlist.strings in Resources */,
+				A22A1824197781E500A45540 /* Lato-LigIta.ttf in Resources */,
+				A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */,
+				A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */,
+				A22A181E197781E500A45540 /* Lato-BlaIta.ttf in Resources */,
+				A22A1822197781E500A45540 /* Lato-HaiIta.ttf in Resources */,
 				A25CA0F919776E0100E9A757 /* Images.xcassets in Resources */,
+				A22A1821197781E500A45540 /* Lato-Hai.ttf in Resources */,
+				A22A1823197781E500A45540 /* Lato-Lig.ttf in Resources */,
+				A22A1825197781E500A45540 /* Lato-Reg.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +560,7 @@
 				A25CA11119776E0100E9A757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A25CA11219776E0100E9A757 /* Build configuration list for PBXNativeTarget "MedianAppTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +569,7 @@
 				A25CA11419776E0100E9A757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

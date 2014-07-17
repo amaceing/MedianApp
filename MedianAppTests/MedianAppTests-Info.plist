@@ -18,5 +18,9 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lato-Lig.ttf</string>
+	</array>
 </dict>
 </plist>
