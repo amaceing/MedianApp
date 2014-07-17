@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
+		A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E819776E0100E9A757 /* CoreGraphics.framework */; };
+		A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
+		A25CA0F119776E0100E9A757 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A25CA0EF19776E0100E9A757 /* InfoPlist.strings */; };
+		A25CA0F319776E0100E9A757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA0F219776E0100E9A757 /* main.m */; };
+		A25CA0F719776E0100E9A757 /* AMMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA0F619776E0100E9A757 /* AMMAppDelegate.m */; };
+		A25CA0F919776E0100E9A757 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25CA0F819776E0100E9A757 /* Images.xcassets */; };
+		A25CA10019776E0100E9A757 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0FF19776E0100E9A757 /* XCTest.framework */; };
+		A25CA10119776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
+		A25CA10219776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
+		A25CA10A19776E0100E9A757 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A25CA10819776E0100E9A757 /* InfoPlist.strings */; };
+		A25CA10C19776E0100E9A757 /* MedianAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA10B19776E0100E9A757 /* MedianAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A25CA10319776E0100E9A757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A25CA0DB19776E0100E9A757 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A25CA0E219776E0100E9A757;
+			remoteInfo = MedianApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A25CA0E319776E0100E9A757 /* MedianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25CA0E619776E0100E9A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A25CA0E819776E0100E9A757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A25CA0EA19776E0100E9A757 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A25CA0EE19776E0100E9A757 /* MedianApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MedianApp-Info.plist"; sourceTree = "<group>"; };
+		A25CA0F019776E0100E9A757 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A25CA0F219776E0100E9A757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A25CA0F419776E0100E9A757 /* MedianApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedianApp-Prefix.pch"; sourceTree = "<group>"; };
+		A25CA0F519776E0100E9A757 /* AMMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMMAppDelegate.h; sourceTree = "<group>"; };
+		A25CA0F619776E0100E9A757 /* AMMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMMAppDelegate.m; sourceTree = "<group>"; };
+		A25CA0F819776E0100E9A757 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A25CA0FE19776E0100E9A757 /* MedianAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedianAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25CA0FF19776E0100E9A757 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A25CA10719776E0100E9A757 /* MedianAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MedianAppTests-Info.plist"; sourceTree = "<group>"; };
+		A25CA10919776E0100E9A757 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A25CA10B19776E0100E9A757 /* MedianAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedianAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A25CA0E019776E0100E9A757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */,
+				A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */,
+				A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25CA0FB19776E0100E9A757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25CA10019776E0100E9A757 /* XCTest.framework in Frameworks */,
+				A25CA10219776E0100E9A757 /* UIKit.framework in Frameworks */,
+				A25CA10119776E0100E9A757 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A25CA0DA19776E0100E9A757 = {
+			isa = PBXGroup;
+			children = (
+				A25CA0EC19776E0100E9A757 /* MedianApp */,
+				A25CA10519776E0100E9A757 /* MedianAppTests */,
+				A25CA0E519776E0100E9A757 /* Frameworks */,
+				A25CA0E419776E0100E9A757 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A25CA0E419776E0100E9A757 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA0E319776E0100E9A757 /* MedianApp.app */,
+				A25CA0FE19776E0100E9A757 /* MedianAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A25CA0E519776E0100E9A757 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA0E619776E0100E9A757 /* Foundation.framework */,
+				A25CA0E819776E0100E9A757 /* CoreGraphics.framework */,
+				A25CA0EA19776E0100E9A757 /* UIKit.framework */,
+				A25CA0FF19776E0100E9A757 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A25CA0EC19776E0100E9A757 /* MedianApp */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA0F519776E0100E9A757 /* AMMAppDelegate.h */,
+				A25CA0F619776E0100E9A757 /* AMMAppDelegate.m */,
+				A25CA0F819776E0100E9A757 /* Images.xcassets */,
+				A25CA0ED19776E0100E9A757 /* Supporting Files */,
+			);
+			path = MedianApp;
+			sourceTree = "<group>";
+		};
+		A25CA0ED19776E0100E9A757 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA0EE19776E0100E9A757 /* MedianApp-Info.plist */,
+				A25CA0EF19776E0100E9A757 /* InfoPlist.strings */,
+				A25CA0F219776E0100E9A757 /* main.m */,
+				A25CA0F419776E0100E9A757 /* MedianApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A25CA10519776E0100E9A757 /* MedianAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA10B19776E0100E9A757 /* MedianAppTests.m */,
+				A25CA10619776E0100E9A757 /* Supporting Files */,
+			);
+			path = MedianAppTests;
+			sourceTree = "<group>";
+		};
+		A25CA10619776E0100E9A757 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A25CA10719776E0100E9A757 /* MedianAppTests-Info.plist */,
+				A25CA10819776E0100E9A757 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A25CA0E219776E0100E9A757 /* MedianApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A25CA10F19776E0100E9A757 /* Build configuration list for PBXNativeTarget "MedianApp" */;
+			buildPhases = (
+				A25CA0DF19776E0100E9A757 /* Sources */,
+				A25CA0E019776E0100E9A757 /* Frameworks */,
+				A25CA0E119776E0100E9A757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedianApp;
+			productName = MedianApp;
+			productReference = A25CA0E319776E0100E9A757 /* MedianApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A25CA0FD19776E0100E9A757 /* MedianAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A25CA11219776E0100E9A757 /* Build configuration list for PBXNativeTarget "MedianAppTests" */;
+			buildPhases = (
+				A25CA0FA19776E0100E9A757 /* Sources */,
+				A25CA0FB19776E0100E9A757 /* Frameworks */,
+				A25CA0FC19776E0100E9A757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A25CA10419776E0100E9A757 /* PBXTargetDependency */,
+			);
+			name = MedianAppTests;
+			productName = MedianAppTests;
+			productReference = A25CA0FE19776E0100E9A757 /* MedianAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A25CA0DB19776E0100E9A757 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AMM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Amaceing Studios";
+				TargetAttributes = {
+					A25CA0FD19776E0100E9A757 = {
+						TestTargetID = A25CA0E219776E0100E9A757;
+					};
+				};
+			};
+			buildConfigurationList = A25CA0DE19776E0100E9A757 /* Build configuration list for PBXProject "MedianApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A25CA0DA19776E0100E9A757;
+			productRefGroup = A25CA0E419776E0100E9A757 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A25CA0E219776E0100E9A757 /* MedianApp */,
+				A25CA0FD19776E0100E9A757 /* MedianAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A25CA0E119776E0100E9A757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25CA0F119776E0100E9A757 /* InfoPlist.strings in Resources */,
+				A25CA0F919776E0100E9A757 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25CA0FC19776E0100E9A757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25CA10A19776E0100E9A757 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A25CA0DF19776E0100E9A757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25CA0F719776E0100E9A757 /* AMMAppDelegate.m in Sources */,
+				A25CA0F319776E0100E9A757 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A25CA0FA19776E0100E9A757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25CA10C19776E0100E9A757 /* MedianAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A25CA10419776E0100E9A757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A25CA0E219776E0100E9A757 /* MedianApp */;
+			targetProxy = A25CA10319776E0100E9A757 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A25CA0EF19776E0100E9A757 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A25CA0F019776E0100E9A757 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A25CA10819776E0100E9A757 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A25CA10919776E0100E9A757 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A25CA10D19776E0100E9A757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A25CA10E19776E0100E9A757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A25CA11019776E0100E9A757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedianApp/MedianApp-Prefix.pch";
+				INFOPLIST_FILE = "MedianApp/MedianApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A25CA11119776E0100E9A757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedianApp/MedianApp-Prefix.pch";
+				INFOPLIST_FILE = "MedianApp/MedianApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A25CA11319776E0100E9A757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MedianApp.app/MedianApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedianApp/MedianApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MedianAppTests/MedianAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A25CA11419776E0100E9A757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MedianApp.app/MedianApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedianApp/MedianApp-Prefix.pch";
+				INFOPLIST_FILE = "MedianAppTests/MedianAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A25CA0DE19776E0100E9A757 /* Build configuration list for PBXProject "MedianApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A25CA10D19776E0100E9A757 /* Debug */,
+				A25CA10E19776E0100E9A757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A25CA10F19776E0100E9A757 /* Build configuration list for PBXNativeTarget "MedianApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A25CA11019776E0100E9A757 /* Debug */,
+				A25CA11119776E0100E9A757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A25CA11219776E0100E9A757 /* Build configuration list for PBXNativeTarget "MedianAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A25CA11319776E0100E9A757 /* Debug */,
+				A25CA11419776E0100E9A757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A25CA0DB19776E0100E9A757 /* Project object */;
+}
