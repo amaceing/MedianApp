@@ -19,6 +19,13 @@
 		A25CA10219776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
 		A25CA10A19776E0100E9A757 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A25CA10819776E0100E9A757 /* InfoPlist.strings */; };
 		A25CA10C19776E0100E9A757 /* MedianAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA10B19776E0100E9A757 /* MedianAppTests.m */; };
+		A25CA11919776E3700E9A757 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA11619776E3700E9A757 /* Assignment.m */; };
+		A25CA11A19776E3700E9A757 /* AssignmentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA11819776E3700E9A757 /* AssignmentCategory.m */; };
+		A25CA11E19776E5900E9A757 /* AMMSchoolClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA11C19776E5900E9A757 /* AMMSchoolClassCell.m */; };
+		A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */; };
+		A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12119776E8A00E9A757 /* AMMClassCircle.m */; };
+		A25CA12719776E8A00E9A757 /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12319776E8A00E9A757 /* AMMClassStore.m */; };
+		A25CA12819776E8A00E9A757 /* SchoolClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12519776E8A00E9A757 /* SchoolClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,19 @@
 		A25CA10719776E0100E9A757 /* MedianAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MedianAppTests-Info.plist"; sourceTree = "<group>"; };
 		A25CA10919776E0100E9A757 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A25CA10B19776E0100E9A757 /* MedianAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedianAppTests.m; sourceTree = "<group>"; };
+		A25CA11519776E3700E9A757 /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assignment.h; sourceTree = "<group>"; };
+		A25CA11619776E3700E9A757 /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
+		A25CA11719776E3700E9A757 /* AssignmentCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentCategory.h; sourceTree = "<group>"; };
+		A25CA11819776E3700E9A757 /* AssignmentCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentCategory.m; sourceTree = "<group>"; };
+		A25CA11B19776E5900E9A757 /* AMMSchoolClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSchoolClassCell.h; sourceTree = "<group>"; };
+		A25CA11C19776E5900E9A757 /* AMMSchoolClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSchoolClassCell.m; sourceTree = "<group>"; };
+		A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSchoolClassCell.xib; sourceTree = "<group>"; };
+		A25CA12019776E8A00E9A757 /* AMMClassCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassCircle.h; sourceTree = "<group>"; };
+		A25CA12119776E8A00E9A757 /* AMMClassCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassCircle.m; sourceTree = "<group>"; };
+		A25CA12219776E8A00E9A757 /* AMMClassStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassStore.h; sourceTree = "<group>"; };
+		A25CA12319776E8A00E9A757 /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassStore.m; sourceTree = "<group>"; };
+		A25CA12419776E8A00E9A757 /* SchoolClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolClass.h; sourceTree = "<group>"; };
+		A25CA12519776E8A00E9A757 /* SchoolClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +128,20 @@
 			isa = PBXGroup;
 			children = (
 				A25CA0F519776E0100E9A757 /* AMMAppDelegate.h */,
+				A25CA12019776E8A00E9A757 /* AMMClassCircle.h */,
+				A25CA12119776E8A00E9A757 /* AMMClassCircle.m */,
+				A25CA12219776E8A00E9A757 /* AMMClassStore.h */,
+				A25CA12319776E8A00E9A757 /* AMMClassStore.m */,
+				A25CA12419776E8A00E9A757 /* SchoolClass.h */,
+				A25CA12519776E8A00E9A757 /* SchoolClass.m */,
 				A25CA0F619776E0100E9A757 /* AMMAppDelegate.m */,
+				A25CA11B19776E5900E9A757 /* AMMSchoolClassCell.h */,
+				A25CA11C19776E5900E9A757 /* AMMSchoolClassCell.m */,
+				A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */,
+				A25CA11519776E3700E9A757 /* Assignment.h */,
+				A25CA11619776E3700E9A757 /* Assignment.m */,
+				A25CA11719776E3700E9A757 /* AssignmentCategory.h */,
+				A25CA11819776E3700E9A757 /* AssignmentCategory.m */,
 				A25CA0F819776E0100E9A757 /* Images.xcassets */,
 				A25CA0ED19776E0100E9A757 /* Supporting Files */,
 			);
@@ -220,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */,
 				A25CA0F119776E0100E9A757 /* InfoPlist.strings in Resources */,
 				A25CA0F919776E0100E9A757 /* Images.xcassets in Resources */,
 			);
@@ -241,7 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A25CA0F719776E0100E9A757 /* AMMAppDelegate.m in Sources */,
+				A25CA11E19776E5900E9A757 /* AMMSchoolClassCell.m in Sources */,
+				A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */,
+				A25CA11919776E3700E9A757 /* Assignment.m in Sources */,
+				A25CA11A19776E3700E9A757 /* AssignmentCategory.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
+				A25CA12819776E8A00E9A757 /* SchoolClass.m in Sources */,
+				A25CA12719776E8A00E9A757 /* AMMClassStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
