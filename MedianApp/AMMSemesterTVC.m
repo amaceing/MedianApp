@@ -41,8 +41,7 @@
     //Color Setup
     [self setColorValuesForNavBar];
 
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"E" style:UIBarButtonItemStylePlain target:self action:@selector(editTable:)];
-    self.navigationItem.rightBarButtonItem = edit;
+    [self setUpEditButton];
     
     //Empty footer to not have empty cells
     self.tableView.tableFooterView = [[UIView alloc] init];
@@ -83,14 +82,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)editTable:(id)sender
+- (void)addSchoolClass:(id)sender
 {
+    // Setting done button
+    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneEditing:)];
+    self.navigationItem.rightBarButtonItem = done;
+    //Adding class
     SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Add" daysOfWeek:@"Days" timeOfDay:@"Time"];
     [[AMMClassStore classStore] addClass:dummy];
+    
+    //Popping VC
+    AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
+    ncvc.classToAdd = dummy;
+    [self.navigationController pushViewController:ncvc animated:YES];
+    
+    //Inserting into table
     NSInteger row = [[[AMMClassStore classStore] allClasses] indexOfObject:dummy];
     NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self.tableView reloadData];
+    self.editing = YES;
+    self.tableView.allowsSelectionDuringEditing = YES;
+}
+
+- (void)doneEditing:(id)sender
+{
+    self.editing = NO;
+    [self setUpEditButton];
+}
+
+- (void)setUpEditButton
+{
+    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(addSchoolClass:)];
+    self.navigationItem.rightBarButtonItem = edit;
 }
 
 #pragma mark - Table view data source
@@ -137,10 +161,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SchoolClass *sc = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
-    if ([sc.name isEqualToString:@"Add"]) {
+    if (self.editing) {
         AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
         ncvc.classToAdd = sc;
         [self.navigationController pushViewController:ncvc animated:YES];
+    } else {
+        
     }
 }
 
@@ -157,8 +183,6 @@
     return YES;
 }
 
-
-
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -166,7 +190,7 @@
         // Delete the row from the data source
         SchoolClass *delete = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
         [[AMMClassStore classStore] removeClass:delete];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView reloadData];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
