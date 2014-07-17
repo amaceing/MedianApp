@@ -18,6 +18,8 @@
 		A22A1825197781E500A45540 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A181A197781E500A45540 /* Lato-Reg.ttf */; };
 		A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A181B197781E500A45540 /* Lato-RegIta.ttf */; };
 		A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A22A181C197781E500A45540 /* SIL Open Font License.txt */; };
+		A22A18291977879800A45540 /* AMMNewClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = A22A18281977879800A45540 /* AMMNewClass.xib */; };
+		A22A182C197787AC00A45540 /* AMMNewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A22A182B197787AC00A45540 /* AMMNewClass.m */; };
 		A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
 		A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E819776E0100E9A757 /* CoreGraphics.framework */; };
 		A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
@@ -30,14 +32,14 @@
 		A25CA10219776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
 		A25CA10A19776E0100E9A757 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A25CA10819776E0100E9A757 /* InfoPlist.strings */; };
 		A25CA10C19776E0100E9A757 /* MedianAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA10B19776E0100E9A757 /* MedianAppTests.m */; };
-		A25CA11919776E3700E9A757 /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA11619776E3700E9A757 /* Assignment.m */; };
-		A25CA11A19776E3700E9A757 /* AssignmentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA11819776E3700E9A757 /* AssignmentCategory.m */; };
 		A25CA11E19776E5900E9A757 /* AMMSchoolClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA11C19776E5900E9A757 /* AMMSchoolClassCell.m */; };
 		A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */; };
 		A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12119776E8A00E9A757 /* AMMClassCircle.m */; };
-		A25CA12719776E8A00E9A757 /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12319776E8A00E9A757 /* AMMClassStore.m */; };
-		A25CA12819776E8A00E9A757 /* SchoolClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12519776E8A00E9A757 /* SchoolClass.m */; };
 		A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */; };
+		A2F9251A197788990082D38C /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92513197788990082D38C /* AMMClassStore.m */; };
+		A2F9251B197788990082D38C /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92515197788990082D38C /* Assignment.m */; };
+		A2F9251C197788990082D38C /* AssignmentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92517197788990082D38C /* AssignmentCategory.m */; };
+		A2F9251D197788990082D38C /* SchoolClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92519197788990082D38C /* SchoolClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		A22A181A197781E500A45540 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Reg.ttf"; path = "../../../App/Median/Median/lato/Lato-Reg.ttf"; sourceTree = "<group>"; };
 		A22A181B197781E500A45540 /* Lato-RegIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-RegIta.ttf"; path = "../../../App/Median/Median/lato/Lato-RegIta.ttf"; sourceTree = "<group>"; };
 		A22A181C197781E500A45540 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SIL Open Font License.txt"; path = "../../../App/Median/Median/lato/SIL Open Font License.txt"; sourceTree = "<group>"; };
+		A22A18281977879800A45540 /* AMMNewClass.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMNewClass.xib; path = ../../../App/Median/Median/AMMNewClass.xib; sourceTree = "<group>"; };
+		A22A182A197787AC00A45540 /* AMMNewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMNewClass.h; path = ../../../App/Median/Median/AMMNewClass.h; sourceTree = "<group>"; };
+		A22A182B197787AC00A45540 /* AMMNewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMNewClass.m; path = ../../../App/Median/Median/AMMNewClass.m; sourceTree = "<group>"; };
 		A25CA0E319776E0100E9A757 /* MedianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25CA0E619776E0100E9A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25CA0E819776E0100E9A757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,21 +83,21 @@
 		A25CA10719776E0100E9A757 /* MedianAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MedianAppTests-Info.plist"; sourceTree = "<group>"; };
 		A25CA10919776E0100E9A757 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A25CA10B19776E0100E9A757 /* MedianAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedianAppTests.m; sourceTree = "<group>"; };
-		A25CA11519776E3700E9A757 /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assignment.h; sourceTree = "<group>"; };
-		A25CA11619776E3700E9A757 /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
-		A25CA11719776E3700E9A757 /* AssignmentCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentCategory.h; sourceTree = "<group>"; };
-		A25CA11819776E3700E9A757 /* AssignmentCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentCategory.m; sourceTree = "<group>"; };
 		A25CA11B19776E5900E9A757 /* AMMSchoolClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSchoolClassCell.h; sourceTree = "<group>"; };
 		A25CA11C19776E5900E9A757 /* AMMSchoolClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSchoolClassCell.m; sourceTree = "<group>"; };
 		A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSchoolClassCell.xib; sourceTree = "<group>"; };
 		A25CA12019776E8A00E9A757 /* AMMClassCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassCircle.h; sourceTree = "<group>"; };
 		A25CA12119776E8A00E9A757 /* AMMClassCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassCircle.m; sourceTree = "<group>"; };
-		A25CA12219776E8A00E9A757 /* AMMClassStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassStore.h; sourceTree = "<group>"; };
-		A25CA12319776E8A00E9A757 /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassStore.m; sourceTree = "<group>"; };
-		A25CA12419776E8A00E9A757 /* SchoolClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolClass.h; sourceTree = "<group>"; };
-		A25CA12519776E8A00E9A757 /* SchoolClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolClass.m; sourceTree = "<group>"; };
 		A25CA12C19776F9D00E9A757 /* AMMSemesterTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSemesterTVC.h; sourceTree = "<group>"; };
 		A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSemesterTVC.m; sourceTree = "<group>"; };
+		A2F92512197788990082D38C /* AMMClassStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMClassStore.h; path = ../../../App/Median/Median/AMMClassStore.h; sourceTree = "<group>"; };
+		A2F92513197788990082D38C /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMClassStore.m; path = ../../../App/Median/Median/AMMClassStore.m; sourceTree = "<group>"; };
+		A2F92514197788990082D38C /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assignment.h; path = ../../../App/Median/Median/Assignment.h; sourceTree = "<group>"; };
+		A2F92515197788990082D38C /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Assignment.m; path = ../../../App/Median/Median/Assignment.m; sourceTree = "<group>"; };
+		A2F92516197788990082D38C /* AssignmentCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssignmentCategory.h; path = ../../../App/Median/Median/AssignmentCategory.h; sourceTree = "<group>"; };
+		A2F92517197788990082D38C /* AssignmentCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssignmentCategory.m; path = ../../../App/Median/Median/AssignmentCategory.m; sourceTree = "<group>"; };
+		A2F92518197788990082D38C /* SchoolClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SchoolClass.h; path = ../../../App/Median/Median/SchoolClass.h; sourceTree = "<group>"; };
+		A2F92519197788990082D38C /* SchoolClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SchoolClass.m; path = ../../../App/Median/Median/SchoolClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +224,7 @@
 				A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */,
 				A25CA12019776E8A00E9A757 /* AMMClassCircle.h */,
 				A25CA12119776E8A00E9A757 /* AMMClassCircle.m */,
+				A22A18281977879800A45540 /* AMMNewClass.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -226,14 +232,14 @@
 		A25CA12A19776EA900E9A757 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A25CA12219776E8A00E9A757 /* AMMClassStore.h */,
-				A25CA12319776E8A00E9A757 /* AMMClassStore.m */,
-				A25CA12419776E8A00E9A757 /* SchoolClass.h */,
-				A25CA12519776E8A00E9A757 /* SchoolClass.m */,
-				A25CA11519776E3700E9A757 /* Assignment.h */,
-				A25CA11619776E3700E9A757 /* Assignment.m */,
-				A25CA11719776E3700E9A757 /* AssignmentCategory.h */,
-				A25CA11819776E3700E9A757 /* AssignmentCategory.m */,
+				A2F92512197788990082D38C /* AMMClassStore.h */,
+				A2F92513197788990082D38C /* AMMClassStore.m */,
+				A2F92514197788990082D38C /* Assignment.h */,
+				A2F92515197788990082D38C /* Assignment.m */,
+				A2F92516197788990082D38C /* AssignmentCategory.h */,
+				A2F92517197788990082D38C /* AssignmentCategory.m */,
+				A2F92518197788990082D38C /* SchoolClass.h */,
+				A2F92519197788990082D38C /* SchoolClass.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -243,6 +249,8 @@
 			children = (
 				A25CA12C19776F9D00E9A757 /* AMMSemesterTVC.h */,
 				A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */,
+				A22A182A197787AC00A45540 /* AMMNewClass.h */,
+				A22A182B197787AC00A45540 /* AMMNewClass.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 				A22A1824197781E500A45540 /* Lato-LigIta.ttf in Resources */,
 				A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */,
 				A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */,
+				A22A18291977879800A45540 /* AMMNewClass.xib in Resources */,
 				A22A181E197781E500A45540 /* Lato-BlaIta.ttf in Resources */,
 				A22A1822197781E500A45540 /* Lato-HaiIta.ttf in Resources */,
 				A25CA0F919776E0100E9A757 /* Images.xcassets in Resources */,
@@ -355,15 +364,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F9251D197788990082D38C /* SchoolClass.m in Sources */,
+				A2F9251B197788990082D38C /* Assignment.m in Sources */,
 				A25CA0F719776E0100E9A757 /* AMMAppDelegate.m in Sources */,
 				A25CA11E19776E5900E9A757 /* AMMSchoolClassCell.m in Sources */,
+				A2F9251C197788990082D38C /* AssignmentCategory.m in Sources */,
 				A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */,
 				A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */,
-				A25CA11919776E3700E9A757 /* Assignment.m in Sources */,
-				A25CA11A19776E3700E9A757 /* AssignmentCategory.m in Sources */,
+				A22A182C197787AC00A45540 /* AMMNewClass.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
-				A25CA12819776E8A00E9A757 /* SchoolClass.m in Sources */,
-				A25CA12719776E8A00E9A757 /* AMMClassStore.m in Sources */,
+				A2F9251A197788990082D38C /* AMMClassStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

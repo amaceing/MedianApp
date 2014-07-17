@@ -10,6 +10,7 @@
 #import "AMMClassStore.h"
 #import "AMMSchoolClassCell.h"
 #import "AMMClassCircle.h"
+#import "AMMNewClass.h"
 
 @interface AMMSemesterTVC ()
 
@@ -133,6 +134,16 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SchoolClass *sc = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
+    if ([sc.name isEqualToString:@"Add"]) {
+        AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
+        ncvc.classToAdd = sc;
+        [self.navigationController pushViewController:ncvc animated:YES];
+    }
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -140,27 +151,34 @@
 }
 
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        SchoolClass *delete = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
+        [[AMMClassStore classStore] removeClass:delete];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView reloadData];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Add" daysOfWeek:@"Days" timeOfDay:@"Time"];
+        [[AMMClassStore classStore] addClass:dummy];
+        NSInteger row = [[[AMMClassStore classStore] allClasses] indexOfObject:dummy];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView reloadData];
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
