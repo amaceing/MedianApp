@@ -16,6 +16,9 @@
 
 @interface AMMSemesterTVC ()
 
+@property (nonatomic, strong) IBOutlet UIView *header;
+@property (nonatomic, strong) IBOutlet UILabel *seasonTitle;
+
 @end
 
 @implementation AMMSemesterTVC
@@ -46,6 +49,10 @@
     //Custom viewDidLoad methods
     self.navigationItem.title = @"Classes";
     
+    //Header
+    UIView *h = self.header;
+    [self.tableView setTableHeaderView:h];
+    
     //Loading custom cells and registering for reuse
     UINib *nib = [UINib nibWithNibName:@"AMMSchoolClassCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"AMMSchoolClassCell"];
@@ -68,6 +75,17 @@
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (UIView *)header
+{
+    if (!_header) {
+        [[NSBundle mainBundle] loadNibNamed:@"AMMSeasonTitle" owner:self options:nil];
+    }
+    self.seasonTitle.text = [UtilityMethods determineSeasonAndYear];
+    self.seasonTitle.font = [UtilityMethods latoLightFont:20];
+    self.seasonTitle.textColor = [UIColor colorWithRed:30/255.0 green:178/255.0 blue:192/255.0 alpha:1];
+    return _header;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -76,8 +94,10 @@
 
 - (void)setColorValuesForNavBar
 {
-    self.navigationController.navigationBar.barTintColor =
-    [UIColor colorWithRed:30/255.0 green:178/255.0 blue:192/255.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:30/255.0
+                                                                           green:178/255.0
+                                                                            blue:192/255.0
+                                                                           alpha:1];
     self.navigationController.navigationBar.translucent = YES;
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,

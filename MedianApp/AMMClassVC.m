@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = [UtilityMethods determineSeasonAndYear];
     
     //Header view
     UIView *header = self.header;
