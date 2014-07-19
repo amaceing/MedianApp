@@ -11,6 +11,8 @@
 #import "AMMSchoolClassCell.h"
 #import "AMMClassCircle.h"
 #import "AMMNewClass.h"
+#import "AMMClassVC.h"
+#import "UtilityMethods.h"
 
 @interface AMMSemesterTVC ()
 
@@ -69,7 +71,7 @@
     self.navigationController.navigationBar.translucent = YES;
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
-                                                                     [UIFont fontWithName:@"Lato-Light" size:21.0], NSFontAttributeName,
+                                                                     [UtilityMethods latoBoldFont:21.0], NSFontAttributeName,
                                                                      nil]];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor lightGrayColor];
@@ -84,9 +86,6 @@
 
 - (void)addSchoolClass:(id)sender
 {
-    // Setting done button
-    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneEditing:)];
-    self.navigationItem.rightBarButtonItem = done;
     //Adding class
     SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Add" daysOfWeek:@"Days" timeOfDay:@"Time"];
     [[AMMClassStore classStore] addClass:dummy];
@@ -94,6 +93,8 @@
     //Popping VC
     AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
     ncvc.classToAdd = dummy;
+    // Setting done button
+    [self setUpDoneButton];
     [self.navigationController pushViewController:ncvc animated:YES];
     
     //Inserting into table
@@ -115,6 +116,18 @@
 {
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(addSchoolClass:)];
     self.navigationItem.rightBarButtonItem = edit;
+}
+
+- (void)setUpDoneButton
+{
+    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneEditing:)];
+    self.navigationItem.rightBarButtonItem = done;
+}
+
+- (void)setUpBackButton
+{
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.backBarButtonItem = back;
 }
 
 #pragma mark - Table view data source
@@ -139,6 +152,12 @@
     return [[[AMMClassStore classStore] allClasses] count];
 }
 
+- (void)setUpCellFonts:(AMMSchoolClassCell *)cell
+{
+    cell.schoolClassNameLabel.font = [UtilityMethods latoRegFont:20];
+    cell.schoolClassDetailsLabel.font = [UtilityMethods latoLightFont:10];
+    cell.gradeLabel.font = [UtilityMethods latoRegFont:18];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -151,6 +170,10 @@
     AMMClassCircle *classCirc = [self makeCircleForCell:display.grade];
     [cell.contentView addSubview:classCirc];
     
+    //Font
+    [self setUpCellFonts:cell];
+    
+    //Content
     cell.schoolClassNameLabel.text = display.name;
     cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", display.daysOfWeek, display.timeOfDay];
     cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", display.grade];
@@ -164,9 +187,13 @@
     if (self.editing) {
         AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
         ncvc.classToAdd = sc;
+        [self setUpBackButton];
         [self.navigationController pushViewController:ncvc animated:YES];
     } else {
-        
+        AMMClassVC *cvc = [[AMMClassVC alloc] initWithNibName:@"AMMClassVC" bundle:nil];
+        cvc.schoolClass = sc;
+        [self setUpBackButton];
+        [self.navigationController pushViewController:cvc animated:YES];
     }
 }
 

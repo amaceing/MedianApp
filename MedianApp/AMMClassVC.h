@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SchoolClass.h"
 
 @interface AMMClassVC : UITableViewController
+
+@property (nonatomic) SchoolClass *schoolClass;
 
 @end

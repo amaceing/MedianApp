@@ -7,8 +7,13 @@
 //
 
 #import "AMMClassVC.h"
+#import "UtilityMethods.h"
 
 @interface AMMClassVC ()
+
+@property (nonatomic, strong) IBOutlet UIView *header;
+@property (nonatomic, strong) IBOutlet UILabel *schoolClassName;
+@property (nonatomic, strong) IBOutlet UILabel *schoolClassGrade;
 
 @end
 
@@ -17,6 +22,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Header view
+    UIView *header = self.header;
+    [self.tableView setTableHeaderView:header];
+    
+    //Empty footer view for no lines after cells
+    [self.tableView setTableFooterView:[[UIView alloc] init]];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -31,20 +43,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIView *)header
+{
+    if (!_header) {
+        [[NSBundle mainBundle] loadNibNamed:@"AMMSemesterHeader" owner:self options:nil];
+    }
+    
+    self.schoolClassName.textColor = [UIColor colorWithRed:30/255.0 green:178/255.0 blue:192/255.0 alpha:1];
+    self.schoolClassName.text = self.schoolClass.name;
+
+    self.schoolClassGrade.text = [NSString stringWithFormat:@"%0.1f", self.schoolClass.grade];
+    self.schoolClassGrade.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
+    
+    return  _header;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.schoolClass.assignmentCategories count];
 }
 
 /*

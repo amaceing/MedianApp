@@ -20,6 +20,8 @@
 		A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A22A181C197781E500A45540 /* SIL Open Font License.txt */; };
 		A22A18291977879800A45540 /* AMMNewClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = A22A18281977879800A45540 /* AMMNewClass.xib */; };
 		A22A182C197787AC00A45540 /* AMMNewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A22A182B197787AC00A45540 /* AMMNewClass.m */; };
+		A231D542197A06F9006FD823 /* AMMSemesterHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A231D541197A06F9006FD823 /* AMMSemesterHeader.xib */; };
+		A231D545197A118E006FD823 /* UtilityMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = A231D544197A118E006FD823 /* UtilityMethods.m */; };
 		A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
 		A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E819776E0100E9A757 /* CoreGraphics.framework */; };
 		A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
@@ -69,6 +71,9 @@
 		A22A18281977879800A45540 /* AMMNewClass.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMNewClass.xib; path = ../../../App/Median/Median/AMMNewClass.xib; sourceTree = "<group>"; };
 		A22A182A197787AC00A45540 /* AMMNewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMNewClass.h; path = ../../../App/Median/Median/AMMNewClass.h; sourceTree = "<group>"; };
 		A22A182B197787AC00A45540 /* AMMNewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMNewClass.m; path = ../../../App/Median/Median/AMMNewClass.m; sourceTree = "<group>"; };
+		A231D541197A06F9006FD823 /* AMMSemesterHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSemesterHeader.xib; sourceTree = "<group>"; };
+		A231D543197A118E006FD823 /* UtilityMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityMethods.h; sourceTree = "<group>"; };
+		A231D544197A118E006FD823 /* UtilityMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityMethods.m; sourceTree = "<group>"; };
 		A25CA0E319776E0100E9A757 /* MedianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25CA0E619776E0100E9A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25CA0E819776E0100E9A757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -231,6 +236,7 @@
 				A25CA12119776E8A00E9A757 /* AMMClassCircle.m */,
 				A22A18281977879800A45540 /* AMMNewClass.xib */,
 				A2F92520197791E60082D38C /* AMMClassVC.xib */,
+				A231D541197A06F9006FD823 /* AMMSemesterHeader.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -245,6 +251,8 @@
 				A2F92516197788990082D38C /* AssignmentCategory.h */,
 				A2F92517197788990082D38C /* AssignmentCategory.m */,
 				A2F92518197788990082D38C /* SchoolClass.h */,
+				A231D543197A118E006FD823 /* UtilityMethods.h */,
+				A231D544197A118E006FD823 /* UtilityMethods.m */,
 				A2F92519197788990082D38C /* SchoolClass.m */,
 			);
 			name = Models;
@@ -345,6 +353,7 @@
 				A22A181F197781E500A45540 /* Lato-Bol.ttf in Resources */,
 				A25CA0F119776E0100E9A757 /* InfoPlist.strings in Resources */,
 				A22A1824197781E500A45540 /* Lato-LigIta.ttf in Resources */,
+				A231D542197A06F9006FD823 /* AMMSemesterHeader.xib in Resources */,
 				A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */,
 				A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */,
 				A22A18291977879800A45540 /* AMMNewClass.xib in Resources */,
@@ -384,6 +393,7 @@
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
 				A2F9251A197788990082D38C /* AMMClassStore.m in Sources */,
 				A2F92521197791E60082D38C /* AMMClassVC.m in Sources */,
+				A231D545197A118E006FD823 /* UtilityMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
