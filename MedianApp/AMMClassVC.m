@@ -49,9 +49,11 @@
         [[NSBundle mainBundle] loadNibNamed:@"AMMSemesterHeader" owner:self options:nil];
     }
     
+    self.schoolClassName.font = [UtilityMethods latoLightFont:18.0];
     self.schoolClassName.textColor = [UIColor colorWithRed:30/255.0 green:178/255.0 blue:192/255.0 alpha:1];
     self.schoolClassName.text = self.schoolClass.name;
 
+    self.schoolClassGrade.font = [UtilityMethods latoRegFont:29.0];
     self.schoolClassGrade.text = [NSString stringWithFormat:@"%0.1f", self.schoolClass.grade];
     self.schoolClassGrade.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
     

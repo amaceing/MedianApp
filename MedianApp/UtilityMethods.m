@@ -25,7 +25,7 @@
     return [UIFont fontWithName:@"Lato-Regular" size:size];
 }
 
-- (NSString *)determineSeasonAndYear
++ (NSString *)determineSeasonAndYear
 {
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
     NSInteger month = [components month];

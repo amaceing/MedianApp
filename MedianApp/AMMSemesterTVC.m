@@ -33,6 +33,16 @@
 {
     [super viewDidLoad];
     
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
+    
     //Custom viewDidLoad methods
     self.navigationItem.title = @"Classes";
     
@@ -155,7 +165,7 @@
 - (void)setUpCellFonts:(AMMSchoolClassCell *)cell
 {
     cell.schoolClassNameLabel.font = [UtilityMethods latoRegFont:20];
-    cell.schoolClassDetailsLabel.font = [UtilityMethods latoLightFont:10];
+    cell.schoolClassDetailsLabel.font = [UtilityMethods latoLightFont:12];
     cell.gradeLabel.font = [UtilityMethods latoRegFont:18];
 }
 
