@@ -8,6 +8,7 @@
 
 #import "AMMClassVC.h"
 #import "UtilityMethods.h"
+#import "AssignmentCategory.h"
 
 @interface AMMClassVC ()
 
@@ -39,6 +40,19 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)setUpAddCategoryButton
+{
+    UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addCat:)];
+    self.navigationItem.rightBarButtonItem = add;
+}
+
+- (void)addCat:(id)sender
+{
+    AssignmentCategory *cat = [[AssignmentCategory alloc] init];
+    [self.schoolClass addAssignmentCategory:cat];
+    //Finish This
 }
 
 - (void)didReceiveMemoryWarning

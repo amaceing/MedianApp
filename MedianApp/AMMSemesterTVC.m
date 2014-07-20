@@ -101,7 +101,7 @@
     self.navigationController.navigationBar.translucent = YES;
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
-                                                                     [UtilityMethods latoBoldFont:21.0], NSFontAttributeName,
+                                                                     [UtilityMethods latoRegFont:21.0], NSFontAttributeName,
                                                                      nil]];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor lightGrayColor];
@@ -145,6 +145,9 @@
 - (void)setUpEditButton
 {
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(addSchoolClass:)];
+    [edit setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                 [UIFont fontWithName:@"Lato-Light" size:16.0], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    
     self.navigationItem.rightBarButtonItem = edit;
 }
 
@@ -184,7 +187,7 @@
 
 - (void)setUpCellFonts:(AMMSchoolClassCell *)cell
 {
-    cell.schoolClassNameLabel.font = [UtilityMethods latoRegFont:20];
+    cell.schoolClassNameLabel.font = [UtilityMethods latoLightFont:20];
     cell.schoolClassDetailsLabel.font = [UtilityMethods latoLightFont:12];
     cell.gradeLabel.font = [UtilityMethods latoRegFont:18];
 }
