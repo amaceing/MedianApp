@@ -53,6 +53,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)setUpAddCategoryButton
 {
     UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addCat:)];
@@ -61,22 +67,33 @@
 
 - (void)addCat:(id)sender
 {
+    //Adding category
     AssignmentCategory *cat = [[AssignmentCategory alloc] init];
     AMMNewAssignmentCat *newCat = [[AMMNewAssignmentCat alloc] init];
     newCat.cat = cat;
     
+    //Popping view
+    [self setUpBackButton];
     [self.navigationController pushViewController:newCat animated:YES];
     
-    [self.schoolClass addAssignmentCategory:newCat.cat];
-    NSInteger row = [[self.schoolClass assignmentCategories] indexOfObject:newCat.cat];
+    //Inserting category
+    [self.schoolClass addAssignmentCategory:cat];
+    NSInteger row = [[self.schoolClass assignmentCategories] indexOfObject:cat];
     NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setUpBackButton
+{
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.backBarButtonItem = back;
 }
 
 - (UIView *)header
@@ -118,7 +135,7 @@
     // Configure the cell...
     cell.catGrade.text = [NSString stringWithFormat:@"%0.1f", cat.average];
     cell.catName.text = cat.name;
-    cell.catWeight.text = [NSString stringWithFormat:@"%.0f/100", cat.weight];
+    cell.catWeight.text = [NSString stringWithFormat:@"%.0f/100", cat.weight * 100];
     
     return cell;
 }
@@ -126,11 +143,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 75;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 10;
 }
 
 /*
