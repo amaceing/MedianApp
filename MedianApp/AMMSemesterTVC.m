@@ -35,17 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    for (NSString* family in [UIFont familyNames])
-    {
-        NSLog(@"%@", family);
-        
-        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-        {
-            NSLog(@"  %@", name);
-        }
-    }
-    
+
     //Custom viewDidLoad methods
     self.navigationItem.title = @"Classes";
     
@@ -146,7 +136,7 @@
 {
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(addSchoolClass:)];
     [edit setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                 [UIFont fontWithName:@"Lato-Light" size:16.0], NSFontAttributeName, nil] forState:UIControlStateNormal];
+                                 [UtilityMethods latoLightFont:16], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
     self.navigationItem.rightBarButtonItem = edit;
 }

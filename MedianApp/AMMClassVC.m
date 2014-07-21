@@ -9,6 +9,8 @@
 #import "AMMClassVC.h"
 #import "UtilityMethods.h"
 #import "AssignmentCategory.h"
+#import "AMMCategoryCell.h"
+#import "AMMNewAssignmentCat.h"
 
 @interface AMMClassVC ()
 
@@ -23,17 +25,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Title
     self.navigationItem.title = [UtilityMethods determineSeasonAndYear];
+    
+    //Loading custom cells and registering for reuse
+    UINib *nib = [UINib nibWithNibName:@"AMMCategoryCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"AMMCategoryCell"];
     
     //Header view
     UIView *header = self.header;
     [self.tableView setTableHeaderView:header];
     
+    //Adding
+    [self setUpAddCategoryButton];
+    
     //Empty footer view for no lines after cells
     [self.tableView setTableFooterView:[[UIView alloc] init]];
     
     //Spaces for separator lines
-    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 15)];
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 25, 0, 25)];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -51,8 +62,15 @@
 - (void)addCat:(id)sender
 {
     AssignmentCategory *cat = [[AssignmentCategory alloc] init];
-    [self.schoolClass addAssignmentCategory:cat];
-    //Finish This
+    AMMNewAssignmentCat *newCat = [[AMMNewAssignmentCat alloc] init];
+    newCat.cat = cat;
+    
+    [self.navigationController pushViewController:newCat animated:YES];
+    
+    [self.schoolClass addAssignmentCategory:newCat.cat];
+    NSInteger row = [[self.schoolClass assignmentCategories] indexOfObject:newCat.cat];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,16 +110,28 @@
     return [self.schoolClass.assignmentCategories count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    AMMCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMCategoryCell" forIndexPath:indexPath];
+    AssignmentCategory *cat = [self.schoolClass assignmentCategoryAtIndex:indexPath.row];
     
     // Configure the cell...
+    cell.catGrade.text = [NSString stringWithFormat:@"%0.1f", cat.average];
+    cell.catName.text = cat.name;
+    cell.catWeight.text = [NSString stringWithFormat:@"%.0f/100", cat.weight];
     
     return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 75;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 10;
+}
 
 /*
 // Override to support conditional editing of the table view.

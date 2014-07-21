@@ -39,6 +39,11 @@
 		A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */; };
 		A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12119776E8A00E9A757 /* AMMClassCircle.m */; };
 		A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */; };
+		A27D80A3197C9B3800D8DBEB /* AMMCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A1197C9B3800D8DBEB /* AMMCategoryCell.m */; };
+		A27D80A4197C9B3800D8DBEB /* AMMCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */; };
+		A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */; };
+		A27D80AB197C9C4600D8DBEB /* AMMNewAssignmentCat.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A8197C9C4600D8DBEB /* AMMNewAssignmentCat.m */; };
+		A27D80AC197C9C4600D8DBEB /* AMMNewAssignmentCat.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27D80A9197C9C4600D8DBEB /* AMMNewAssignmentCat.xib */; };
 		A2F9251A197788990082D38C /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92513197788990082D38C /* AMMClassStore.m */; };
 		A2F9251B197788990082D38C /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92515197788990082D38C /* Assignment.m */; };
 		A2F9251C197788990082D38C /* AssignmentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92517197788990082D38C /* AssignmentCategory.m */; };
@@ -99,6 +104,14 @@
 		A25CA12119776E8A00E9A757 /* AMMClassCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassCircle.m; sourceTree = "<group>"; };
 		A25CA12C19776F9D00E9A757 /* AMMSemesterTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSemesterTVC.h; sourceTree = "<group>"; };
 		A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSemesterTVC.m; sourceTree = "<group>"; };
+		A27D80A0197C9B3800D8DBEB /* AMMCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMCategoryCell.h; path = ../../../App/Median/AMMCategoryCell.h; sourceTree = "<group>"; };
+		A27D80A1197C9B3800D8DBEB /* AMMCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMCategoryCell.m; path = ../../../App/Median/AMMCategoryCell.m; sourceTree = "<group>"; };
+		A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMCategoryCell.xib; path = ../../../App/Median/AMMCategoryCell.xib; sourceTree = "<group>"; };
+		A27D80A5197C9C4600D8DBEB /* AMMGradeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMGradeBar.h; path = ../../../App/Median/Median/AMMGradeBar.h; sourceTree = "<group>"; };
+		A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMGradeBar.m; path = ../../../App/Median/Median/AMMGradeBar.m; sourceTree = "<group>"; };
+		A27D80A7197C9C4600D8DBEB /* AMMNewAssignmentCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMNewAssignmentCat.h; path = ../../../App/Median/Median/AMMNewAssignmentCat.h; sourceTree = "<group>"; };
+		A27D80A8197C9C4600D8DBEB /* AMMNewAssignmentCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMNewAssignmentCat.m; path = ../../../App/Median/Median/AMMNewAssignmentCat.m; sourceTree = "<group>"; };
+		A27D80A9197C9C4600D8DBEB /* AMMNewAssignmentCat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMNewAssignmentCat.xib; path = ../../../App/Median/Median/AMMNewAssignmentCat.xib; sourceTree = "<group>"; };
 		A2F92512197788990082D38C /* AMMClassStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMClassStore.h; path = ../../../App/Median/Median/AMMClassStore.h; sourceTree = "<group>"; };
 		A2F92513197788990082D38C /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMClassStore.m; path = ../../../App/Median/Median/AMMClassStore.m; sourceTree = "<group>"; };
 		A2F92514197788990082D38C /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assignment.h; path = ../../../App/Median/Median/Assignment.h; sourceTree = "<group>"; };
@@ -240,6 +253,12 @@
 				A2F92520197791E60082D38C /* AMMClassVC.xib */,
 				A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */,
 				A231D541197A06F9006FD823 /* AMMSemesterHeader.xib */,
+				A27D80A0197C9B3800D8DBEB /* AMMCategoryCell.h */,
+				A27D80A1197C9B3800D8DBEB /* AMMCategoryCell.m */,
+				A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */,
+				A27D80A5197C9C4600D8DBEB /* AMMGradeBar.h */,
+				A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */,
+				A27D80A9197C9C4600D8DBEB /* AMMNewAssignmentCat.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -270,6 +289,8 @@
 				A22A182B197787AC00A45540 /* AMMNewClass.m */,
 				A2F9251E197791E60082D38C /* AMMClassVC.h */,
 				A2F9251F197791E60082D38C /* AMMClassVC.m */,
+				A27D80A7197C9C4600D8DBEB /* AMMNewAssignmentCat.h */,
+				A27D80A8197C9C4600D8DBEB /* AMMNewAssignmentCat.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -356,6 +377,7 @@
 				A22A181F197781E500A45540 /* Lato-Bol.ttf in Resources */,
 				A25CA0F119776E0100E9A757 /* InfoPlist.strings in Resources */,
 				A22A1824197781E500A45540 /* Lato-LigIta.ttf in Resources */,
+				A27D80AC197C9C4600D8DBEB /* AMMNewAssignmentCat.xib in Resources */,
 				A231D542197A06F9006FD823 /* AMMSemesterHeader.xib in Resources */,
 				A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */,
 				A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */,
@@ -366,6 +388,7 @@
 				A22A1822197781E500A45540 /* Lato-HaiIta.ttf in Resources */,
 				A25CA0F919776E0100E9A757 /* Images.xcassets in Resources */,
 				A22A1821197781E500A45540 /* Lato-Hai.ttf in Resources */,
+				A27D80A4197C9B3800D8DBEB /* AMMCategoryCell.xib in Resources */,
 				A22A1823197781E500A45540 /* Lato-Lig.ttf in Resources */,
 				A22A1825197781E500A45540 /* Lato-Reg.ttf in Resources */,
 			);
@@ -386,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A27D80A3197C9B3800D8DBEB /* AMMCategoryCell.m in Sources */,
 				A2F9251D197788990082D38C /* SchoolClass.m in Sources */,
 				A2F9251B197788990082D38C /* Assignment.m in Sources */,
 				A25CA0F719776E0100E9A757 /* AMMAppDelegate.m in Sources */,
@@ -396,6 +420,8 @@
 				A22A182C197787AC00A45540 /* AMMNewClass.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
 				A2F9251A197788990082D38C /* AMMClassStore.m in Sources */,
+				A27D80AB197C9C4600D8DBEB /* AMMNewAssignmentCat.m in Sources */,
+				A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */,
 				A2F92521197791E60082D38C /* AMMClassVC.m in Sources */,
 				A231D545197A118E006FD823 /* UtilityMethods.m in Sources */,
 			);
