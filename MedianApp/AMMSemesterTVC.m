@@ -106,30 +106,28 @@
 
 - (void)addSchoolClass:(id)sender
 {
-    //Adding class
-    SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Add" daysOfWeek:@"Days" timeOfDay:@"Time"];
-    [[AMMClassStore classStore] addClass:dummy];
+    SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Click to Add" daysOfWeek:@"Days" timeOfDay:@"Time"];
+    [[AMMClassStore classStore] addClass:dummy atIndex:0];
     
-    //Popping VC
-    AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
-    ncvc.classToAdd = dummy;
-    // Setting done button
-    [self setUpDoneButton];
-    [self.navigationController pushViewController:ncvc animated:YES];
-    
-    //Inserting into table
-    NSInteger row = [[[AMMClassStore classStore] allClasses] indexOfObject:dummy];
-    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView reloadData];
     self.editing = YES;
     self.tableView.allowsSelectionDuringEditing = YES;
+    [self.tableView reloadData];
+    
+    [self setUpDoneButton];
 }
 
 - (void)doneEditing:(id)sender
 {
+    SchoolClass *dummy = [[[AMMClassStore classStore] allClasses] objectAtIndex:0];
+    if ([dummy.name isEqualToString:@"Click to Add"]) {
+        NSInteger row = 0;
+        NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+        [[AMMClassStore classStore] removeClass:dummy];
+        [self.tableView deleteRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
     self.editing = NO;
     [self setUpEditButton];
+    [self.tableView reloadData];
 }
 
 - (void)setUpEditButton
@@ -172,11 +170,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if (self.editing) {
-        return [[[AMMClassStore classStore] allClasses] count] + 1;
-    } else {
-        return [[[AMMClassStore classStore] allClasses] count];
-    }
+    NSInteger numRows = [[[AMMClassStore classStore] allClasses] count];
+    
+    return numRows;
 }
 
 - (void)setUpCellFonts:(AMMSchoolClassCell *)cell
@@ -189,23 +185,36 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AMMSchoolClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMSchoolClassCell" forIndexPath:indexPath];
-    SchoolClass *display = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
-    
-    // Configure the cell...
-    
-    //Creating circle
-    AMMClassCircle *classCirc = [self makeCircleForCell:display.grade];
-    [cell.contentView addSubview:classCirc];
-    
     //Font
     [self setUpCellFonts:cell];
     
-    //Content
-    cell.schoolClassNameLabel.text = display.name;
-    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", display.daysOfWeek, display.timeOfDay];
-    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", display.grade];
-    
-    return cell;
+    if (self.editing && indexPath.row == 0) {
+        SchoolClass *dummy = [[[AMMClassStore classStore] allClasses] objectAtIndex:0];
+        
+        //Creating circle
+        AMMClassCircle *classCirc = [self makeCircleForCell:dummy.grade];
+        [cell.contentView addSubview:classCirc];
+        
+        //Content
+        cell.schoolClassNameLabel.text = dummy.name;
+        cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", dummy.daysOfWeek, dummy.timeOfDay];
+        cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", dummy.grade];
+        
+        return cell;
+    } else {
+        SchoolClass *display = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
+        
+        //Creating circle
+        AMMClassCircle *classCirc = [self makeCircleForCell:display.grade];
+        [cell.contentView addSubview:classCirc];
+        
+        //Content
+        cell.schoolClassNameLabel.text = display.name;
+        cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", display.daysOfWeek, display.timeOfDay];
+        cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", display.grade];
+        
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -216,6 +225,7 @@
         ncvc.classToAdd = sc;
         [self setUpBackButton];
         [self.navigationController pushViewController:ncvc animated:YES];
+        [self.tableView reloadData];
     } else {
         AMMClassVC *cvc = [[AMMClassVC alloc] initWithNibName:@"AMMClassVC" bundle:nil];
         cvc.schoolClass = sc;
@@ -234,6 +244,7 @@
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     return YES;
 }
 
@@ -248,14 +259,18 @@
         [self.tableView reloadData];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Add" daysOfWeek:@"Days" timeOfDay:@"Time"];
-        [[AMMClassStore classStore] addClass:dummy];
-        NSInteger row = [[[AMMClassStore classStore] allClasses] indexOfObject:dummy];
-        NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView reloadData];
     }   
 }
+
+/*
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(self.editing && indexPath.row == 0) {
+        return UITableViewCellEditingStyleInsert;
+    } else {
+        return UITableViewCellEditingStyleDelete;
+    }
+}*/
 
 
 /*
