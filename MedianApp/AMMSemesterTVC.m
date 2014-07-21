@@ -172,7 +172,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [[[AMMClassStore classStore] allClasses] count];
+    if (self.editing) {
+        return [[[AMMClassStore classStore] allClasses] count] + 1;
+    } else {
+        return [[[AMMClassStore classStore] allClasses] count];
+    }
 }
 
 - (void)setUpCellFonts:(AMMSchoolClassCell *)cell
