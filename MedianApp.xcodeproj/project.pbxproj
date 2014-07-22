@@ -44,6 +44,8 @@
 		A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */; };
 		A27D80AB197C9C4600D8DBEB /* AMMNewAssignmentCat.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A8197C9C4600D8DBEB /* AMMNewAssignmentCat.m */; };
 		A27D80AC197C9C4600D8DBEB /* AMMNewAssignmentCat.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27D80A9197C9C4600D8DBEB /* AMMNewAssignmentCat.xib */; };
+		A2970D84197E007C00CCC9CE /* AMMSchoolClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2970D82197E007C00CCC9CE /* AMMSchoolClassVC.m */; };
+		A2970D85197E007C00CCC9CE /* AMMSchoolClassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2970D83197E007C00CCC9CE /* AMMSchoolClassVC.xib */; };
 		A2F9251A197788990082D38C /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92513197788990082D38C /* AMMClassStore.m */; };
 		A2F9251B197788990082D38C /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92515197788990082D38C /* Assignment.m */; };
 		A2F9251C197788990082D38C /* AssignmentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92517197788990082D38C /* AssignmentCategory.m */; };
@@ -112,6 +114,9 @@
 		A27D80A7197C9C4600D8DBEB /* AMMNewAssignmentCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMNewAssignmentCat.h; path = ../../../App/Median/Median/AMMNewAssignmentCat.h; sourceTree = "<group>"; };
 		A27D80A8197C9C4600D8DBEB /* AMMNewAssignmentCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMNewAssignmentCat.m; path = ../../../App/Median/Median/AMMNewAssignmentCat.m; sourceTree = "<group>"; };
 		A27D80A9197C9C4600D8DBEB /* AMMNewAssignmentCat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMNewAssignmentCat.xib; path = ../../../App/Median/Median/AMMNewAssignmentCat.xib; sourceTree = "<group>"; };
+		A2970D81197E007C00CCC9CE /* AMMSchoolClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSchoolClassVC.h; sourceTree = "<group>"; };
+		A2970D82197E007C00CCC9CE /* AMMSchoolClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSchoolClassVC.m; sourceTree = "<group>"; };
+		A2970D83197E007C00CCC9CE /* AMMSchoolClassVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSchoolClassVC.xib; sourceTree = "<group>"; };
 		A2F92512197788990082D38C /* AMMClassStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMClassStore.h; path = ../../../App/Median/Median/AMMClassStore.h; sourceTree = "<group>"; };
 		A2F92513197788990082D38C /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMClassStore.m; path = ../../../App/Median/Median/AMMClassStore.m; sourceTree = "<group>"; };
 		A2F92514197788990082D38C /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assignment.h; path = ../../../App/Median/Median/Assignment.h; sourceTree = "<group>"; };
@@ -258,6 +263,7 @@
 				A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */,
 				A27D80A5197C9C4600D8DBEB /* AMMGradeBar.h */,
 				A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */,
+				A2970D83197E007C00CCC9CE /* AMMSchoolClassVC.xib */,
 				A27D80A9197C9C4600D8DBEB /* AMMNewAssignmentCat.xib */,
 			);
 			name = Views;
@@ -287,6 +293,8 @@
 				A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */,
 				A22A182A197787AC00A45540 /* AMMNewClass.h */,
 				A22A182B197787AC00A45540 /* AMMNewClass.m */,
+				A2970D81197E007C00CCC9CE /* AMMSchoolClassVC.h */,
+				A2970D82197E007C00CCC9CE /* AMMSchoolClassVC.m */,
 				A2F9251E197791E60082D38C /* AMMClassVC.h */,
 				A2F9251F197791E60082D38C /* AMMClassVC.m */,
 				A27D80A7197C9C4600D8DBEB /* AMMNewAssignmentCat.h */,
@@ -371,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2970D85197E007C00CCC9CE /* AMMSchoolClassVC.xib in Resources */,
 				A22A181D197781E500A45540 /* Lato-Bla.ttf in Resources */,
 				A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */,
 				A22A1820197781E500A45540 /* Lato-BolIta.ttf in Resources */,
@@ -424,6 +433,7 @@
 				A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */,
 				A2F92521197791E60082D38C /* AMMClassVC.m in Sources */,
 				A231D545197A118E006FD823 /* UtilityMethods.m in Sources */,
+				A2970D84197E007C00CCC9CE /* AMMSchoolClassVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

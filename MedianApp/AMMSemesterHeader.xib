@@ -6,9 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AMMClassVC">
             <connections>
-                <outlet property="header" destination="TNw-0m-wkA" id="h4r-TN-2X5"/>
-                <outlet property="schoolClassGrade" destination="QfZ-EK-SdF" id="Z1Y-v5-dyd"/>
-                <outlet property="schoolClassName" destination="Ug5-ll-YGt" id="QyX-eU-1y2"/>
+                <outlet property="header" destination="TNw-0m-wkA" id="TOf-mo-R64"/>
+                <outlet property="schoolClassGrade" destination="QfZ-EK-SdF" id="5W8-CZ-GdY"/>
+                <outlet property="schoolClassName" destination="Ug5-ll-YGt" id="6Lu-7Y-peJ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
