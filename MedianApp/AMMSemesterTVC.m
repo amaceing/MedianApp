@@ -11,8 +11,8 @@
 #import "AMMSchoolClassCell.h"
 #import "AMMClassCircle.h"
 #import "AMMNewClass.h"
-#import "AMMSchoolClassVC.h"
 #import "UtilityMethods.h"
+#import "AMMClassPageController.h"
 
 
 @interface AMMSemesterTVC ()
@@ -228,10 +228,12 @@
         [self.navigationController pushViewController:ncvc animated:YES];
         [self.tableView reloadData];
     } else {
-        AMMSchoolClassVC *cvc = [[AMMSchoolClassVC alloc] initWithNibName:@"AMMSchoolClassVC" bundle:nil];
-        cvc.schoolClass = sc;
+        //Pop School Class
+        NSInteger classIndex  = indexPath.row;
+        AMMClassPageController *cpvc = [[AMMClassPageController alloc] init];
+        cpvc.classIndex = classIndex;
         [self setUpBackButton];
-        [self.navigationController pushViewController:cvc animated:YES];
+        [self.navigationController pushViewController:cpvc animated:YES];
     }
 }
 

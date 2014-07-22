@@ -1,16 +1,17 @@
 //
-//  AMMClassVC.h
+//  AMMSchoolClassVC.h
 //  MedianApp
 //
-//  Created by Anthony Mace on 7/16/14.
+//  Created by Anthony Mace on 7/22/14.
 //  Copyright (c) 2014 Amaceing Studios. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "SchoolClass.h"
 
-@interface AMMClassVC : UITableViewController
+@interface AMMSchoolClassVC : UIViewController
 
 @property (nonatomic) SchoolClass *schoolClass;
+@property (nonatomic) NSInteger index;
 
 @end
