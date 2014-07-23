@@ -36,18 +36,17 @@
     self.navigationItem.title = [UtilityMethods determineSeasonAndYear];
     
     //Page View Controller
-    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
                                                           navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                         options:nil];
     self.pageController.dataSource = self;
     self.pageController.delegate = self;
-    [[self.pageController view] setFrame:[[self view] bounds]];
     
     AMMSchoolClassVC *initialViewController = [self viewControllerAtIndex:self.classIndex];
     
     NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
     
-    [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     
     [self addChildViewController:self.pageController];
     [[self view] addSubview:[self.pageController view]];

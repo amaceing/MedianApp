@@ -15,6 +15,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassName;
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassGrade;
 @property (nonatomic, strong) IBOutlet UIButton *addCat;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end
 

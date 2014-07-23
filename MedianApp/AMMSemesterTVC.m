@@ -189,33 +189,19 @@
     //Font
     [self setUpCellFonts:cell];
     
-    if (self.editing && indexPath.row == 0) {
-        SchoolClass *dummy = [[[AMMClassStore classStore] allClasses] objectAtIndex:0];
-        
-        //Creating circle
-        AMMClassCircle *classCirc = [self makeCircleForCell:dummy.grade];
-        [cell.contentView addSubview:classCirc];
-        
-        //Content
-        cell.schoolClassNameLabel.text = dummy.name;
-        cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", dummy.daysOfWeek, dummy.timeOfDay];
-        cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", dummy.grade];
-        
-        return cell;
-    } else {
-        SchoolClass *display = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
-        
-        //Creating circle
-        AMMClassCircle *classCirc = [self makeCircleForCell:display.grade];
-        [cell.contentView addSubview:classCirc];
-        
-        //Content
-        cell.schoolClassNameLabel.text = display.name;
-        cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", display.daysOfWeek, display.timeOfDay];
-        cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", display.grade];
-        
-        return cell;
-    }
+    //SchoolClass
+    SchoolClass *display = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
+    
+    //Creating circle
+    AMMClassCircle *classCirc = [self makeCircleForCell:display.grade];
+    [cell.contentView addSubview:classCirc];
+    
+    //Content
+    cell.schoolClassNameLabel.text = display.name;
+    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", display.daysOfWeek, display.timeOfDay];
+    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", display.grade];
+
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
