@@ -10,6 +10,7 @@
 #import "UtilityMethods.h"
 #import "AMMNewAssignmentCat.h"
 #import "AMMCategoryCell.h"
+#import "AMMGradeBar.h"
 
 @interface AMMSchoolClassVC ()
 
@@ -137,7 +138,14 @@
 {
     cell.catName.font = [UtilityMethods latoLightFont:17];
     cell.catGrade.font = [UtilityMethods latoLightFont:17];
-    cell.catGrade.font = [UtilityMethods latoLightFont:12];
+    cell.catWeight.font = [UtilityMethods latoLightFont:12];
+}
+
+- (void)addGradeBarToCell:(AMMCategoryCell *)cell catGrade:(double)grade
+{
+    AMMGradeBar *gradeBar = [[AMMGradeBar alloc] initWithFrame:cell.catGradeLine.bounds];
+    gradeBar.grade = grade;
+    [cell.catGradeLine addSubview:gradeBar];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -152,6 +160,9 @@
     cell.catName.text = cat.name;
     cell.catGrade.text = [NSString stringWithFormat:@"%0.1f", cat.average];
     cell.catWeight.text = [NSString stringWithFormat:@"%.0f/100", cat.weight * 100];
+    
+    //Grade Bar
+    [self addGradeBarToCell:cell catGrade:cat.average];
     
     return cell;
 }
