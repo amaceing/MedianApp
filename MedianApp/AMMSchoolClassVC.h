@@ -10,6 +10,7 @@
 #import "SchoolClass.h"
 
 @interface AMMSchoolClassVC : UIViewController
+        <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) SchoolClass *schoolClass;
 @property (nonatomic) NSInteger index;

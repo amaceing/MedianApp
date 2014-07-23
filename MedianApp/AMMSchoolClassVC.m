@@ -8,6 +8,8 @@
 
 #import "AMMSchoolClassVC.h"
 #import "UtilityMethods.h"
+#import "AMMNewAssignmentCat.h"
+#import "AMMCategoryCell.h"
 
 @interface AMMSchoolClassVC ()
 
@@ -30,6 +32,8 @@
     return self;
 }
 
+#pragma Loading View
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,6 +41,28 @@
     
     //Header
     [self setHeader:self.header];
+    
+    //Table view
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    //Spaces for separator lines
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 0)];
+    
+    //Loading custom cells and registering for reuse
+    UINib *nib = [UINib nibWithNibName:@"AMMCategoryCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"AMMCategoryCell"];
+    
+    
+    //Empty Footer
+    [self.tableView setTableFooterView:[[UIView alloc] init]];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,6 +93,67 @@
                                                alpha:1] forState:UIControlStateNormal];
     
     return _header;
+}
+
+#pragma Logic
+
+- (IBAction)addAssignCat:(id)sender
+{
+    AssignmentCategory *assignCatToAdd = [[AssignmentCategory alloc] init];
+    AMMNewAssignmentCat *newCat = [[AMMNewAssignmentCat alloc] init];
+    newCat.cat = assignCatToAdd;
+    
+    //Done button setup
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = doneButton;
+    
+    [self.navigationController pushViewController:newCat animated:YES];
+    
+    //Adding assignment to datasource and tableView
+    [self.schoolClass addAssignmentCategory:assignCatToAdd];
+    NSInteger row = [self.schoolClass.assignmentCategories indexOfObject:assignCatToAdd];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+#pragma Table View 
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.schoolClass.assignmentCategories count];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 75;
+}
+
+- (void)setUpCellFonts:(AMMCategoryCell *)cell
+{
+    cell.catName.font = [UtilityMethods latoLightFont:17];
+    cell.catGrade.font = [UtilityMethods latoLightFont:17];
+    cell.catGrade.font = [UtilityMethods latoLightFont:12];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AMMCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMCategoryCell" forIndexPath:indexPath];
+    AssignmentCategory *cat = [self.schoolClass.assignmentCategories objectAtIndex:indexPath.row];
+    
+    //Fonts
+    [self setUpCellFonts:cell];
+    
+    //Content
+    cell.catName.text = cat.name;
+    cell.catGrade.text = [NSString stringWithFormat:@"%0.1f", cat.average];
+    cell.catWeight.text = [NSString stringWithFormat:@"%.0f/100", cat.weight * 100];
+    
+    return cell;
 }
 
 @end
