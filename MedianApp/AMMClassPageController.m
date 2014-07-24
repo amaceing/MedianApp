@@ -84,33 +84,25 @@
     return childViewController;
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
     NSUInteger index = [(AMMSchoolClassVC *)viewController index];
-    
     if (index == 0) {
         return nil;
     }
-    
     index--;
-    
     return [self viewControllerAtIndex:index];
-    
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
     NSUInteger index = [(AMMSchoolClassVC *)viewController index];
     NSInteger classCount = [[[AMMClassStore classStore] allClasses] count];
-    
     index++;
-    
     if (index == classCount) {
         return nil;
     }
-    
     return [self viewControllerAtIndex:index];
-    
 }
 
 

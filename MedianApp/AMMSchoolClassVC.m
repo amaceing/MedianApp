@@ -54,9 +54,15 @@
     UINib *nib = [UINib nibWithNibName:@"AMMCategoryCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"AMMCategoryCell"];
     
-    
     //Empty Footer
     [self.tableView setTableFooterView:[[UIView alloc] init]];
+    
+    //Long press
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 2.0; //seconds
+    lpgr.delegate = self;
+    [self.tableView addGestureRecognizer:lpgr];
     
 }
 
@@ -77,6 +83,7 @@
     //Font
     self.schoolClassName.font = [UtilityMethods latoLightFont:20];
     self.schoolClassGrade.font = [UtilityMethods latoLightFont:30];
+    self.addCat.titleLabel.font = [UtilityMethods latoLightFont:14];
     
     //Text
     self.schoolClassName.text = self.schoolClass.name;
@@ -96,13 +103,19 @@
     return _header;
 }
 
+- (void)setUpBackButton
+{
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.backBarButtonItem = back;
+}
+
 #pragma Logic
 
 - (IBAction)addAssignCat:(id)sender
 {
     AssignmentCategory *assignCatToAdd = [[AssignmentCategory alloc] init];
     AMMNewAssignmentCat *newCat = [[AMMNewAssignmentCat alloc] init];
-    newCat.cat = assignCatToAdd;
+    newCat.assignCat = assignCatToAdd;
     
     //Done button setup
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -165,6 +178,26 @@
     [self addGradeBarToCell:cell catGrade:cat.average];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    CGPoint p = [gestureRecognizer locationInView:self.tableView];
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:p];
+    if (indexPath == nil) {
+        NSLog(@"long press on table view but not on a row");
+    } else {
+        AssignmentCategory *delete = [self.schoolClass.assignmentCategories objectAtIndex:indexPath.row];
+        [self.schoolClass removeAssignmentCategory:delete];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView reloadData];
+    }
 }
 
 @end
