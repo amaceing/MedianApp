@@ -279,9 +279,9 @@
 				A2F92516197788990082D38C /* AssignmentCategory.h */,
 				A2F92517197788990082D38C /* AssignmentCategory.m */,
 				A2F92518197788990082D38C /* SchoolClass.h */,
+				A2F92519197788990082D38C /* SchoolClass.m */,
 				A231D543197A118E006FD823 /* UtilityMethods.h */,
 				A231D544197A118E006FD823 /* UtilityMethods.m */,
-				A2F92519197788990082D38C /* SchoolClass.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";

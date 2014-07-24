@@ -121,10 +121,7 @@
 {
     SchoolClass *dummy = [[[AMMClassStore classStore] allClasses] objectAtIndex:0];
     if ([dummy.name isEqualToString:@"Click to Add"]) {
-        NSInteger row = 0;
-        NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
         [[AMMClassStore classStore] removeClass:dummy];
-        [self.tableView deleteRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     self.editing = NO;
     [self setUpEditButton];
@@ -210,7 +207,7 @@
     if (self.editing) {
         AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
         ncvc.classToAdd = sc;
-        [self setUpBackButton];
+        [self setUpDoneButton];
         [self.navigationController pushViewController:ncvc animated:YES];
         [self.tableView reloadData];
     } else {

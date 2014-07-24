@@ -17,8 +17,8 @@
 @property (nonatomic, strong) IBOutlet UIView *header;
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassName;
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassGrade;
-@property (nonatomic, strong) IBOutlet UIButton *addCat;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UIButton *edit;
 
 @end
 
@@ -46,6 +46,8 @@
     //Table view
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    [self setUpEditButton];
     
     //Spaces for separator lines
     [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 0)];
@@ -83,7 +85,7 @@
     //Font
     self.schoolClassName.font = [UtilityMethods latoLightFont:20];
     self.schoolClassGrade.font = [UtilityMethods latoLightFont:30];
-    self.addCat.titleLabel.font = [UtilityMethods latoLightFont:14];
+    self.edit.titleLabel.font = [UtilityMethods latoLightFont:14];
     
     //Text
     self.schoolClassName.text = self.schoolClass.name;
@@ -94,11 +96,11 @@
                                                      green:178/255.0
                                                       blue:192/255.0
                                                      alpha:1];
+    [self.edit setTitleColor:[UIColor colorWithRed:30/255.0
+                                        green:178/255.0
+                                         blue:192/255.0
+                                        alpha:1] forState:UIControlStateNormal];
     self.schoolClassGrade.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
-    [self.addCat setTitleColor:[UIColor colorWithRed:30/255.0
-                                               green:178/255.0
-                                                blue:192/255.0
-                                               alpha:1] forState:UIControlStateNormal];
     
     return _header;
 }
@@ -109,25 +111,46 @@
     self.navigationItem.backBarButtonItem = back;
 }
 
+
 #pragma Logic
 
-- (IBAction)addAssignCat:(id)sender
+- (void)setUpEditButton
 {
-    AssignmentCategory *assignCatToAdd = [[AssignmentCategory alloc] init];
-    AMMNewAssignmentCat *newCat = [[AMMNewAssignmentCat alloc] init];
-    newCat.assignCat = assignCatToAdd;
-    
-    //Done button setup
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.backBarButtonItem = doneButton;
-    
-    [self.navigationController pushViewController:newCat animated:YES];
-    
-    //Adding assignment to datasource and tableView
+    if (self.tableView.editing) {
+       [self.edit removeTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
+    }
+    [self.edit addTarget:self action:@selector(addAssignCat) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)setUpDoneEditingButton
+{
+    self.edit.titleLabel.text = @"Done";
+    if (self.tableView.editing) {
+        [self.edit removeTarget:self action:@selector(addAssignCat) forControlEvents:UIControlEventTouchUpInside];
+    }
+    [self.edit addTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)addAssignCat
+{
+    AssignmentCategory *assignCatToAdd = [[AssignmentCategory alloc] initWithName:@"Click to Add" withWeight:0];
     [self.schoolClass addAssignmentCategory:assignCatToAdd];
-    NSInteger row = [self.schoolClass.assignmentCategories indexOfObject:assignCatToAdd];
-    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationTop];
+    
+    self.tableView.editing = YES;
+    self.tableView.allowsSelectionDuringEditing = YES;
+    [self.tableView reloadData];
+    [self setUpDoneEditingButton];
+}
+
+- (void)doneEditing
+{
+    AssignmentCategory *dummy = [self.schoolClass assignmentCategoryAtIndex:0];
+    if ([dummy.name isEqualToString:@"Click to Add"]) {
+        [self.schoolClass removeAssignmentCategory:dummy];
+    }
+    [self setUpEditButton];
+    self.tableView.editing = NO;
+    [self.tableView reloadData];
 }
 
 #pragma Table View 
@@ -182,7 +205,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    AssignmentCategory *cat = [self.schoolClass assignmentCategoryAtIndex:indexPath.row];
+    if (self.tableView.editing) {
+        AMMNewAssignmentCat *navc = [[AMMNewAssignmentCat alloc] init];
+        navc.assignCat = cat;
+        [self.navigationController pushViewController:navc animated:YES];
+        [self.tableView reloadData];
+    } else {
+        
+    }
 }
 
 -(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer

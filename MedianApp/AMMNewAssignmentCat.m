@@ -37,7 +37,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if ([self.assignCat.name isEqualToString:@"Category"]) {
+    if ([self.assignCat.name isEqualToString:@"Click to Add"]) {
         self.navigationItem.title = @"New Category";
         self.assignCatName.placeholder = @"Assignment Category Name";
         self.assignCatWeight.placeholder = @"Weight";
