@@ -59,13 +59,6 @@
     //Empty Footer
     [self.tableView setTableFooterView:[[UIView alloc] init]];
     
-    //Long press
-    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
-                                          initWithTarget:self action:@selector(handleLongPress:)];
-    lpgr.minimumPressDuration = 2.0; //seconds
-    lpgr.delegate = self;
-    [self.tableView addGestureRecognizer:lpgr];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -218,17 +211,11 @@
     }
 }
 
--(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGPoint p = [gestureRecognizer locationInView:self.tableView];
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:p];
-    if (indexPath == nil) {
-        NSLog(@"long press on table view but not on a row");
-    } else {
-        AssignmentCategory *delete = [self.schoolClass.assignmentCategories objectAtIndex:indexPath.row];
-        [self.schoolClass removeAssignmentCategory:delete];
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        AssignmentCategory *cat = [self.schoolClass assignmentCategoryAtIndex:indexPath.row];
+        [self.schoolClass removeAssignmentCategory:cat];
         [self.tableView reloadData];
     }
 }
