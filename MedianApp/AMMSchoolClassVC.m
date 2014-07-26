@@ -11,6 +11,7 @@
 #import "AMMNewAssignmentCat.h"
 #import "AMMCategoryCell.h"
 #import "AMMGradeBar.h"
+#import "AMMAssignCatTVC.h"
 
 @interface AMMSchoolClassVC ()
 
@@ -103,6 +104,12 @@
 {
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.backBarButtonItem = back;
+}
+
+- (void)setUpDoneButton
+{
+    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.backBarButtonItem = done;
 }
 
 
@@ -207,8 +214,12 @@
         navc.assignCat = cat;
         [self.navigationController pushViewController:navc animated:YES];
         [self.tableView reloadData];
+        [self.schoolClassName setNeedsDisplay];
     } else {
-        
+        AMMAssignCatTVC *actvc = [[AMMAssignCatTVC alloc] init];
+        actvc.assignCat = cat;
+        actvc.schoolClass = self.schoolClass;
+        [self.navigationController pushViewController:actvc animated:YES];
     }
 }
 

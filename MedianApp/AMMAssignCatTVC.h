@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SchoolClass.h"
 #import "AssignmentCategory.h"
 #import "Assignment.h"
 
 @interface AMMAssignCatTVC : UITableViewController
 
 @property (nonatomic) AssignmentCategory *assignCat;
+@property (nonatomic) SchoolClass *schoolClass;
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A20E753D19843A82008BE1D8 /* AMMAssignCatTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20E753C19843A82008BE1D8 /* AMMAssignCatTVC.m */; };
+		A20E753F19843CD6008BE1D8 /* AMMAssignCatHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20E753E19843CD6008BE1D8 /* AMMAssignCatHeader.xib */; };
 		A2274516197EFE7D00BB76C4 /* AMMClassPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2274515197EFE7D00BB76C4 /* AMMClassPageController.m */; };
 		A227451A197EFF4900BB76C4 /* AMMSchoolClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2274518197EFF4900BB76C4 /* AMMSchoolClassVC.m */; };
 		A227451B197EFF4900BB76C4 /* AMMSchoolClassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		A20E753B19843A82008BE1D8 /* AMMAssignCatTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMAssignCatTVC.h; sourceTree = "<group>"; };
 		A20E753C19843A82008BE1D8 /* AMMAssignCatTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMAssignCatTVC.m; sourceTree = "<group>"; };
+		A20E753E19843CD6008BE1D8 /* AMMAssignCatHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMAssignCatHeader.xib; sourceTree = "<group>"; };
 		A2274514197EFE7D00BB76C4 /* AMMClassPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassPageController.h; sourceTree = "<group>"; };
 		A2274515197EFE7D00BB76C4 /* AMMClassPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassPageController.m; sourceTree = "<group>"; };
 		A2274517197EFF4900BB76C4 /* AMMSchoolClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSchoolClassVC.h; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */,
 				A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */,
 				A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */,
+				A20E753E19843CD6008BE1D8 /* AMMAssignCatHeader.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -299,9 +302,9 @@
 				A2274514197EFE7D00BB76C4 /* AMMClassPageController.h */,
 				A2274515197EFE7D00BB76C4 /* AMMClassPageController.m */,
 				A2274517197EFF4900BB76C4 /* AMMSchoolClassVC.h */,
+				A2274518197EFF4900BB76C4 /* AMMSchoolClassVC.m */,
 				A2374C3819819A1500D0FCCC /* AMMNewAssignmentCat.h */,
 				A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */,
-				A2274518197EFF4900BB76C4 /* AMMSchoolClassVC.m */,
 				A20E753B19843A82008BE1D8 /* AMMAssignCatTVC.h */,
 				A20E753C19843A82008BE1D8 /* AMMAssignCatTVC.m */,
 			);
@@ -394,6 +397,7 @@
 				A231D542197A06F9006FD823 /* AMMSemesterHeader.xib in Resources */,
 				A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */,
 				A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */,
+				A20E753F19843CD6008BE1D8 /* AMMAssignCatHeader.xib in Resources */,
 				A2443B3B197B06E700384034 /* AMMSeasonTitle.xib in Resources */,
 				A22A18291977879800A45540 /* AMMNewClass.xib in Resources */,
 				A2F92522197791E60082D38C /* AMMClassVC.xib in Resources */,

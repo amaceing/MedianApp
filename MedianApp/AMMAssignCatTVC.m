@@ -7,8 +7,13 @@
 //
 
 #import "AMMAssignCatTVC.h"
+#import "UtilityMethods.h"
 
 @interface AMMAssignCatTVC ()
+
+@property (nonatomic, strong) IBOutlet UIView *header;
+@property (nonatomic, strong) IBOutlet UILabel *assignCatName;
+@property (nonatomic, strong) IBOutlet UIButton *editButton;
 
 @end
 
@@ -27,11 +32,52 @@
 {
     [super viewDidLoad];
     
+    //Title
+    self.navigationItem.title = self.schoolClass.name;
+    
+    //Header
+    [self.tableView setTableHeaderView:self.header];
+    
+    //Empty Footer
+    [self.tableView setTableFooterView:[[UIView alloc] init]];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
+- (UIView *)header
+{
+    if (!_header) {
+        [[NSBundle mainBundle] loadNibNamed:@"AMMAssignCatHeader" owner:self options:nil];
+    }
+    //Font
+    self.assignCatName.font = [UtilityMethods latoLightFont:20];
+    self.editButton.titleLabel.font = [UtilityMethods latoLightFont:12];
+    
+    //Text
+    self.assignCatName.text = self.assignCat.name;
+    [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
+    
+    //Color
+    self.assignCatName.textColor = [UIColor colorWithRed:30/255.0
+                                                     green:178/255.0
+                                                      blue:192/255.0
+                                                     alpha:1];
+    [self.editButton setTitleColor:[UIColor colorWithRed:30/255.0
+                                             green:178/255.0
+                                              blue:192/255.0
+                                             alpha:1] forState:UIControlStateNormal];
+    
+    return _header;
 }
 
 - (void)didReceiveMemoryWarning
