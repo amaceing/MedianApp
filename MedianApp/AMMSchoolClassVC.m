@@ -116,6 +116,7 @@
 
 - (void)setUpEditButton
 {
+    [self.edit setTitle:@"Edit" forState:UIControlStateNormal];
     if (self.tableView.editing) {
        [self.edit removeTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -124,11 +125,12 @@
 
 - (void)setUpDoneEditingButton
 {
-    self.edit.titleLabel.text = @"Done";
+    [self.edit setTitle:@"Done" forState:UIControlStateNormal];
     if (self.tableView.editing) {
         [self.edit removeTarget:self action:@selector(addAssignCat) forControlEvents:UIControlEventTouchUpInside];
     }
     [self.edit addTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
+    [self.edit setNeedsDisplay];
 }
 
 - (void)addAssignCat
