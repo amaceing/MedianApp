@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20E753D19843A82008BE1D8 /* AMMAssignCatTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A20E753C19843A82008BE1D8 /* AMMAssignCatTVC.m */; };
 		A2274516197EFE7D00BB76C4 /* AMMClassPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2274515197EFE7D00BB76C4 /* AMMClassPageController.m */; };
 		A227451A197EFF4900BB76C4 /* AMMSchoolClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2274518197EFF4900BB76C4 /* AMMSchoolClassVC.m */; };
 		A227451B197EFF4900BB76C4 /* AMMSchoolClassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A20E753B19843A82008BE1D8 /* AMMAssignCatTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMAssignCatTVC.h; sourceTree = "<group>"; };
+		A20E753C19843A82008BE1D8 /* AMMAssignCatTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMAssignCatTVC.m; sourceTree = "<group>"; };
 		A2274514197EFE7D00BB76C4 /* AMMClassPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassPageController.h; sourceTree = "<group>"; };
 		A2274515197EFE7D00BB76C4 /* AMMClassPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassPageController.m; sourceTree = "<group>"; };
 		A2274517197EFF4900BB76C4 /* AMMSchoolClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSchoolClassVC.h; sourceTree = "<group>"; };
@@ -296,9 +299,11 @@
 				A2274514197EFE7D00BB76C4 /* AMMClassPageController.h */,
 				A2274515197EFE7D00BB76C4 /* AMMClassPageController.m */,
 				A2274517197EFF4900BB76C4 /* AMMSchoolClassVC.h */,
-				A2274518197EFF4900BB76C4 /* AMMSchoolClassVC.m */,
 				A2374C3819819A1500D0FCCC /* AMMNewAssignmentCat.h */,
 				A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */,
+				A2274518197EFF4900BB76C4 /* AMMSchoolClassVC.m */,
+				A20E753B19843A82008BE1D8 /* AMMAssignCatTVC.h */,
+				A20E753C19843A82008BE1D8 /* AMMAssignCatTVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 				A2F9251C197788990082D38C /* AssignmentCategory.m in Sources */,
 				A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */,
 				A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */,
+				A20E753D19843A82008BE1D8 /* AMMAssignCatTVC.m in Sources */,
 				A22A182C197787AC00A45540 /* AMMNewClass.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
 				A2F9251A197788990082D38C /* AMMClassStore.m in Sources */,

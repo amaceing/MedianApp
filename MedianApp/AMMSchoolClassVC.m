@@ -65,6 +65,7 @@
 {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+    [self.schoolClassName setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning
