@@ -50,7 +50,7 @@
     [self setUpEditButton];
     
     //Spaces for separator lines
-    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 0)];
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 25, 0, 43)];
     
     //Loading custom cells and registering for reuse
     UINib *nib = [UINib nibWithNibName:@"AMMCategoryCell" bundle:nil];
