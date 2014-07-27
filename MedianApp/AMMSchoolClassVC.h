@@ -10,7 +10,8 @@
 #import "SchoolClass.h"
 
 @interface AMMSchoolClassVC : UIViewController
-        <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
+        <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate,
+         UIActionSheetDelegate>
 
 @property (nonatomic) SchoolClass *schoolClass;
 @property (nonatomic) NSInteger index;

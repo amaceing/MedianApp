@@ -44,7 +44,7 @@
     } else {
         self.navigationItem.title = @"Edit Category";
         self.assignCatName.text = self.assignCat.name;
-        self.assignCatWeight.text = [NSString stringWithFormat:@"%.2f", self.assignCat.weight];
+        self.assignCatWeight.text = [NSString stringWithFormat:@"%.0f", self.assignCat.weight * 100];
     }
 }
 

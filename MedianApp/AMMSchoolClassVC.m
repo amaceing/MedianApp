@@ -51,7 +51,7 @@
     [self setUpEditButton];
     
     //Spaces for separator lines
-    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 25, 0, 43)];
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 23, 0, 39)];
     
     //Loading custom cells and registering for reuse
     UINib *nib = [UINib nibWithNibName:@"AMMCategoryCell" bundle:nil];
@@ -210,11 +210,16 @@
 {
     AssignmentCategory *cat = [self.schoolClass assignmentCategoryAtIndex:indexPath.row];
     if (self.tableView.editing) {
-        AMMNewAssignmentCat *navc = [[AMMNewAssignmentCat alloc] init];
-        navc.assignCat = cat;
-        [self.navigationController pushViewController:navc animated:YES];
-        [self.tableView reloadData];
-        [self.schoolClassName setNeedsDisplay];
+        if ([cat.name isEqualToString:@"Click to Add"]) {
+            AMMNewAssignmentCat *navc = [[AMMNewAssignmentCat alloc] init];
+            navc.assignCat = cat;
+            [self.navigationController pushViewController:navc animated:YES];
+            [self.tableView reloadData];
+            [self.schoolClassName setNeedsDisplay];
+        } else {
+            UIActionSheet *editDeleteSheet = [[UIActionSheet alloc] initWithTitle:@"Edit or Delete" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Category" otherButtonTitles:@"Edit Category", nil];
+            [editDeleteSheet showInView:self.view];
+        }
     } else {
         AMMAssignCatTVC *actvc = [[AMMAssignCatTVC alloc] init];
         actvc.assignCat = cat;
@@ -223,13 +228,25 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        AssignmentCategory *cat = [self.schoolClass assignmentCategoryAtIndex:indexPath.row];
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    AssignmentCategory *cat = [self.schoolClass.assignmentCategories objectAtIndex:selectedIndexPath.row];
+    if (buttonIndex == actionSheet.destructiveButtonIndex) {
         [self.schoolClass removeAssignmentCategory:cat];
         [self.tableView reloadData];
+        [self.schoolClassName setNeedsDisplay];
+    } else if (buttonIndex == 1) {
+        AMMNewAssignmentCat *navc = [[AMMNewAssignmentCat alloc] init];
+        navc.assignCat = cat;
+        [self.navigationController pushViewController:navc animated:YES];
+        [self.tableView reloadData];
     }
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
 }
 
 @end
