@@ -66,7 +66,9 @@
 {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
-    [self.schoolClassName setNeedsDisplay];
+    [self.view reloadInputViews];
+    [self.schoolClassGrade setText:[NSString stringWithFormat:@"%0.1f", self.schoolClass.grade]];
+    [self.schoolClassGrade setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning

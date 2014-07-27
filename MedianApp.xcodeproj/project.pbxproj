@@ -30,6 +30,8 @@
 		A2374C3B19819A1500D0FCCC /* AMMNewAssignmentCat.m in Sources */ = {isa = PBXBuildFile; fileRef = A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */; };
 		A2374C3C19819A1500D0FCCC /* AMMNewAssignmentCat.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */; };
 		A2443B3B197B06E700384034 /* AMMSeasonTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */; };
+		A254BBCB1985AF2E00466005 /* AMMNewAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A254BBC91985AF2E00466005 /* AMMNewAssignment.m */; };
+		A254BBCC1985AF2E00466005 /* AMMNewAssignment.xib in Resources */ = {isa = PBXBuildFile; fileRef = A254BBCA1985AF2E00466005 /* AMMNewAssignment.xib */; };
 		A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
 		A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E819776E0100E9A757 /* CoreGraphics.framework */; };
 		A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
@@ -96,6 +98,9 @@
 		A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMNewAssignmentCat.m; sourceTree = "<group>"; };
 		A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMNewAssignmentCat.xib; sourceTree = "<group>"; };
 		A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSeasonTitle.xib; sourceTree = "<group>"; };
+		A254BBC81985AF2E00466005 /* AMMNewAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMNewAssignment.h; path = ../../../App/Median/Median/AMMNewAssignment.h; sourceTree = "<group>"; };
+		A254BBC91985AF2E00466005 /* AMMNewAssignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMNewAssignment.m; path = ../../../App/Median/Median/AMMNewAssignment.m; sourceTree = "<group>"; };
+		A254BBCA1985AF2E00466005 /* AMMNewAssignment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMNewAssignment.xib; path = ../../../App/Median/Median/AMMNewAssignment.xib; sourceTree = "<group>"; };
 		A25CA0E319776E0100E9A757 /* MedianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25CA0E619776E0100E9A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25CA0E819776E0100E9A757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -271,6 +276,7 @@
 				A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */,
 				A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */,
 				A20E753E19843CD6008BE1D8 /* AMMAssignCatHeader.xib */,
+				A254BBCA1985AF2E00466005 /* AMMNewAssignment.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -307,6 +313,8 @@
 				A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */,
 				A20E753B19843A82008BE1D8 /* AMMAssignCatTVC.h */,
 				A20E753C19843A82008BE1D8 /* AMMAssignCatTVC.m */,
+				A254BBC81985AF2E00466005 /* AMMNewAssignment.h */,
+				A254BBC91985AF2E00466005 /* AMMNewAssignment.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -399,6 +407,7 @@
 				A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */,
 				A20E753F19843CD6008BE1D8 /* AMMAssignCatHeader.xib in Resources */,
 				A2443B3B197B06E700384034 /* AMMSeasonTitle.xib in Resources */,
+				A254BBCC1985AF2E00466005 /* AMMNewAssignment.xib in Resources */,
 				A22A18291977879800A45540 /* AMMNewClass.xib in Resources */,
 				A2F92522197791E60082D38C /* AMMClassVC.xib in Resources */,
 				A22A181E197781E500A45540 /* Lato-BlaIta.ttf in Resources */,
@@ -442,6 +451,7 @@
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
 				A2F9251A197788990082D38C /* AMMClassStore.m in Sources */,
 				A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */,
+				A254BBCB1985AF2E00466005 /* AMMNewAssignment.m in Sources */,
 				A231D545197A118E006FD823 /* UtilityMethods.m in Sources */,
 				A227451A197EFF4900BB76C4 /* AMMSchoolClassVC.m in Sources */,
 			);

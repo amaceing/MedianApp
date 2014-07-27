@@ -8,6 +8,7 @@
 
 #import "AMMAssignCatTVC.h"
 #import "UtilityMethods.h"
+#import "AMMNewAssignment.h"
 
 @interface AMMAssignCatTVC ()
 
@@ -41,6 +42,10 @@
     //Empty Footer
     [self.tableView setTableFooterView:[[UIView alloc] init]];
     
+    //Loading custom cells and registering for reuse
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -65,7 +70,7 @@
     
     //Text
     self.assignCatName.text = self.assignCat.name;
-    [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
+    [self setUpEditButton];
     
     //Color
     self.assignCatName.textColor = [UIColor colorWithRed:30/255.0
@@ -78,6 +83,46 @@
                                              alpha:1] forState:UIControlStateNormal];
     
     return _header;
+}
+
+- (void)setUpEditButton
+{
+    [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
+    if (self.tableView.editing) {
+        [self.editButton removeTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
+    }
+    [self.editButton addTarget:self action:@selector(addAssignment) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)setUpDoneEditingButton
+{
+    [self.editButton setTitle:@"Done" forState:UIControlStateNormal];
+    if (self.tableView.editing) {
+        [self.editButton removeTarget:self action:@selector(addAssignment) forControlEvents:UIControlEventTouchUpInside];
+    }
+    [self.editButton addTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
+    [self.editButton setNeedsDisplay];
+}
+
+- (void)addAssignment
+{
+    Assignment *assign = [[Assignment alloc] initWithName:@"Click to Add" gradeEarned:0.0];
+    [self.assignCat addAssignment:assign atIndex:0];
+    self.tableView.editing = YES;
+    self.tableView.allowsSelectionDuringEditing = YES;
+    [self.tableView reloadData];
+    [self setUpDoneEditingButton];
+}
+
+- (void)doneEditing
+{
+    Assignment *dummy = [self.assignCat.assignmentList objectAtIndex:0];
+    if ([dummy.name isEqualToString:@"Click to Add"]) {
+        [self.assignCat removeAssignment:dummy];
+    }
+    [self setUpEditButton];
+    self.tableView.editing = NO;
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,16 +155,29 @@
     }
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    Assignment *assign = [self.assignCat.assignmentList objectAtIndex:indexPath.row];
     
     // Configure the cell...
+    cell.textLabel.font = [UtilityMethods latoLightFont:15];
+    cell.textLabel.text = [assign description];
     
     return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Assignment *assign = [self.assignCat.assignmentList objectAtIndex:indexPath.row];
+    AMMNewAssignment *navc = [[AMMNewAssignment alloc] initWithNibName:@"AMMNewAssignment" bundle:nil];
+    navc.assign = assign;
+    
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.backBarButtonItem = back;
+    [self.navigationController pushViewController:navc animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.
