@@ -198,7 +198,7 @@
     
     //Content
     cell.schoolClassNameLabel.text = display.name;
-    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@", display.daysOfWeek, display.timeOfDay];
+    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@ • %@", display.section, display.daysOfWeek, display.timeOfDay];
     cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", display.grade];
 
     return cell;
