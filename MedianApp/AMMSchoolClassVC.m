@@ -194,12 +194,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 75;
+    return 65;
 }
 
 - (void)setUpCellFonts:(AMMCategoryCell *)cell
 {
-    cell.catName.font = [UtilityMethods latoLightFont:17];
+    cell.catName.font = [UtilityMethods latoLightFont:20];
     cell.catGrade.font = [UtilityMethods latoLightFont:17];
     cell.catWeight.font = [UtilityMethods latoLightFont:12];
 }
