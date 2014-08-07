@@ -89,13 +89,13 @@
     self.schoolClassGrade.text = [NSString stringWithFormat:@"%0.1f", self.schoolClass.grade];
     
     //Color
-    self.schoolClassName.textColor = [UIColor colorWithRed:30/255.0
-                                                     green:178/255.0
-                                                      blue:192/255.0
+    self.schoolClassName.textColor = [UIColor colorWithRed:38/255.0
+                                                     green:172/255.0
+                                                      blue:199/255.0
                                                      alpha:1];
-    [self.edit setTitleColor:[UIColor colorWithRed:30/255.0
-                                        green:178/255.0
-                                         blue:192/255.0
+    [self.edit setTitleColor:[UIColor colorWithRed:38/255.0
+                                        green:172/255.0
+                                         blue:199/255.0
                                         alpha:1] forState:UIControlStateNormal];
     self.schoolClassGrade.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
     

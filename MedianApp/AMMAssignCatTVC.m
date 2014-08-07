@@ -73,14 +73,14 @@
     [self setUpEditButton];
     
     //Color
-    self.assignCatName.textColor = [UIColor colorWithRed:30/255.0
-                                                     green:178/255.0
-                                                      blue:192/255.0
+    self.assignCatName.textColor = [UIColor colorWithRed:38/255.0
+                                                     green:172/255.0
+                                                      blue:199/255.0
                                                      alpha:1];
-    [self.editButton setTitleColor:[UIColor colorWithRed:30/255.0
-                                             green:178/255.0
-                                              blue:192/255.0
-                                             alpha:1] forState:UIControlStateNormal];
+    [self.editButton setTitleColor:[UIColor colorWithRed:38/255.0
+                                                   green:172/255.0
+                                                    blue:199/255.0
+                                                   alpha:1] forState:UIControlStateNormal];
     
     return _header;
 }

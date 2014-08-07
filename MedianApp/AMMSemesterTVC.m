@@ -73,7 +73,10 @@
     }
     self.seasonTitle.text = [UtilityMethods determineSeasonAndYear];
     self.seasonTitle.font = [UtilityMethods latoLightFont:20];
-    self.seasonTitle.textColor = [UIColor colorWithRed:30/255.0 green:178/255.0 blue:192/255.0 alpha:1];
+    self.seasonTitle.textColor = [UIColor colorWithRed:38/255.0
+                                                 green:172/255.0
+                                                  blue:199/255.0
+                                                 alpha:1];
     return _header;
 }
 
@@ -85,9 +88,9 @@
 
 - (void)setColorValuesForNavBar
 {
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:30/255.0
-                                                                           green:178/255.0
-                                                                            blue:192/255.0
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:38/255.0
+                                                                           green:172/255.0
+                                                                            blue:199/255.0
                                                                            alpha:1];
     self.navigationController.navigationBar.translucent = YES;
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -107,7 +110,7 @@
 
 - (void)addSchoolClass:(id)sender
 {
-    SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Click to Add" daysOfWeek:@"Days" timeOfDay:@"Time"];
+    SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Click to Add" section:@"" daysOfWeek:@"Days" timeOfDay:@"Time"];
     [[AMMClassStore classStore] addClass:dummy atIndex:0];
     
     self.editing = YES;
