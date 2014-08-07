@@ -18,6 +18,7 @@
 @property (nonatomic, strong) IBOutlet UIView *header;
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassName;
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassGrade;
+@property (nonatomic, strong) IBOutlet UILabel *schoolClassGradeDec;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIButton *edit;
 
@@ -67,8 +68,7 @@
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     [self.view reloadInputViews];
-    [self.schoolClassGrade setText:[NSString stringWithFormat:@"%0.1f", self.schoolClass.grade]];
-    [self.schoolClassGrade setNeedsDisplay];
+    [self gradeTextSetUp];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,28 +77,37 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)gradeTextSetUp
+{
+    //Text
+    self.schoolClassGrade.text = [NSString stringWithFormat:@"%.0f", [self getGradeWholeNumber]];
+    //Decimal
+    double decToDisplay = [self getGradeDecimal] * 10;
+    self.schoolClassGradeDec.text = [NSString stringWithFormat:@".%.0f", decToDisplay];
+    
+    //Color
+    self.schoolClassGrade.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
+    self.schoolClassGradeDec.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
+}
+
 - (UIView *)header
 {
     //Font
     self.schoolClassName.font = [UtilityMethods latoLightFont:20];
-    self.schoolClassGrade.font = [UtilityMethods latoLightFont:30];
+    self.schoolClassGrade.font = [UtilityMethods latoLightFont:65];
+    self.schoolClassGradeDec.font = [UtilityMethods latoLightFont:45];
     self.edit.titleLabel.font = [UtilityMethods latoLightFont:14];
     
     //Text
     self.schoolClassName.text = self.schoolClass.name;
-    self.schoolClassGrade.text = [NSString stringWithFormat:@"%0.1f", self.schoolClass.grade];
     
     //Color
-    self.schoolClassName.textColor = [UIColor colorWithRed:38/255.0
-                                                     green:172/255.0
-                                                      blue:199/255.0
-                                                     alpha:1];
+    self.schoolClassName.textColor = [UIColor blackColor];
     [self.edit setTitleColor:[UIColor colorWithRed:38/255.0
                                         green:172/255.0
-                                         blue:199/255.0
+                                         blue:198/255.0
                                         alpha:1] forState:UIControlStateNormal];
-    self.schoolClassGrade.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
-    
+
     return _header;
 }
 
@@ -116,6 +125,19 @@
 
 
 #pragma Logic
+
+- (double)getGradeWholeNumber
+{
+    double wholeNum = self.schoolClass.grade;
+    double dec = [self getGradeDecimal];
+    return wholeNum - dec;
+}
+
+- (double)getGradeDecimal
+{
+    double dec = self.schoolClass.grade - floor(self.schoolClass.grade);
+    return dec;
+}
 
 - (void)setUpEditButton
 {
