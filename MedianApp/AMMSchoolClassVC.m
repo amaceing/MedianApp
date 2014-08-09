@@ -107,6 +107,19 @@
                                         green:172/255.0
                                          blue:198/255.0
                                         alpha:1] forState:UIControlStateNormal];
+    
+    /*Border on grade label
+    CALayer* wholeNumLayer = [self.schoolClassGrade layer];
+    CALayer* decLayer = [self.schoolClassGradeDec layer];
+    
+    CALayer *bottomBorder = [CALayer layer];
+    bottomBorder.borderColor = [UIColor lightGrayColor].CGColor;
+    bottomBorder.borderWidth = 1;
+    bottomBorder.frame = CGRectMake(10, wholeNumLayer.frame.size.height-1, 250, 1);
+    [bottomBorder setBorderColor:[UIColor lightGrayColor].CGColor];
+    [wholeNumLayer addSublayer:bottomBorder];
+     */
+    
 
     return _header;
 }
