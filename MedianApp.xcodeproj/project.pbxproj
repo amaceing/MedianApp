@@ -51,6 +51,7 @@
 		A27D80A3197C9B3800D8DBEB /* AMMCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A1197C9B3800D8DBEB /* AMMCategoryCell.m */; };
 		A27D80A4197C9B3800D8DBEB /* AMMCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */; };
 		A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */; };
+		A2A1A4A0199832720074735C /* SlantyDashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A1A49F199832720074735C /* SlantyDashedView.m */; };
 		A2F9251A197788990082D38C /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92513197788990082D38C /* AMMClassStore.m */; };
 		A2F9251B197788990082D38C /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92515197788990082D38C /* Assignment.m */; };
 		A2F9251C197788990082D38C /* AssignmentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92517197788990082D38C /* AssignmentCategory.m */; };
@@ -129,6 +130,8 @@
 		A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMCategoryCell.xib; path = ../../../App/Median/AMMCategoryCell.xib; sourceTree = "<group>"; };
 		A27D80A5197C9C4600D8DBEB /* AMMGradeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMGradeBar.h; path = ../../../App/Median/Median/AMMGradeBar.h; sourceTree = "<group>"; };
 		A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMGradeBar.m; path = ../../../App/Median/Median/AMMGradeBar.m; sourceTree = "<group>"; };
+		A2A1A49E199832720074735C /* SlantyDashedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlantyDashedView.h; path = "../../../../Downloads/SlantyDashedView-master/SlantyDashedView/SlantyDashedView.h"; sourceTree = "<group>"; };
+		A2A1A49F199832720074735C /* SlantyDashedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlantyDashedView.m; path = "../../../../Downloads/SlantyDashedView-master/SlantyDashedView/SlantyDashedView.m"; sourceTree = "<group>"; };
 		A2F92512197788990082D38C /* AMMClassStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMClassStore.h; path = ../../../App/Median/Median/AMMClassStore.h; sourceTree = "<group>"; };
 		A2F92513197788990082D38C /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMClassStore.m; path = ../../../App/Median/Median/AMMClassStore.m; sourceTree = "<group>"; };
 		A2F92514197788990082D38C /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assignment.h; path = ../../../App/Median/Median/Assignment.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */,
 				A27D80A5197C9C4600D8DBEB /* AMMGradeBar.h */,
 				A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */,
+				A2A1A49E199832720074735C /* SlantyDashedView.h */,
+				A2A1A49F199832720074735C /* SlantyDashedView.m */,
 				A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */,
 				A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */,
 				A20E753E19843CD6008BE1D8 /* AMMAssignCatHeader.xib */,
@@ -449,6 +454,7 @@
 				A20E753D19843A82008BE1D8 /* AMMAssignCatTVC.m in Sources */,
 				A22A182C197787AC00A45540 /* AMMNewClass.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
+				A2A1A4A0199832720074735C /* SlantyDashedView.m in Sources */,
 				A2F9251A197788990082D38C /* AMMClassStore.m in Sources */,
 				A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */,
 				A254BBCB1985AF2E00466005 /* AMMNewAssignment.m in Sources */,

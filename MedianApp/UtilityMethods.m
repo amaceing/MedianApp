@@ -46,11 +46,11 @@
 {
     UIColor *color;
     if (percentage >= 85) {
-       color = [UIColor colorWithRed:124/255.0 green:209/255.0 blue:30/255.0 alpha:1];
+       color = [UIColor colorWithRed:143/255.0 green:218/255.0 blue:34/255.0 alpha:1];
     } else if (percentage >= 70) {
-        color = [UIColor colorWithRed:243/255.0 green:172/255.0 blue:54/255.0 alpha:1];
+        color = [UIColor colorWithRed:244/255.0 green:184/255.0 blue:60/255.0 alpha:1];
     } else {
-        color = [UIColor colorWithRed:233/255.0 green:69/255.0 blue:89/255.0 alpha:1];
+        color = [UIColor colorWithRed:223/255.0 green:69/255.0 blue:89/255.0 alpha:1];
     }
     return color;
 }

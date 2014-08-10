@@ -12,6 +12,7 @@
 #import "AMMCategoryCell.h"
 #import "AMMGradeBar.h"
 #import "AMMAssignCatTVC.h"
+#import "SlantyDashedView.h"
 
 @interface AMMSchoolClassVC ()
 
@@ -107,26 +108,16 @@
                                         green:172/255.0
                                          blue:198/255.0
                                         alpha:1] forState:UIControlStateNormal];
-    
-    /*Border on grade label
-    CALayer* wholeNumLayer = [self.schoolClassGrade layer];
-    CALayer* decLayer = [self.schoolClassGradeDec layer];
-    
-    CALayer *bottomBorder = [CALayer layer];
-    bottomBorder.borderColor = [UIColor lightGrayColor].CGColor;
-    bottomBorder.borderWidth = 1;
-    bottomBorder.frame = CGRectMake(10, wholeNumLayer.frame.size.height-1, 250, 1);
-    [bottomBorder setBorderColor:[UIColor lightGrayColor].CGColor];
-    [wholeNumLayer addSublayer:bottomBorder];
-     */
-    
 
     return _header;
 }
 
 - (void)setUpBackButton
 {
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                             style:UIBarButtonItemStylePlain
+                                                            target:self
+                                                            action:nil];
     self.navigationItem.backBarButtonItem = back;
 }
 
@@ -193,6 +184,17 @@
     [self.tableView reloadData];
 }
 
+- (UIColor *)grade:(double)grade
+{
+    if (grade >= 85) {
+        return [UIColor colorWithRed:128/255.0 green:209/255.0 blue:37/255.0 alpha:1];
+    } else if (grade >= 70) {
+        return [UIColor colorWithRed:243/255.0 green:172/255.0 blue:54/255.0 alpha:1];
+    } else {
+        return [UIColor colorWithRed:208/255.0 green:69/255.0 blue:89/255.0 alpha:1];
+    }
+}
+
 #pragma Table View 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -219,9 +221,24 @@
 
 - (void)addGradeBarToCell:(AMMCategoryCell *)cell catGrade:(double)grade
 {
+    CGRect rect = CGRectMake(0, 0,
+                            (cell.catGradeLine.bounds.size.width / 100) * grade,
+                             cell.catGradeLine.bounds.size.height);
+    
+    SlantyDashedView *gradeBar = [[SlantyDashedView alloc] initWithFrame:rect];
+    gradeBar.backgroundColor = [UtilityMethods determineColorShown:grade];
+    gradeBar.dashColor = [self grade:grade];
+    gradeBar.dashWidth = 10.0;
+    gradeBar.dashSpacing = 10.0;
+    gradeBar.horizontalTranslation = 10.0;
+    
+    [cell.catGradeLine addSubview:gradeBar];
+    
+    /*
     AMMGradeBar *gradeBar = [[AMMGradeBar alloc] initWithFrame:cell.catGradeLine.bounds];
     gradeBar.grade = grade;
     [cell.catGradeLine addSubview:gradeBar];
+     */
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
