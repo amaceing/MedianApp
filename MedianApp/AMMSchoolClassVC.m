@@ -221,6 +221,7 @@
 
 - (void)addGradeBarToCell:(AMMCategoryCell *)cell catGrade:(double)grade
 {
+    [cell.catGradeLine setNeedsDisplay];
     CGRect rect = CGRectMake(0, 0,
                             (cell.catGradeLine.bounds.size.width / 100) * grade,
                              cell.catGradeLine.bounds.size.height);
@@ -256,7 +257,7 @@
     
     //Grade Bar
     [self addGradeBarToCell:cell catGrade:cat.average];
-    
+
     return cell;
 }
 
