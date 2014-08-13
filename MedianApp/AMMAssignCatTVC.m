@@ -73,10 +73,7 @@
     [self setUpEditButton];
     
     //Color
-    self.assignCatName.textColor = [UIColor colorWithRed:38/255.0
-                                                     green:172/255.0
-                                                      blue:199/255.0
-                                                     alpha:1];
+    self.assignCatName.textColor = [UIColor blackColor];
     [self.editButton setTitleColor:[UIColor colorWithRed:38/255.0
                                                    green:172/255.0
                                                     blue:199/255.0
@@ -170,13 +167,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Assignment *assign = [self.assignCat.assignmentList objectAtIndex:indexPath.row];
-    AMMNewAssignment *navc = [[AMMNewAssignment alloc] initWithNibName:@"AMMNewAssignment" bundle:nil];
-    navc.assign = assign;
-    
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
-    self.navigationItem.backBarButtonItem = back;
-    [self.navigationController pushViewController:navc animated:YES];
+    if (self.tableView.editing) {
+        Assignment *assign = [self.assignCat.assignmentList objectAtIndex:indexPath.row];
+        AMMNewAssignment *navc = [[AMMNewAssignment alloc] initWithNibName:@"AMMNewAssignment" bundle:nil];
+        navc.assign = assign;
+        
+        UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+        self.navigationItem.backBarButtonItem = back;
+        [self.navigationController pushViewController:navc animated:YES];
+    }
 }
 
 /*
