@@ -66,7 +66,7 @@
     }
     //Font
     self.assignCatName.font = [UtilityMethods latoLightFont:20];
-    self.editButton.titleLabel.font = [UtilityMethods latoLightFont:12];
+    self.editButton.titleLabel.font = [UtilityMethods latoLightFont:14];
     
     //Text
     self.assignCatName.text = self.assignCat.name;
