@@ -79,6 +79,12 @@
                                                     blue:199/255.0
                                                    alpha:1] forState:UIControlStateNormal];
     
+    // Add a bottomBorder.
+    CALayer *bottomBorder = [CALayer layer];
+    bottomBorder.frame = CGRectMake(0.0f, 63.0f, self.assignCatName.frame.size.width, 1.0f);
+    bottomBorder.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1].CGColor;
+    [self.assignCatName.layer addSublayer:bottomBorder];
+    
     return _header;
 }
 

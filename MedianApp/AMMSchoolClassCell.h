@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *schoolClassNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *schoolClassDetailsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *decimalLabel;
 
 @end

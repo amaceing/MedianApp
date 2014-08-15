@@ -65,7 +65,7 @@
     //Outer arcs
     //[innerDashGrayed addArcWithCenter:point radius:radius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     [outerSolidGrayed addArcWithCenter:outerPoint radius:outerRadius startAngle:270 endAngle:540 clockwise:YES];
-    [[UIColor colorWithRed:192/255.0 green:192/255.0 blue:192/255.0 alpha:1] setStroke];
+    [[UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1] setStroke];
     
     //Stroke
     [innerDashGrayed stroke];

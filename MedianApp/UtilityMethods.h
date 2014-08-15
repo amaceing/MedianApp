@@ -15,5 +15,9 @@
 + (UIFont *)latoRegFont:(CGFloat)size;
 + (NSString *)determineSeasonAndYear;
 + (UIColor *)determineColorShown:(double)percentage;
++ (double)getGradeWholeNumber:(double)grade;
++ (double)getGradeDecimal:(double)grade;
+
+
 
 @end

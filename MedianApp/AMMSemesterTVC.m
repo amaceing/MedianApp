@@ -72,11 +72,17 @@
         [[NSBundle mainBundle] loadNibNamed:@"AMMSeasonTitle" owner:self options:nil];
     }
     self.seasonTitle.text = [UtilityMethods determineSeasonAndYear];
-    self.seasonTitle.font = [UtilityMethods latoLightFont:20];
-    self.seasonTitle.textColor = [UIColor colorWithRed:38/255.0
-                                                 green:172/255.0
-                                                  blue:199/255.0
+    self.seasonTitle.font = [UtilityMethods latoRegFont:17];
+    self.seasonTitle.textColor = [UIColor colorWithRed:30/255.0
+                                                 green:178/255.0
+                                                  blue:192/255.0
                                                  alpha:1];
+    // Add a bottomBorder.
+    CALayer *bottomBorder = [CALayer layer];
+    bottomBorder.frame = CGRectMake(0.0f, 63.0f, self.seasonTitle.frame.size.width, 1.0f);
+    bottomBorder.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1].CGColor;
+    [self.seasonTitle.layer addSublayer:bottomBorder];
+    
     return _header;
 }
 
@@ -88,11 +94,11 @@
 
 - (void)setColorValuesForNavBar
 {
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:38/255.0
-                                                                           green:172/255.0
-                                                                            blue:199/255.0
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:30/255.0
+                                                                           green:178/255.0
+                                                                            blue:192/255.0
                                                                            alpha:1];
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.translucent = NO;
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
                                                                      [UtilityMethods latoRegFont:21.0], NSFontAttributeName,
@@ -133,7 +139,8 @@
 
 - (void)setUpEditButton
 {
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(addSchoolClass:)];
+    UIImage *pencil = [[UIImage imageNamed:@"pencil3.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithImage:pencil style:UIBarButtonItemStylePlain target:self action:@selector(addSchoolClass:)];
     [edit setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                  [UtilityMethods latoLightFont:16], NSFontAttributeName, nil] forState:UIControlStateNormal];
     
@@ -178,9 +185,10 @@
 
 - (void)setUpCellFonts:(AMMSchoolClassCell *)cell
 {
-    cell.schoolClassNameLabel.font = [UtilityMethods latoLightFont:20];
-    cell.schoolClassDetailsLabel.font = [UtilityMethods latoLightFont:12];
-    cell.gradeLabel.font = [UtilityMethods latoRegFont:18];
+    cell.schoolClassNameLabel.font = [UtilityMethods latoRegFont:20];
+    cell.schoolClassDetailsLabel.font = [UtilityMethods latoLightFont:14];
+    cell.gradeLabel.font = [UtilityMethods latoRegFont:16];
+    cell.decimalLabel.font = [UtilityMethods latoRegFont:12];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -198,8 +206,9 @@
     
     //Content
     cell.schoolClassNameLabel.text = display.name;
-    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@ • %@ • %@", display.section, display.daysOfWeek, display.timeOfDay];
-    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", display.grade];
+    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@  ∙  %@  ∙  %@", display.section, display.daysOfWeek, display.timeOfDay];
+    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f.", [UtilityMethods getGradeWholeNumber:display.grade]];
+    cell.decimalLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeDecimal:display.grade]];
 
     return cell;
 }

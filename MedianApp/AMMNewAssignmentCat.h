@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AssignmentCategory.h"
 
-@interface AMMNewAssignmentCat : UIViewController
+@interface AMMNewAssignmentCat : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) AssignmentCategory *assignCat;
 

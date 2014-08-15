@@ -81,9 +81,10 @@
 - (void)gradeTextSetUp
 {
     //Text
-    self.schoolClassGrade.text = [NSString stringWithFormat:@"%.0f", [self getGradeWholeNumber]];
+    self.schoolClassGrade.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeWholeNumber:self.schoolClass.grade]];
+    
     //Decimal
-    double decToDisplay = [self getGradeDecimal] * 10;
+    double decToDisplay = [UtilityMethods getGradeDecimal:self.schoolClass.grade] * 10;
     self.schoolClassGradeDec.text = [NSString stringWithFormat:@".%.0f", decToDisplay];
     
     //Color
@@ -108,6 +109,12 @@
                                         green:172/255.0
                                          blue:198/255.0
                                         alpha:1] forState:UIControlStateNormal];
+    
+    // Add a bottomBorder.
+    CALayer *bottomBorder = [CALayer layer];
+    bottomBorder.frame = CGRectMake(0.0f, 63.0f, self.schoolClassName.frame.size.width, 1.0f);
+    bottomBorder.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1].CGColor;
+    [self.schoolClassName.layer addSublayer:bottomBorder];
 
     return _header;
 }
@@ -129,19 +136,6 @@
 
 
 #pragma Logic
-
-- (double)getGradeWholeNumber
-{
-    double wholeNum = self.schoolClass.grade;
-    double dec = [self getGradeDecimal];
-    return wholeNum - dec;
-}
-
-- (double)getGradeDecimal
-{
-    double dec = self.schoolClass.grade - floor(self.schoolClass.grade);
-    return dec;
-}
 
 - (void)setUpEditButton
 {
@@ -187,11 +181,11 @@
 - (UIColor *)grade:(double)grade
 {
     if (grade >= 85) {
-        return [UIColor colorWithRed:128/255.0 green:209/255.0 blue:37/255.0 alpha:1];
+        return [UIColor colorWithRed:144/255.0 green:218/255.0 blue:37/255.0 alpha:1];
     } else if (grade >= 70) {
-        return [UIColor colorWithRed:243/255.0 green:172/255.0 blue:54/255.0 alpha:1];
+        return [UIColor colorWithRed:244/255.0 green:184/255.0 blue:60/255.0 alpha:1];
     } else {
-        return [UIColor colorWithRed:208/255.0 green:69/255.0 blue:89/255.0 alpha:1];
+        return [UIColor colorWithRed:273/255.0 green:78/255.0 blue:108/255.0 alpha:1];
     }
 }
 
@@ -272,8 +266,10 @@
             [self.tableView reloadData];
             [self.schoolClassName setNeedsDisplay];
         } else {
+            NSLog(@"Working");
             UIActionSheet *editDeleteSheet = [[UIActionSheet alloc] initWithTitle:@"Edit or Delete" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Category" otherButtonTitles:@"Edit Category", nil];
-            [editDeleteSheet showInView:self.view];
+            [editDeleteSheet showInView:self.view.window];
+            NSLog(@"Working 2");
         }
     } else {
         AMMAssignCatTVC *actvc = [[AMMAssignCatTVC alloc] init];

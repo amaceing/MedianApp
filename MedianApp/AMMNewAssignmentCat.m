@@ -23,6 +23,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.assignCatName.delegate = self;
+        self.assignCatWeight.delegate = self;
     }
     return self;
 }

@@ -36,7 +36,7 @@
     self.navigationItem.title = [UtilityMethods determineSeasonAndYear];
     
     //Page View Controller
-    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
+    self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
                                                           navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                         options:nil];
     self.pageController.dataSource = self;
