@@ -266,10 +266,8 @@
             [self.tableView reloadData];
             [self.schoolClassName setNeedsDisplay];
         } else {
-            NSLog(@"Working");
             UIActionSheet *editDeleteSheet = [[UIActionSheet alloc] initWithTitle:@"Edit or Delete" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Category" otherButtonTitles:@"Edit Category", nil];
             [editDeleteSheet showInView:self.view.window];
-            NSLog(@"Working 2");
         }
     } else {
         AMMAssignCatTVC *actvc = [[AMMAssignCatTVC alloc] init];
