@@ -208,7 +208,7 @@
     cell.schoolClassNameLabel.text = display.name;
     cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@  ∙  %@  ∙  %@", display.section, display.daysOfWeek, display.timeOfDay];
     cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f.", [UtilityMethods getGradeWholeNumber:display.grade]];
-    cell.decimalLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeDecimal:display.grade]];
+    cell.decimalLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeDecimal:display.grade] * 10];
 
     return cell;
 }

@@ -178,7 +178,7 @@
     [self.tableView reloadData];
 }
 
-- (UIColor *)grade:(double)grade
+- (UIColor *)determineDashColor:(double)grade
 {
     if (grade >= 85) {
         return [UIColor colorWithRed:144/255.0 green:218/255.0 blue:37/255.0 alpha:1];
@@ -222,7 +222,7 @@
     
     SlantyDashedView *gradeBar = [[SlantyDashedView alloc] initWithFrame:rect];
     gradeBar.backgroundColor = [UtilityMethods determineColorShown:grade];
-    gradeBar.dashColor = [self grade:grade];
+    gradeBar.dashColor = [self determineDashColor:grade];
     gradeBar.dashWidth = 10.0;
     gradeBar.dashSpacing = 10.0;
     gradeBar.horizontalTranslation = 10.0;
