@@ -173,9 +173,13 @@
     AssignmentCategory *assignCatToAdd = [[AssignmentCategory alloc] initWithName:@"Click to Add" withWeight:0];
     [self.schoolClass addAssignmentCategory:assignCatToAdd];
     
+    //Insertion animation
+    NSInteger row = 0;
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
+    
     self.tableView.editing = YES;
     self.tableView.allowsSelectionDuringEditing = YES;
-    [self.tableView reloadData];
     [self setUpDoneEditingButton];
 }
 
@@ -184,10 +188,13 @@
     AssignmentCategory *dummy = [self.schoolClass assignmentCategoryAtIndex:0];
     if ([dummy.name isEqualToString:@"Click to Add"]) {
         [self.schoolClass removeAssignmentCategory:dummy];
+        //Deletion animation
+        NSInteger row = 0;
+        NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+        [self.tableView deleteRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
     }
     [self setUpEditButton];
     self.tableView.editing = NO;
-    [self.tableView reloadData];
 }
 
 - (UIColor *)determineDashColor:(double)grade

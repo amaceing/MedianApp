@@ -116,12 +116,16 @@
 
 - (void)addSchoolClass:(id)sender
 {
-    SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Click to Add" section:@"" daysOfWeek:@"Days" timeOfDay:@"Time"];
+    SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Click to Add" section:@"101" daysOfWeek:@"Days" timeOfDay:@"Time"];
     [[AMMClassStore classStore] addClass:dummy atIndex:0];
+    
+    //Insertion Animation
+    NSInteger row = 0;
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
     
     self.editing = YES;
     self.tableView.allowsSelectionDuringEditing = YES;
-    [self.tableView reloadData];
     
     [self setUpDoneButton];
 }
@@ -131,10 +135,14 @@
     SchoolClass *dummy = [[[AMMClassStore classStore] allClasses] objectAtIndex:0];
     if ([dummy.name isEqualToString:@"Click to Add"]) {
         [[AMMClassStore classStore] removeClass:dummy];
+        
+        //Deletion animation
+        NSInteger row = 0;
+        NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0];
+        [self.tableView deleteRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationTop];
     }
     self.editing = NO;
     [self setUpEditButton];
-    [self.tableView reloadData];
 }
 
 - (void)setUpEditButton
