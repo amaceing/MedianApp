@@ -92,6 +92,15 @@
     self.schoolClassGradeDec.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
 }
 
+- (NSString *)schoolClassNameTextSetUp
+{
+    NSString *className = self.schoolClass.name;
+    if ([className length] > 18) {
+        className = [className substringToIndex: MIN(15, [className length])];
+    }
+    return className;
+}
+
 - (UIView *)header
 {
     //Font
@@ -101,7 +110,7 @@
     self.edit.titleLabel.font = [UtilityMethods latoLightFont:14];
     
     //Text
-    self.schoolClassName.text = self.schoolClass.name;
+    self.schoolClassName.text = [self schoolClassNameTextSetUp];
     
     //Color
     self.schoolClassName.textColor = [UIColor blackColor];
