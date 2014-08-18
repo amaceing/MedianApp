@@ -124,7 +124,7 @@
 		A25CA12019776E8A00E9A757 /* AMMClassCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassCircle.h; sourceTree = "<group>"; };
 		A25CA12119776E8A00E9A757 /* AMMClassCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassCircle.m; sourceTree = "<group>"; };
 		A25CA12C19776F9D00E9A757 /* AMMSemesterTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSemesterTVC.h; sourceTree = "<group>"; };
-		A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSemesterTVC.m; sourceTree = "<group>"; };
+		A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSemesterTVC.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A27D80A0197C9B3800D8DBEB /* AMMCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMCategoryCell.h; path = ../../../App/Median/AMMCategoryCell.h; sourceTree = "<group>"; };
 		A27D80A1197C9B3800D8DBEB /* AMMCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMCategoryCell.m; path = ../../../App/Median/AMMCategoryCell.m; sourceTree = "<group>"; };
 		A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMCategoryCell.xib; path = ../../../App/Median/AMMCategoryCell.xib; sourceTree = "<group>"; };
