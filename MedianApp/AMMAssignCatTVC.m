@@ -96,7 +96,9 @@
 
 - (void)setUpEditButton
 {
-    [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
+    [self.editButton setTitle:nil forState:UIControlStateNormal];
+    UIImage *pencil = [[UIImage imageNamed:@"pencil6.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [self.editButton setImage:pencil forState:UIControlStateNormal];
     if (self.tableView.editing) {
         [self.editButton removeTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -105,6 +107,7 @@
 
 - (void)setUpDoneEditingButton
 {
+    [self.editButton setImage:nil forState:UIControlStateNormal];
     [self.editButton setTitle:@"Done" forState:UIControlStateNormal];
     if (self.tableView.editing) {
         [self.editButton removeTarget:self action:@selector(addAssignment) forControlEvents:UIControlEventTouchUpInside];
