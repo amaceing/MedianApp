@@ -235,9 +235,12 @@
 - (void)addGradeBarToCell:(AMMCategoryCell *)cell catGrade:(double)grade
 {
     [cell.catGradeLine setNeedsDisplay];
-    CGRect rect = CGRectMake(0, 0,
-                            (cell.catGradeLine.bounds.size.width / 100) * grade,
-                             cell.catGradeLine.bounds.size.height);
+    
+    double length = (cell.catGradeLine.bounds.size.width / 100) * grade;
+    if (length >= 300) {
+        length = cell.catGradeLine.bounds.size.width;
+    }
+    CGRect rect = CGRectMake(0, 0, length,cell.catGradeLine.bounds.size.height);
     
     SlantyDashedView *gradeBar = [[SlantyDashedView alloc] initWithFrame:rect];
     gradeBar.backgroundColor = [UtilityMethods determineColorShown:grade];

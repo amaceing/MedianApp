@@ -195,8 +195,8 @@
 {
     cell.schoolClassNameLabel.font = [UtilityMethods latoRegFont:20];
     cell.schoolClassDetailsLabel.font = [UtilityMethods latoLightFont:14];
-    cell.gradeLabel.font = [UtilityMethods latoRegFont:16];
-    cell.decimalLabel.font = [UtilityMethods latoRegFont:12];
+    cell.gradeLabel.font = [UtilityMethods latoLightFont:18];
+    cell.decimalLabel.font = [UtilityMethods latoLightFont:13];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -215,8 +215,8 @@
     //Content
     cell.schoolClassNameLabel.text = display.name;
     cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@  ∙  %@  ∙  %@", display.section, display.daysOfWeek, display.timeOfDay];
-    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f.", [UtilityMethods getGradeWholeNumber:display.grade]];
-    cell.decimalLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeDecimal:display.grade] * 10];
+    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeWholeNumber:display.grade]];
+    cell.decimalLabel.text = [NSString stringWithFormat:@".%.0f", [UtilityMethods getGradeDecimal:display.grade] * 10];
 
     return cell;
 }

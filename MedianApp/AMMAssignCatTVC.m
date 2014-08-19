@@ -59,6 +59,12 @@
     [self.tableView reloadData];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self doneEditing];
+}
+
 - (UIView *)header
 {
     if (!_header) {
