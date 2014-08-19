@@ -65,6 +65,9 @@
 + (double)getGradeDecimal:(double)grade
 {
     double dec = grade - floor(grade);
+    if (dec >= 0.95) {
+        return 0.1;
+    }
     return dec;
 }
 
