@@ -50,7 +50,8 @@
     
     //Color Setup
     [self setColorValuesForNavBar];
-
+    
+    //Edit Button set up
     [self setUpEditButton];
     
     //Empty footer to not have empty cells
@@ -77,7 +78,7 @@
                                                  green:178/255.0
                                                   blue:192/255.0
                                                  alpha:1];
-    // Add a bottomBorder.
+    // Add a bottomBorder to season title
     CALayer *bottomBorder = [CALayer layer];
     bottomBorder.frame = CGRectMake(0.0f, 63.0f, self.seasonTitle.frame.size.width, 1.0f);
     bottomBorder.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1].CGColor;
@@ -98,13 +99,17 @@
                                                                            green:178/255.0
                                                                             blue:192/255.0
                                                                            alpha:1];
+    
     self.navigationController.navigationBar.translucent = NO;
+    
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
                                                                      [UtilityMethods latoRegFont:21.0], NSFontAttributeName,
                                                                      nil]];
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor lightGrayColor];
+    
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
@@ -112,6 +117,23 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Adding a class
+
+- (void)setUpEditButton
+{
+    UIImage *pencil = [[UIImage imageNamed:@"pencil3.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithImage:pencil
+                                                             style:UIBarButtonItemStylePlain
+                                                            target:self
+                                                            action:@selector(addSchoolClass:)];
+    
+    [edit setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                  [UtilityMethods latoLightFont:16], NSFontAttributeName, nil]
+                                  forState:UIControlStateNormal];
+    
+    self.navigationItem.rightBarButtonItem = edit;
 }
 
 - (void)addSchoolClass:(id)sender
@@ -143,16 +165,6 @@
     }
     self.editing = NO;
     [self setUpEditButton];
-}
-
-- (void)setUpEditButton
-{
-    UIImage *pencil = [[UIImage imageNamed:@"pencil3.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithImage:pencil style:UIBarButtonItemStylePlain target:self action:@selector(addSchoolClass:)];
-    [edit setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                 [UtilityMethods latoLightFont:16], NSFontAttributeName, nil] forState:UIControlStateNormal];
-    
-    self.navigationItem.rightBarButtonItem = edit;
 }
 
 - (void)setUpDoneButton
@@ -202,6 +214,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AMMSchoolClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMSchoolClassCell" forIndexPath:indexPath];
+    
     //Font
     [self setUpCellFonts:cell];
     
@@ -224,6 +237,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SchoolClass *sc = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
+    
     if (self.editing) {
         AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
         ncvc.classToAdd = sc;
@@ -231,7 +245,7 @@
         [self.navigationController pushViewController:ncvc animated:YES];
         [self.tableView reloadData];
     } else {
-        //Pop School Class
+        //Push School Class
         NSInteger classIndex  = indexPath.row;
         AMMClassPageController *cpvc = [[AMMClassPageController alloc] init];
         cpvc.classIndex = classIndex;
@@ -250,7 +264,6 @@
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     return YES;
 }
 

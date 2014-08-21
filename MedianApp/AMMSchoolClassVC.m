@@ -306,7 +306,7 @@
     if (buttonIndex == actionSheet.destructiveButtonIndex) {
         [self.schoolClass removeAssignmentCategory:cat];
         [self.tableView reloadData];
-        [self.schoolClassName setNeedsDisplay];
+        [self gradeTextSetUp];
     } else if (buttonIndex == 1) {
         AMMNewAssignmentCat *navc = [[AMMNewAssignmentCat alloc] init];
         navc.assignCat = cat;
