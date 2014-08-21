@@ -33,6 +33,8 @@
     return self;
 }
 
+#pragma mark - View loading methods
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
