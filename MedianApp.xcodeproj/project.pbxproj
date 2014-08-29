@@ -12,26 +12,11 @@
 		A2274516197EFE7D00BB76C4 /* AMMClassPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2274515197EFE7D00BB76C4 /* AMMClassPageController.m */; };
 		A227451A197EFF4900BB76C4 /* AMMSchoolClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2274518197EFF4900BB76C4 /* AMMSchoolClassVC.m */; };
 		A227451B197EFF4900BB76C4 /* AMMSchoolClassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */; };
-		A22A181D197781E500A45540 /* Lato-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1812197781E500A45540 /* Lato-Bla.ttf */; };
-		A22A181E197781E500A45540 /* Lato-BlaIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1813197781E500A45540 /* Lato-BlaIta.ttf */; };
-		A22A181F197781E500A45540 /* Lato-Bol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1814197781E500A45540 /* Lato-Bol.ttf */; };
-		A22A1820197781E500A45540 /* Lato-BolIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1815197781E500A45540 /* Lato-BolIta.ttf */; };
-		A22A1821197781E500A45540 /* Lato-Hai.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1816197781E500A45540 /* Lato-Hai.ttf */; };
-		A22A1822197781E500A45540 /* Lato-HaiIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1817197781E500A45540 /* Lato-HaiIta.ttf */; };
-		A22A1823197781E500A45540 /* Lato-Lig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1818197781E500A45540 /* Lato-Lig.ttf */; };
-		A22A1824197781E500A45540 /* Lato-LigIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A1819197781E500A45540 /* Lato-LigIta.ttf */; };
-		A22A1825197781E500A45540 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A181A197781E500A45540 /* Lato-Reg.ttf */; };
-		A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22A181B197781E500A45540 /* Lato-RegIta.ttf */; };
-		A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A22A181C197781E500A45540 /* SIL Open Font License.txt */; };
-		A22A18291977879800A45540 /* AMMNewClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = A22A18281977879800A45540 /* AMMNewClass.xib */; };
-		A22A182C197787AC00A45540 /* AMMNewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A22A182B197787AC00A45540 /* AMMNewClass.m */; };
 		A231D542197A06F9006FD823 /* AMMSemesterHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A231D541197A06F9006FD823 /* AMMSemesterHeader.xib */; };
 		A231D545197A118E006FD823 /* UtilityMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = A231D544197A118E006FD823 /* UtilityMethods.m */; };
 		A2374C3B19819A1500D0FCCC /* AMMNewAssignmentCat.m in Sources */ = {isa = PBXBuildFile; fileRef = A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */; };
 		A2374C3C19819A1500D0FCCC /* AMMNewAssignmentCat.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */; };
 		A2443B3B197B06E700384034 /* AMMSeasonTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */; };
-		A254BBCB1985AF2E00466005 /* AMMNewAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A254BBC91985AF2E00466005 /* AMMNewAssignment.m */; };
-		A254BBCC1985AF2E00466005 /* AMMNewAssignment.xib in Resources */ = {isa = PBXBuildFile; fileRef = A254BBCA1985AF2E00466005 /* AMMNewAssignment.xib */; };
 		A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
 		A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E819776E0100E9A757 /* CoreGraphics.framework */; };
 		A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
@@ -48,14 +33,36 @@
 		A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */; };
 		A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12119776E8A00E9A757 /* AMMClassCircle.m */; };
 		A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */; };
-		A27D80A3197C9B3800D8DBEB /* AMMCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A1197C9B3800D8DBEB /* AMMCategoryCell.m */; };
-		A27D80A4197C9B3800D8DBEB /* AMMCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */; };
-		A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */; };
-		A2A1A4A0199832720074735C /* SlantyDashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A1A49F199832720074735C /* SlantyDashedView.m */; };
-		A2F9251A197788990082D38C /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92513197788990082D38C /* AMMClassStore.m */; };
-		A2F9251B197788990082D38C /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92515197788990082D38C /* Assignment.m */; };
-		A2F9251C197788990082D38C /* AssignmentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92517197788990082D38C /* AssignmentCategory.m */; };
-		A2F9251D197788990082D38C /* SchoolClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F92519197788990082D38C /* SchoolClass.m */; };
+		A2778EBE19B1309A00E0FC8F /* AMMCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2778EBC19B1309A00E0FC8F /* AMMCategoryCell.m */; };
+		A2778EBF19B1309A00E0FC8F /* AMMCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2778EBD19B1309A00E0FC8F /* AMMCategoryCell.xib */; };
+		A2778EC819B130B900E0FC8F /* AMMClassStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2778EC119B130B900E0FC8F /* AMMClassStore.m */; };
+		A2778EC919B130B900E0FC8F /* Assignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A2778EC319B130B900E0FC8F /* Assignment.m */; };
+		A2778ECA19B130B900E0FC8F /* AssignmentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A2778EC519B130B900E0FC8F /* AssignmentCategory.m */; };
+		A2778ECB19B130B900E0FC8F /* SchoolClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A2778EC719B130B900E0FC8F /* SchoolClass.m */; };
+		A2778ED019B130DC00E0FC8F /* AMMNewAssignment.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2778ECC19B130DC00E0FC8F /* AMMNewAssignment.xib */; };
+		A2778ED119B130DC00E0FC8F /* AMMNewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A2778ECE19B130DC00E0FC8F /* AMMNewClass.m */; };
+		A2778ED219B130DC00E0FC8F /* AMMNewClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2778ECF19B130DC00E0FC8F /* AMMNewClass.xib */; };
+		A2CD54A819B12EBE00790E3F /* AMMNewAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD54A719B12EBE00790E3F /* AMMNewAssignment.m */; };
+		A2CD54AB19B12F3B00790E3F /* AMMGradeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD54AA19B12F3B00790E3F /* AMMGradeBar.m */; };
+		A2CD54AE19B12F9000790E3F /* SlantyDashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD54AD19B12F9000790E3F /* SlantyDashedView.m */; };
+		A2CD54C119B12FF000790E3F /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54AF19B12FF000790E3F /* Lato-Black.ttf */; };
+		A2CD54C219B12FF000790E3F /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B019B12FF000790E3F /* Lato-BlackItalic.ttf */; };
+		A2CD54C319B12FF000790E3F /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B119B12FF000790E3F /* Lato-Bold.ttf */; };
+		A2CD54C419B12FF000790E3F /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B219B12FF000790E3F /* Lato-BoldItalic.ttf */; };
+		A2CD54C519B12FF000790E3F /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B319B12FF000790E3F /* Lato-Hairline.ttf */; };
+		A2CD54C619B12FF000790E3F /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B419B12FF000790E3F /* Lato-HairlineItalic.ttf */; };
+		A2CD54C719B12FF000790E3F /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B519B12FF000790E3F /* Lato-Heavy.ttf */; };
+		A2CD54C819B12FF000790E3F /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B619B12FF000790E3F /* Lato-HeavyItalic.ttf */; };
+		A2CD54C919B12FF000790E3F /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B719B12FF000790E3F /* Lato-Italic.ttf */; };
+		A2CD54CA19B12FF000790E3F /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B819B12FF000790E3F /* Lato-Light.ttf */; };
+		A2CD54CB19B12FF000790E3F /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54B919B12FF000790E3F /* Lato-LightItalic.ttf */; };
+		A2CD54CC19B12FF000790E3F /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54BA19B12FF000790E3F /* Lato-Medium.ttf */; };
+		A2CD54CD19B12FF000790E3F /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54BB19B12FF000790E3F /* Lato-MediumItalic.ttf */; };
+		A2CD54CE19B12FF000790E3F /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54BC19B12FF000790E3F /* Lato-Regular.ttf */; };
+		A2CD54CF19B12FF000790E3F /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54BD19B12FF000790E3F /* Lato-Semibold.ttf */; };
+		A2CD54D019B12FF000790E3F /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54BE19B12FF000790E3F /* Lato-SemiboldItalic.ttf */; };
+		A2CD54D119B12FF000790E3F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54BF19B12FF000790E3F /* Lato-Thin.ttf */; };
+		A2CD54D219B12FF000790E3F /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54C019B12FF000790E3F /* Lato-ThinItalic.ttf */; };
 		A2F92522197791E60082D38C /* AMMClassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F92520197791E60082D38C /* AMMClassVC.xib */; };
 /* End PBXBuildFile section */
 
@@ -78,20 +85,6 @@
 		A2274517197EFF4900BB76C4 /* AMMSchoolClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSchoolClassVC.h; sourceTree = "<group>"; };
 		A2274518197EFF4900BB76C4 /* AMMSchoolClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSchoolClassVC.m; sourceTree = "<group>"; };
 		A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSchoolClassVC.xib; sourceTree = "<group>"; };
-		A22A1812197781E500A45540 /* Lato-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bla.ttf"; path = "../../../App/Median/Median/lato/Lato-Bla.ttf"; sourceTree = "<group>"; };
-		A22A1813197781E500A45540 /* Lato-BlaIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlaIta.ttf"; path = "../../../App/Median/Median/lato/Lato-BlaIta.ttf"; sourceTree = "<group>"; };
-		A22A1814197781E500A45540 /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bol.ttf"; path = "../../../App/Median/Median/lato/Lato-Bol.ttf"; sourceTree = "<group>"; };
-		A22A1815197781E500A45540 /* Lato-BolIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BolIta.ttf"; path = "../../../App/Median/Median/lato/Lato-BolIta.ttf"; sourceTree = "<group>"; };
-		A22A1816197781E500A45540 /* Lato-Hai.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hai.ttf"; path = "../../../App/Median/Median/lato/Lato-Hai.ttf"; sourceTree = "<group>"; };
-		A22A1817197781E500A45540 /* Lato-HaiIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HaiIta.ttf"; path = "../../../App/Median/Median/lato/Lato-HaiIta.ttf"; sourceTree = "<group>"; };
-		A22A1818197781E500A45540 /* Lato-Lig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Lig.ttf"; path = "../../../App/Median/Median/lato/Lato-Lig.ttf"; sourceTree = "<group>"; };
-		A22A1819197781E500A45540 /* Lato-LigIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LigIta.ttf"; path = "../../../App/Median/Median/lato/Lato-LigIta.ttf"; sourceTree = "<group>"; };
-		A22A181A197781E500A45540 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Reg.ttf"; path = "../../../App/Median/Median/lato/Lato-Reg.ttf"; sourceTree = "<group>"; };
-		A22A181B197781E500A45540 /* Lato-RegIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-RegIta.ttf"; path = "../../../App/Median/Median/lato/Lato-RegIta.ttf"; sourceTree = "<group>"; };
-		A22A181C197781E500A45540 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "SIL Open Font License.txt"; path = "../../../App/Median/Median/lato/SIL Open Font License.txt"; sourceTree = "<group>"; };
-		A22A18281977879800A45540 /* AMMNewClass.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMNewClass.xib; path = ../../../App/Median/Median/AMMNewClass.xib; sourceTree = "<group>"; };
-		A22A182A197787AC00A45540 /* AMMNewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMNewClass.h; path = ../../../App/Median/Median/AMMNewClass.h; sourceTree = "<group>"; };
-		A22A182B197787AC00A45540 /* AMMNewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMNewClass.m; path = ../../../App/Median/Median/AMMNewClass.m; sourceTree = "<group>"; };
 		A231D541197A06F9006FD823 /* AMMSemesterHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSemesterHeader.xib; sourceTree = "<group>"; };
 		A231D543197A118E006FD823 /* UtilityMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityMethods.h; sourceTree = "<group>"; };
 		A231D544197A118E006FD823 /* UtilityMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityMethods.m; sourceTree = "<group>"; };
@@ -99,9 +92,6 @@
 		A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMNewAssignmentCat.m; sourceTree = "<group>"; };
 		A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMNewAssignmentCat.xib; sourceTree = "<group>"; };
 		A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSeasonTitle.xib; sourceTree = "<group>"; };
-		A254BBC81985AF2E00466005 /* AMMNewAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMNewAssignment.h; path = ../../../App/Median/Median/AMMNewAssignment.h; sourceTree = "<group>"; };
-		A254BBC91985AF2E00466005 /* AMMNewAssignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMNewAssignment.m; path = ../../../App/Median/Median/AMMNewAssignment.m; sourceTree = "<group>"; };
-		A254BBCA1985AF2E00466005 /* AMMNewAssignment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMNewAssignment.xib; path = ../../../App/Median/Median/AMMNewAssignment.xib; sourceTree = "<group>"; };
 		A25CA0E319776E0100E9A757 /* MedianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25CA0E619776E0100E9A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25CA0E819776E0100E9A757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,21 +115,45 @@
 		A25CA12119776E8A00E9A757 /* AMMClassCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassCircle.m; sourceTree = "<group>"; };
 		A25CA12C19776F9D00E9A757 /* AMMSemesterTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMSemesterTVC.h; sourceTree = "<group>"; };
 		A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMSemesterTVC.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		A27D80A0197C9B3800D8DBEB /* AMMCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMCategoryCell.h; path = ../../../App/Median/AMMCategoryCell.h; sourceTree = "<group>"; };
-		A27D80A1197C9B3800D8DBEB /* AMMCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMCategoryCell.m; path = ../../../App/Median/AMMCategoryCell.m; sourceTree = "<group>"; };
-		A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMMCategoryCell.xib; path = ../../../App/Median/AMMCategoryCell.xib; sourceTree = "<group>"; };
-		A27D80A5197C9C4600D8DBEB /* AMMGradeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMGradeBar.h; path = ../../../App/Median/Median/AMMGradeBar.h; sourceTree = "<group>"; };
-		A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMGradeBar.m; path = ../../../App/Median/Median/AMMGradeBar.m; sourceTree = "<group>"; };
-		A2A1A49E199832720074735C /* SlantyDashedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlantyDashedView.h; path = "../../../../Downloads/SlantyDashedView-master/SlantyDashedView/SlantyDashedView.h"; sourceTree = "<group>"; };
-		A2A1A49F199832720074735C /* SlantyDashedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlantyDashedView.m; path = "../../../../Downloads/SlantyDashedView-master/SlantyDashedView/SlantyDashedView.m"; sourceTree = "<group>"; };
-		A2F92512197788990082D38C /* AMMClassStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMMClassStore.h; path = ../../../App/Median/Median/AMMClassStore.h; sourceTree = "<group>"; };
-		A2F92513197788990082D38C /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMMClassStore.m; path = ../../../App/Median/Median/AMMClassStore.m; sourceTree = "<group>"; };
-		A2F92514197788990082D38C /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assignment.h; path = ../../../App/Median/Median/Assignment.h; sourceTree = "<group>"; };
-		A2F92515197788990082D38C /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Assignment.m; path = ../../../App/Median/Median/Assignment.m; sourceTree = "<group>"; };
-		A2F92516197788990082D38C /* AssignmentCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssignmentCategory.h; path = ../../../App/Median/Median/AssignmentCategory.h; sourceTree = "<group>"; };
-		A2F92517197788990082D38C /* AssignmentCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssignmentCategory.m; path = ../../../App/Median/Median/AssignmentCategory.m; sourceTree = "<group>"; };
-		A2F92518197788990082D38C /* SchoolClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SchoolClass.h; path = ../../../App/Median/Median/SchoolClass.h; sourceTree = "<group>"; };
-		A2F92519197788990082D38C /* SchoolClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SchoolClass.m; path = ../../../App/Median/Median/SchoolClass.m; sourceTree = "<group>"; };
+		A2778EBB19B1309A00E0FC8F /* AMMCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMCategoryCell.h; sourceTree = "<group>"; };
+		A2778EBC19B1309A00E0FC8F /* AMMCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMCategoryCell.m; sourceTree = "<group>"; };
+		A2778EBD19B1309A00E0FC8F /* AMMCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMCategoryCell.xib; sourceTree = "<group>"; };
+		A2778EC019B130B900E0FC8F /* AMMClassStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassStore.h; sourceTree = "<group>"; };
+		A2778EC119B130B900E0FC8F /* AMMClassStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassStore.m; sourceTree = "<group>"; };
+		A2778EC219B130B900E0FC8F /* Assignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assignment.h; sourceTree = "<group>"; };
+		A2778EC319B130B900E0FC8F /* Assignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assignment.m; sourceTree = "<group>"; };
+		A2778EC419B130B900E0FC8F /* AssignmentCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignmentCategory.h; sourceTree = "<group>"; };
+		A2778EC519B130B900E0FC8F /* AssignmentCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignmentCategory.m; sourceTree = "<group>"; };
+		A2778EC619B130B900E0FC8F /* SchoolClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolClass.h; sourceTree = "<group>"; };
+		A2778EC719B130B900E0FC8F /* SchoolClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolClass.m; sourceTree = "<group>"; };
+		A2778ECC19B130DC00E0FC8F /* AMMNewAssignment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMNewAssignment.xib; sourceTree = "<group>"; };
+		A2778ECD19B130DC00E0FC8F /* AMMNewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMNewClass.h; sourceTree = "<group>"; };
+		A2778ECE19B130DC00E0FC8F /* AMMNewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMNewClass.m; sourceTree = "<group>"; };
+		A2778ECF19B130DC00E0FC8F /* AMMNewClass.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMNewClass.xib; sourceTree = "<group>"; };
+		A2CD54A619B12EBE00790E3F /* AMMNewAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMNewAssignment.h; sourceTree = "<group>"; };
+		A2CD54A719B12EBE00790E3F /* AMMNewAssignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMNewAssignment.m; sourceTree = "<group>"; };
+		A2CD54A919B12F3B00790E3F /* AMMGradeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMGradeBar.h; sourceTree = "<group>"; };
+		A2CD54AA19B12F3B00790E3F /* AMMGradeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMGradeBar.m; sourceTree = "<group>"; };
+		A2CD54AC19B12F9000790E3F /* SlantyDashedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlantyDashedView.h; path = "../../../Downloads/SlantyDashedView-master/SlantyDashedView/SlantyDashedView.h"; sourceTree = "<group>"; };
+		A2CD54AD19B12F9000790E3F /* SlantyDashedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SlantyDashedView.m; path = "../../../Downloads/SlantyDashedView-master/SlantyDashedView/SlantyDashedView.m"; sourceTree = "<group>"; };
+		A2CD54AF19B12FF000790E3F /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "../../../Downloads/lato/Lato-Black.ttf"; sourceTree = "<group>"; };
+		A2CD54B019B12FF000790E3F /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlackItalic.ttf"; path = "../../../Downloads/lato/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		A2CD54B119B12FF000790E3F /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "../../../Downloads/lato/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		A2CD54B219B12FF000790E3F /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BoldItalic.ttf"; path = "../../../Downloads/lato/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A2CD54B319B12FF000790E3F /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hairline.ttf"; path = "../../../Downloads/lato/Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		A2CD54B419B12FF000790E3F /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HairlineItalic.ttf"; path = "../../../Downloads/lato/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		A2CD54B519B12FF000790E3F /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Heavy.ttf"; path = "../../../Downloads/lato/Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		A2CD54B619B12FF000790E3F /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HeavyItalic.ttf"; path = "../../../Downloads/lato/Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		A2CD54B719B12FF000790E3F /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "../../../Downloads/lato/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		A2CD54B819B12FF000790E3F /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../Downloads/lato/Lato-Light.ttf"; sourceTree = "<group>"; };
+		A2CD54B919B12FF000790E3F /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "../../../Downloads/lato/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		A2CD54BA19B12FF000790E3F /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Medium.ttf"; path = "../../../Downloads/lato/Lato-Medium.ttf"; sourceTree = "<group>"; };
+		A2CD54BB19B12FF000790E3F /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-MediumItalic.ttf"; path = "../../../Downloads/lato/Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A2CD54BC19B12FF000790E3F /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "../../../Downloads/lato/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		A2CD54BD19B12FF000790E3F /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Semibold.ttf"; path = "../../../Downloads/lato/Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		A2CD54BE19B12FF000790E3F /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-SemiboldItalic.ttf"; path = "../../../Downloads/lato/Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		A2CD54BF19B12FF000790E3F /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../../../Downloads/lato/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		A2CD54C019B12FF000790E3F /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-ThinItalic.ttf"; path = "../../../Downloads/lato/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		A2F92520197791E60082D38C /* AMMClassVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMClassVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,17 +184,24 @@
 		A22A1811197781C000A45540 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A22A1812197781E500A45540 /* Lato-Bla.ttf */,
-				A22A1813197781E500A45540 /* Lato-BlaIta.ttf */,
-				A22A1814197781E500A45540 /* Lato-Bol.ttf */,
-				A22A1815197781E500A45540 /* Lato-BolIta.ttf */,
-				A22A1816197781E500A45540 /* Lato-Hai.ttf */,
-				A22A1817197781E500A45540 /* Lato-HaiIta.ttf */,
-				A22A1818197781E500A45540 /* Lato-Lig.ttf */,
-				A22A1819197781E500A45540 /* Lato-LigIta.ttf */,
-				A22A181A197781E500A45540 /* Lato-Reg.ttf */,
-				A22A181B197781E500A45540 /* Lato-RegIta.ttf */,
-				A22A181C197781E500A45540 /* SIL Open Font License.txt */,
+				A2CD54AF19B12FF000790E3F /* Lato-Black.ttf */,
+				A2CD54B019B12FF000790E3F /* Lato-BlackItalic.ttf */,
+				A2CD54B119B12FF000790E3F /* Lato-Bold.ttf */,
+				A2CD54B219B12FF000790E3F /* Lato-BoldItalic.ttf */,
+				A2CD54B319B12FF000790E3F /* Lato-Hairline.ttf */,
+				A2CD54B419B12FF000790E3F /* Lato-HairlineItalic.ttf */,
+				A2CD54B519B12FF000790E3F /* Lato-Heavy.ttf */,
+				A2CD54B619B12FF000790E3F /* Lato-HeavyItalic.ttf */,
+				A2CD54B719B12FF000790E3F /* Lato-Italic.ttf */,
+				A2CD54B819B12FF000790E3F /* Lato-Light.ttf */,
+				A2CD54B919B12FF000790E3F /* Lato-LightItalic.ttf */,
+				A2CD54BA19B12FF000790E3F /* Lato-Medium.ttf */,
+				A2CD54BB19B12FF000790E3F /* Lato-MediumItalic.ttf */,
+				A2CD54BC19B12FF000790E3F /* Lato-Regular.ttf */,
+				A2CD54BD19B12FF000790E3F /* Lato-Semibold.ttf */,
+				A2CD54BE19B12FF000790E3F /* Lato-SemiboldItalic.ttf */,
+				A2CD54BF19B12FF000790E3F /* Lato-Thin.ttf */,
+				A2CD54C019B12FF000790E3F /* Lato-ThinItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -267,21 +288,21 @@
 				A25CA11D19776E5900E9A757 /* AMMSchoolClassCell.xib */,
 				A25CA12019776E8A00E9A757 /* AMMClassCircle.h */,
 				A25CA12119776E8A00E9A757 /* AMMClassCircle.m */,
-				A22A18281977879800A45540 /* AMMNewClass.xib */,
+				A2778ECF19B130DC00E0FC8F /* AMMNewClass.xib */,
 				A2F92520197791E60082D38C /* AMMClassVC.xib */,
 				A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */,
 				A231D541197A06F9006FD823 /* AMMSemesterHeader.xib */,
-				A27D80A0197C9B3800D8DBEB /* AMMCategoryCell.h */,
-				A27D80A1197C9B3800D8DBEB /* AMMCategoryCell.m */,
-				A27D80A2197C9B3800D8DBEB /* AMMCategoryCell.xib */,
-				A27D80A5197C9C4600D8DBEB /* AMMGradeBar.h */,
-				A27D80A6197C9C4600D8DBEB /* AMMGradeBar.m */,
-				A2A1A49E199832720074735C /* SlantyDashedView.h */,
-				A2A1A49F199832720074735C /* SlantyDashedView.m */,
+				A2778EBB19B1309A00E0FC8F /* AMMCategoryCell.h */,
+				A2778EBC19B1309A00E0FC8F /* AMMCategoryCell.m */,
+				A2778EBD19B1309A00E0FC8F /* AMMCategoryCell.xib */,
+				A2CD54A919B12F3B00790E3F /* AMMGradeBar.h */,
+				A2CD54AA19B12F3B00790E3F /* AMMGradeBar.m */,
+				A2CD54AC19B12F9000790E3F /* SlantyDashedView.h */,
+				A2CD54AD19B12F9000790E3F /* SlantyDashedView.m */,
 				A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */,
 				A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */,
 				A20E753E19843CD6008BE1D8 /* AMMAssignCatHeader.xib */,
-				A254BBCA1985AF2E00466005 /* AMMNewAssignment.xib */,
+				A2778ECC19B130DC00E0FC8F /* AMMNewAssignment.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -289,14 +310,14 @@
 		A25CA12A19776EA900E9A757 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A2F92512197788990082D38C /* AMMClassStore.h */,
-				A2F92513197788990082D38C /* AMMClassStore.m */,
-				A2F92514197788990082D38C /* Assignment.h */,
-				A2F92515197788990082D38C /* Assignment.m */,
-				A2F92516197788990082D38C /* AssignmentCategory.h */,
-				A2F92517197788990082D38C /* AssignmentCategory.m */,
-				A2F92518197788990082D38C /* SchoolClass.h */,
-				A2F92519197788990082D38C /* SchoolClass.m */,
+				A2778EC019B130B900E0FC8F /* AMMClassStore.h */,
+				A2778EC119B130B900E0FC8F /* AMMClassStore.m */,
+				A2778EC219B130B900E0FC8F /* Assignment.h */,
+				A2778EC319B130B900E0FC8F /* Assignment.m */,
+				A2778EC419B130B900E0FC8F /* AssignmentCategory.h */,
+				A2778EC519B130B900E0FC8F /* AssignmentCategory.m */,
+				A2778EC619B130B900E0FC8F /* SchoolClass.h */,
+				A2778EC719B130B900E0FC8F /* SchoolClass.m */,
 				A231D543197A118E006FD823 /* UtilityMethods.h */,
 				A231D544197A118E006FD823 /* UtilityMethods.m */,
 			);
@@ -308,8 +329,8 @@
 			children = (
 				A25CA12C19776F9D00E9A757 /* AMMSemesterTVC.h */,
 				A25CA12D19776F9D00E9A757 /* AMMSemesterTVC.m */,
-				A22A182A197787AC00A45540 /* AMMNewClass.h */,
-				A22A182B197787AC00A45540 /* AMMNewClass.m */,
+				A2778ECD19B130DC00E0FC8F /* AMMNewClass.h */,
+				A2778ECE19B130DC00E0FC8F /* AMMNewClass.m */,
 				A2274514197EFE7D00BB76C4 /* AMMClassPageController.h */,
 				A2274515197EFE7D00BB76C4 /* AMMClassPageController.m */,
 				A2274517197EFF4900BB76C4 /* AMMSchoolClassVC.h */,
@@ -318,8 +339,8 @@
 				A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */,
 				A20E753B19843A82008BE1D8 /* AMMAssignCatTVC.h */,
 				A20E753C19843A82008BE1D8 /* AMMAssignCatTVC.m */,
-				A254BBC81985AF2E00466005 /* AMMNewAssignment.h */,
-				A254BBC91985AF2E00466005 /* AMMNewAssignment.m */,
+				A2CD54A619B12EBE00790E3F /* AMMNewAssignment.h */,
+				A2CD54A719B12EBE00790E3F /* AMMNewAssignment.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -372,6 +393,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Amaceing Studios";
 				TargetAttributes = {
+					A25CA0E219776E0100E9A757 = {
+						DevelopmentTeam = FBF4TQ644W;
+					};
 					A25CA0FD19776E0100E9A757 = {
 						TestTargetID = A25CA0E219776E0100E9A757;
 					};
@@ -400,29 +424,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CD54C719B12FF000790E3F /* Lato-Heavy.ttf in Resources */,
 				A227451B197EFF4900BB76C4 /* AMMSchoolClassVC.xib in Resources */,
-				A22A181D197781E500A45540 /* Lato-Bla.ttf in Resources */,
+				A2CD54CA19B12FF000790E3F /* Lato-Light.ttf in Resources */,
 				A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */,
-				A22A1820197781E500A45540 /* Lato-BolIta.ttf in Resources */,
-				A22A181F197781E500A45540 /* Lato-Bol.ttf in Resources */,
+				A2778ED019B130DC00E0FC8F /* AMMNewAssignment.xib in Resources */,
+				A2CD54CC19B12FF000790E3F /* Lato-Medium.ttf in Resources */,
+				A2CD54C819B12FF000790E3F /* Lato-HeavyItalic.ttf in Resources */,
+				A2CD54C119B12FF000790E3F /* Lato-Black.ttf in Resources */,
+				A2778EBF19B1309A00E0FC8F /* AMMCategoryCell.xib in Resources */,
+				A2CD54CE19B12FF000790E3F /* Lato-Regular.ttf in Resources */,
+				A2CD54CD19B12FF000790E3F /* Lato-MediumItalic.ttf in Resources */,
+				A2CD54D019B12FF000790E3F /* Lato-SemiboldItalic.ttf in Resources */,
+				A2CD54C319B12FF000790E3F /* Lato-Bold.ttf in Resources */,
+				A2CD54D219B12FF000790E3F /* Lato-ThinItalic.ttf in Resources */,
 				A25CA0F119776E0100E9A757 /* InfoPlist.strings in Resources */,
-				A22A1824197781E500A45540 /* Lato-LigIta.ttf in Resources */,
+				A2CD54D119B12FF000790E3F /* Lato-Thin.ttf in Resources */,
 				A231D542197A06F9006FD823 /* AMMSemesterHeader.xib in Resources */,
-				A22A1826197781E500A45540 /* Lato-RegIta.ttf in Resources */,
-				A22A1827197781E500A45540 /* SIL Open Font License.txt in Resources */,
+				A2CD54C419B12FF000790E3F /* Lato-BoldItalic.ttf in Resources */,
+				A2CD54C219B12FF000790E3F /* Lato-BlackItalic.ttf in Resources */,
 				A20E753F19843CD6008BE1D8 /* AMMAssignCatHeader.xib in Resources */,
 				A2443B3B197B06E700384034 /* AMMSeasonTitle.xib in Resources */,
-				A254BBCC1985AF2E00466005 /* AMMNewAssignment.xib in Resources */,
-				A22A18291977879800A45540 /* AMMNewClass.xib in Resources */,
 				A2F92522197791E60082D38C /* AMMClassVC.xib in Resources */,
-				A22A181E197781E500A45540 /* Lato-BlaIta.ttf in Resources */,
-				A22A1822197781E500A45540 /* Lato-HaiIta.ttf in Resources */,
+				A2CD54C519B12FF000790E3F /* Lato-Hairline.ttf in Resources */,
+				A2CD54C619B12FF000790E3F /* Lato-HairlineItalic.ttf in Resources */,
+				A2CD54CB19B12FF000790E3F /* Lato-LightItalic.ttf in Resources */,
+				A2778ED219B130DC00E0FC8F /* AMMNewClass.xib in Resources */,
 				A25CA0F919776E0100E9A757 /* Images.xcassets in Resources */,
-				A22A1821197781E500A45540 /* Lato-Hai.ttf in Resources */,
-				A27D80A4197C9B3800D8DBEB /* AMMCategoryCell.xib in Resources */,
 				A2374C3C19819A1500D0FCCC /* AMMNewAssignmentCat.xib in Resources */,
-				A22A1823197781E500A45540 /* Lato-Lig.ttf in Resources */,
-				A22A1825197781E500A45540 /* Lato-Reg.ttf in Resources */,
+				A2CD54C919B12FF000790E3F /* Lato-Italic.ttf in Resources */,
+				A2CD54CF19B12FF000790E3F /* Lato-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,25 +472,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A27D80A3197C9B3800D8DBEB /* AMMCategoryCell.m in Sources */,
-				A2F9251D197788990082D38C /* SchoolClass.m in Sources */,
-				A2F9251B197788990082D38C /* Assignment.m in Sources */,
 				A2274516197EFE7D00BB76C4 /* AMMClassPageController.m in Sources */,
 				A25CA0F719776E0100E9A757 /* AMMAppDelegate.m in Sources */,
 				A25CA11E19776E5900E9A757 /* AMMSchoolClassCell.m in Sources */,
 				A2374C3B19819A1500D0FCCC /* AMMNewAssignmentCat.m in Sources */,
-				A2F9251C197788990082D38C /* AssignmentCategory.m in Sources */,
+				A2778EC919B130B900E0FC8F /* Assignment.m in Sources */,
 				A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */,
 				A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */,
+				A2778ECA19B130B900E0FC8F /* AssignmentCategory.m in Sources */,
+				A2778EBE19B1309A00E0FC8F /* AMMCategoryCell.m in Sources */,
 				A20E753D19843A82008BE1D8 /* AMMAssignCatTVC.m in Sources */,
-				A22A182C197787AC00A45540 /* AMMNewClass.m in Sources */,
+				A2CD54AE19B12F9000790E3F /* SlantyDashedView.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
-				A2A1A4A0199832720074735C /* SlantyDashedView.m in Sources */,
-				A2F9251A197788990082D38C /* AMMClassStore.m in Sources */,
-				A27D80AA197C9C4600D8DBEB /* AMMGradeBar.m in Sources */,
-				A254BBCB1985AF2E00466005 /* AMMNewAssignment.m in Sources */,
+				A2CD54AB19B12F3B00790E3F /* AMMGradeBar.m in Sources */,
 				A231D545197A118E006FD823 /* UtilityMethods.m in Sources */,
+				A2778ED119B130DC00E0FC8F /* AMMNewClass.m in Sources */,
+				A2778EC819B130B900E0FC8F /* AMMClassStore.m in Sources */,
 				A227451A197EFF4900BB76C4 /* AMMSchoolClassVC.m in Sources */,
+				A2CD54A819B12EBE00790E3F /* AMMNewAssignment.m in Sources */,
+				A2778ECB19B130B900E0FC8F /* SchoolClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,10 +607,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MedianApp/MedianApp-Prefix.pch";
 				INFOPLIST_FILE = "MedianApp/MedianApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -589,10 +623,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MedianApp/MedianApp-Prefix.pch";
 				INFOPLIST_FILE = "MedianApp/MedianApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
