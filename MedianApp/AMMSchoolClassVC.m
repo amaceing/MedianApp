@@ -141,7 +141,7 @@
     //Header fonts
     self.sectionHeader.font = [UtilityMethods latoRegFont:18];
     self.daysHeader.font = [UtilityMethods latoRegFont:18];
-    self.timesHeader.font = [UtilityMethods latoRegFont:18];
+    self.timesHeader.font = [UtilityMethods latoRegFont:15];
     
     //Info fonts
     self.sectionInfo.font = [UtilityMethods latoLightFont:12];
