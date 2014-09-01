@@ -22,6 +22,12 @@
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassGradeDec;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIButton *edit;
+@property (weak, nonatomic) IBOutlet UILabel *sectionHeader;
+@property (weak, nonatomic) IBOutlet UILabel *daysHeader;
+@property (weak, nonatomic) IBOutlet UILabel *timesHeader;
+@property (weak, nonatomic) IBOutlet UILabel *sectionInfo;
+@property (weak, nonatomic) IBOutlet UILabel *daysInfo;
+@property (weak, nonatomic) IBOutlet UILabel *timesInfro;
 
 @end
 
@@ -45,6 +51,8 @@
     
     //Header
     [self setHeader:self.header];
+    //Footer
+    [self classDetailsLabels];
     
     //Table view
     self.tableView.delegate = self;
@@ -126,6 +134,25 @@
     [self.schoolClassName.layer addSublayer:bottomBorder];
 
     return _header;
+}
+
+- (void)classDetailsLabels
+{
+    //Header fonts
+    self.sectionHeader.font = [UtilityMethods latoRegFont:18];
+    self.daysHeader.font = [UtilityMethods latoRegFont:18];
+    self.timesHeader.font = [UtilityMethods latoRegFont:18];
+    
+    //Info fonts
+    self.sectionInfo.font = [UtilityMethods latoLightFont:12];
+    self.daysInfo.font = [UtilityMethods latoLightFont:12];
+    self.timesInfro.font = [UtilityMethods latoLightFont:12];
+    
+    //Content
+    self.sectionInfo.text = self.schoolClass.section;
+    self.daysInfo.text = self.schoolClass.daysOfWeek;
+    self.timesInfro.text = self.schoolClass.timeOfDay;
+    
 }
 
 - (void)setUpBackButton
