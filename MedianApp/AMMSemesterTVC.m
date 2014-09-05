@@ -213,6 +213,17 @@
     cell.decimalLabel.font = [UtilityMethods latoLightFont:13];
 }
 
+- (CGRect)determineGradeLabelFrameWithGrade:(double)grade
+{
+    CGRect gradeRect;
+    if (grade >= 100) {
+        gradeRect = CGRectMake(20, 34, 41, 25);
+    } else {
+        gradeRect = CGRectMake(11, 34, 41, 25);
+    }
+    return gradeRect;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AMMSchoolClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMSchoolClassCell" forIndexPath:indexPath];
@@ -227,11 +238,19 @@
     AMMClassCircle *classCirc = [self makeCircleForCell:display.grade];
     [cell.contentView addSubview:classCirc];
     
+    //GradeLabel
+    cell.gradeLabel.frame = [self determineGradeLabelFrameWithGrade:display.grade];
+    
     //Content
     cell.schoolClassNameLabel.text = display.name;
     cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@  ∙  %@  ∙  %@", display.section, display.daysOfWeek, display.timeOfDay];
     cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeWholeNumber:display.grade]];
-    cell.decimalLabel.text = [NSString stringWithFormat:@".%.0f", [UtilityMethods getGradeDecimal:display.grade] * 10];
+    
+    if (display.grade >= 100) {
+        cell.decimalLabel = nil;
+    } else {
+        cell.decimalLabel.text = [NSString stringWithFormat:@".%.0f", [UtilityMethods getGradeDecimal:display.grade] * 10];
+    }
 
     return cell;
 }
