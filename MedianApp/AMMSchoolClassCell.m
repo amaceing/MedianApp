@@ -30,6 +30,9 @@
         if ([view isKindOfClass:[AMMClassCircle class]]) {
            [view removeFromSuperview];
         }
+        if ([view isKindOfClass:[UILabel class]]) {
+            [view setNeedsDisplay];
+        }
     }
 }
 
