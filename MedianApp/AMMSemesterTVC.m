@@ -248,12 +248,7 @@
     
     if (display.grade >= 100) {
         cell.decimalLabel.text = @"";
-        cell.decimalLabel = nil;
     } else {
-        if (!cell.decimalLabel) {
-            UILabel *decLabel = [[UILabel alloc] initWithFrame:CGRectMake(52, 38, 27, 21)];
-            cell.decimalLabel = decLabel;
-        }
         cell.decimalLabel.text = [NSString stringWithFormat:@".%.0f", [UtilityMethods getGradeDecimal:display.grade] * 10];
     }
 
