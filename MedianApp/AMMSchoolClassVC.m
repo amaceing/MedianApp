@@ -42,7 +42,7 @@
     return self;
 }
 
-#pragma Loading View
+#pragma-mark Loading View
 
 - (void)viewDidLoad
 {
@@ -74,6 +74,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self.schoolClassGrade setNeedsDisplay];
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     [self.view reloadInputViews];
@@ -86,14 +87,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (CGRect)determineGradeLabelFrameWithGrade:(double)grade
+{
+    CGRect gradeRect;
+    if (grade >= 100) {
+        gradeRect = CGRectMake(57, 81, 151, 81);
+    } else {
+        gradeRect = CGRectMake(57, 81, 121, 81);
+    }
+    return gradeRect;
+}
+
+
 - (void)gradeTextSetUp
 {
+    //Grade label frame
+    self.schoolClassGrade.frame = [self determineGradeLabelFrameWithGrade:self.schoolClass.grade];
+    
     //Text
     self.schoolClassGrade.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeWholeNumber:self.schoolClass.grade]];
     
     //Decimal
-    double decToDisplay = [UtilityMethods getGradeDecimal:self.schoolClass.grade] * 10;
-    self.schoolClassGradeDec.text = [NSString stringWithFormat:@".%.0f", decToDisplay];
+    if (self.schoolClass.grade >= 100) {
+        self.schoolClassGradeDec.text = @"";
+    } else {
+        double decToDisplay = [UtilityMethods getGradeDecimal:self.schoolClass.grade] * 10;
+        self.schoolClassGradeDec.text = [NSString stringWithFormat:@".%.0f", decToDisplay];
+    }
     
     //Color
     self.schoolClassGrade.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
@@ -171,7 +191,7 @@
 }
 
 
-#pragma Logic
+#pragma-mark Logic
 
 - (void)setUpEditButton
 {
@@ -235,7 +255,7 @@
     }
 }
 
-#pragma Table View 
+#pragma-mark Table View
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
