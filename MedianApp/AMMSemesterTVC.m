@@ -101,6 +101,8 @@
                                                                            green:178/255.0
                                                                             blue:192/255.0
                                                                            alpha:1];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    
     
     self.navigationController.navigationBar.translucent = NO;
     
@@ -108,6 +110,7 @@
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
                                                                      [UtilityMethods latoRegFont:21.0], NSFontAttributeName,
                                                                      nil]];
+    
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor lightGrayColor];

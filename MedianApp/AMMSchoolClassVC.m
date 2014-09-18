@@ -76,7 +76,18 @@
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     [self.view reloadInputViews];
+    [self resetGradeLabels];
     [self gradeTextSetUp];
+}
+
+- (void)resetGradeLabels
+{
+    for (UIView *view in [self.header subviews])
+    {
+        if ([view isKindOfClass:[AMMClassGradeLabels class]]) {
+            [view removeFromSuperview];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,8 +111,14 @@
 - (void)gradeTextSetUp
 {
     CGRect gradeLabelsRect = CGRectMake(20, 72, 280, 80);
+    if (self.schoolClass.grade >= 100) {
+        gradeLabelsRect.origin.x += 20;
+    } else {
+        
+    }
     AMMClassGradeLabels *gradeLabels = [[AMMClassGradeLabels alloc] initWithFrame:gradeLabelsRect];
     [self.header addSubview:gradeLabels];
+    gradeLabels.contentMode = UIViewContentModeRedraw;
     
     //Text
     gradeLabels.wholeNumberLabel.font = [UtilityMethods latoLightFont:65];

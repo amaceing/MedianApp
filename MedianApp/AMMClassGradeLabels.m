@@ -21,8 +21,15 @@
     return self;
 }
 
+- (void)viewWillAppear
+{
+    
+}
+
 - (void)AddUILabels
 {
+    [self.wholeNumberLabel setNeedsDisplay];
+    [self.decNumberLabel setNeedsDisplay];
     [self addSubview:self.wholeNumberLabel];
     [self addSubview:self.decNumberLabel];
 }
