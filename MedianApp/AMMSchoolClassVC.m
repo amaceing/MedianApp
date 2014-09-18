@@ -110,11 +110,11 @@
 
 - (void)gradeTextSetUp
 {
-    CGRect gradeLabelsRect = CGRectMake(20, 72, 280, 80);
+    CGRect gradeLabelsRect;
     if (self.schoolClass.grade >= 100) {
-        gradeLabelsRect.origin.x += 20;
+        gradeLabelsRect = CGRectMake(50, 72, 280, 80);
     } else {
-        
+        gradeLabelsRect = CGRectMake(20, 72, 280, 80);
     }
     AMMClassGradeLabels *gradeLabels = [[AMMClassGradeLabels alloc] initWithFrame:gradeLabelsRect];
     [self.header addSubview:gradeLabels];

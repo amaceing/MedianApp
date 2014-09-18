@@ -40,17 +40,17 @@
     if (!_wholeNumberLabel) {
         _wholeNumberLabel = [[UILabel alloc] initWithFrame:wholeNumLabel];
     }
-    _wholeNumberLabel.textAlignment = UITextAlignmentRight;
+    _wholeNumberLabel.textAlignment = NSTextAlignmentRight;
     return  _wholeNumberLabel;
 }
 
 - (UILabel *)decNumberLabel
 {
-    CGRect decNumLabel = CGRectMake(157, 20, 77, 61);
+    CGRect decNumLabel = CGRectMake(157, 20, 77, 65);
     if (!_decNumberLabel) {
         _decNumberLabel = [[UILabel alloc] initWithFrame:decNumLabel];
     }
-    _decNumberLabel.textAlignment = UITextAlignmentLeft;
+    _decNumberLabel.textAlignment = NSTextAlignmentLeft;
     return _decNumberLabel;
 }
 

@@ -34,9 +34,9 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Lato-Lig.ttf</string>
-		<string>Lato-Bol.ttf</string>
-		<string>Lato-Reg.ttf</string>
+		<string>Lato-Light.ttf</string>
+		<string>Lato-Bold.ttf</string>
+		<string>Lato-Regular.ttf</string>
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
