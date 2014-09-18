@@ -10,7 +10,7 @@
 
 @interface AMMClassGradeLabels : UIView
 
-@property (nonatomic, weak) UILabel *wholeNumberLabel;
-@property (nonatomic, weak) UILabel *decNumberLabel;
+@property (nonatomic, strong) UILabel *wholeNumberLabel;
+@property (nonatomic, strong) UILabel *decNumberLabel;
 
 @end

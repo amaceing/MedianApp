@@ -16,21 +16,35 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
+        [self AddUILabels];
     }
     return self;
 }
 
 - (void)AddUILabels
 {
-    CGRect wholeNumLabel = CGRectMake(self.bounds.origin.x + 5, self.bounds.origin.y + 5, self.bounds.size.width / 3, self.bounds.size.height - 10);
-    CGRect decNumLabel = CGRectMake(self.bounds.origin.x + 50, self.bounds.origin.y + 10, self.bounds.size.width / 4, self.bounds.size.height - 20);
-    
-    self.wholeNumberLabel.frame = wholeNumLabel;
-    self.decNumberLabel.frame = decNumLabel;
-    
     [self addSubview:self.wholeNumberLabel];
     [self addSubview:self.decNumberLabel];
+}
+
+- (UILabel *)wholeNumberLabel
+{
+    CGRect wholeNumLabel = CGRectMake(15, 11, 143, 70);
+    if (!_wholeNumberLabel) {
+        _wholeNumberLabel = [[UILabel alloc] initWithFrame:wholeNumLabel];
+    }
+    _wholeNumberLabel.textAlignment = UITextAlignmentRight;
+    return  _wholeNumberLabel;
+}
+
+- (UILabel *)decNumberLabel
+{
+    CGRect decNumLabel = CGRectMake(157, 20, 77, 61);
+    if (!_decNumberLabel) {
+        _decNumberLabel = [[UILabel alloc] initWithFrame:decNumLabel];
+    }
+    _decNumberLabel.textAlignment = UITextAlignmentLeft;
+    return _decNumberLabel;
 }
 
 /*

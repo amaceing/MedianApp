@@ -13,13 +13,12 @@
 #import "AMMGradeBar.h"
 #import "AMMAssignCatTVC.h"
 #import "SlantyDashedView.h"
+#import "AMMClassGradeLabels.h"
 
 @interface AMMSchoolClassVC ()
 
 @property (nonatomic, strong) IBOutlet UIView *header;
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassName;
-@property (nonatomic, strong) IBOutlet UILabel *schoolClassGrade;
-@property (nonatomic, strong) IBOutlet UILabel *schoolClassGradeDec;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIButton *edit;
 @property (weak, nonatomic) IBOutlet UILabel *sectionHeader;
@@ -74,7 +73,6 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.schoolClassGrade setNeedsDisplay];
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     [self.view reloadInputViews];
@@ -101,23 +99,29 @@
 
 - (void)gradeTextSetUp
 {
-    //Grade label frame
-    self.schoolClassGrade.frame = [self determineGradeLabelFrameWithGrade:self.schoolClass.grade];
+    CGRect gradeLabelsRect = CGRectMake(20, 72, 280, 80);
+    AMMClassGradeLabels *gradeLabels = [[AMMClassGradeLabels alloc] initWithFrame:gradeLabelsRect];
+    [self.header addSubview:gradeLabels];
     
     //Text
-    self.schoolClassGrade.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeWholeNumber:self.schoolClass.grade]];
+    gradeLabels.wholeNumberLabel.font = [UtilityMethods latoLightFont:65];
+    gradeLabels.decNumberLabel.font = [UtilityMethods latoLightFont:45];
+    
+    //Whole
+    double wholeNum = [UtilityMethods getGradeWholeNumber:self.schoolClass.grade];
+    gradeLabels.wholeNumberLabel.text = [NSString stringWithFormat:@"%.0f", wholeNum];
     
     //Decimal
     if (self.schoolClass.grade >= 100) {
-        self.schoolClassGradeDec.text = @"";
+        gradeLabels.decNumberLabel.text = @"";
     } else {
         double decToDisplay = [UtilityMethods getGradeDecimal:self.schoolClass.grade] * 10;
-        self.schoolClassGradeDec.text = [NSString stringWithFormat:@".%.0f", decToDisplay];
+        gradeLabels.decNumberLabel.text = [NSString stringWithFormat:@".%.0f", decToDisplay];
     }
     
     //Color
-    self.schoolClassGrade.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
-    self.schoolClassGradeDec.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
+    gradeLabels.wholeNumberLabel.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
+    gradeLabels.decNumberLabel.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
 }
 
 - (NSString *)schoolClassNameTextSetUp
@@ -133,8 +137,6 @@
 {
     //Font
     self.schoolClassName.font = [UtilityMethods latoLightFont:20];
-    self.schoolClassGrade.font = [UtilityMethods latoLightFont:65];
-    self.schoolClassGradeDec.font = [UtilityMethods latoLightFont:45];
     self.edit.titleLabel.font = [UtilityMethods latoLightFont:14];
     
     //Text

@@ -10,8 +10,6 @@
                 <outlet property="daysInfo" destination="6Kl-R0-NMo" id="CPQ-j3-bbo"/>
                 <outlet property="edit" destination="etB-KM-M85" id="mhc-sR-NxE"/>
                 <outlet property="header" destination="qyx-7M-3kg" id="dGa-mw-L1I"/>
-                <outlet property="schoolClassGrade" destination="E0l-1U-uMc" id="aJI-nj-MPv"/>
-                <outlet property="schoolClassGradeDec" destination="72F-Rc-NCe" id="rDI-eg-YRc"/>
                 <outlet property="schoolClassName" destination="5mm-iy-TZj" id="0a9-R4-OOM"/>
                 <outlet property="sectionHeader" destination="RGW-oQ-3rf" id="dSn-9h-nFg"/>
                 <outlet property="sectionInfo" destination="gXg-nZ-qGo" id="YDy-V8-eK8"/>
@@ -37,12 +35,6 @@
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0l-1U-uMc">
-                            <rect key="frame" x="57" y="81" width="121" height="81"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etB-KM-M85">
                             <rect key="frame" x="260" y="5" width="60" height="55"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -51,12 +43,6 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72F-Rc-NCe">
-                            <rect key="frame" x="180" y="102" width="42" height="51"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxs-in-cYS">
                             <rect key="frame" x="92" y="161" width="130" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
