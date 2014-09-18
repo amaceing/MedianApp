@@ -64,7 +64,6 @@
 		A2CD54D119B12FF000790E3F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54BF19B12FF000790E3F /* Lato-Thin.ttf */; };
 		A2CD54D219B12FF000790E3F /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54C019B12FF000790E3F /* Lato-ThinItalic.ttf */; };
 		A2D4E91219CAAE7F00387B6F /* AMMClassGradeLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D4E91119CAAE7F00387B6F /* AMMClassGradeLabels.m */; };
-		A2D4E91619CAB0D200387B6F /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2D4E91519CAB0D200387B6F /* test.xib */; };
 		A2F92522197791E60082D38C /* AMMClassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F92520197791E60082D38C /* AMMClassVC.xib */; };
 /* End PBXBuildFile section */
 
@@ -158,7 +157,6 @@
 		A2CD54C019B12FF000790E3F /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-ThinItalic.ttf"; path = "../../../Downloads/lato/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		A2D4E91019CAAE7F00387B6F /* AMMClassGradeLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassGradeLabels.h; sourceTree = "<group>"; };
 		A2D4E91119CAAE7F00387B6F /* AMMClassGradeLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassGradeLabels.m; sourceTree = "<group>"; };
-		A2D4E91519CAB0D200387B6F /* test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
 		A2F92520197791E60082D38C /* AMMClassVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMClassVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,7 +305,6 @@
 				A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */,
 				A2D4E91019CAAE7F00387B6F /* AMMClassGradeLabels.h */,
 				A2D4E91119CAAE7F00387B6F /* AMMClassGradeLabels.m */,
-				A2D4E91519CAB0D200387B6F /* test.xib */,
 				A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */,
 				A20E753E19843CD6008BE1D8 /* AMMAssignCatHeader.xib */,
 				A2778ECC19B130DC00E0FC8F /* AMMNewAssignment.xib */,
@@ -433,7 +430,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2CD54C719B12FF000790E3F /* Lato-Heavy.ttf in Resources */,
-				A2D4E91619CAB0D200387B6F /* test.xib in Resources */,
 				A227451B197EFF4900BB76C4 /* AMMSchoolClassVC.xib in Resources */,
 				A2CD54CA19B12FF000790E3F /* Lato-Light.ttf in Resources */,
 				A25CA11F19776E5900E9A757 /* AMMSchoolClassCell.xib in Resources */,
