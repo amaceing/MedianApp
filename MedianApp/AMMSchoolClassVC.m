@@ -76,18 +76,7 @@
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     [self.view reloadInputViews];
-    [self resetGradeLabels];
     [self gradeTextSetUp];
-}
-
-- (void)resetGradeLabels
-{
-    for (UIView *view in [self.header subviews])
-    {
-        if ([view isKindOfClass:[AMMClassGradeLabels class]]) {
-            [view removeFromSuperview];
-        }
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,26 +85,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (CGRect)determineGradeLabelFrameWithGrade:(double)grade
-{
-    CGRect gradeRect;
-    if (grade >= 100) {
-        gradeRect = CGRectMake(57, 81, 151, 81);
-    } else {
-        gradeRect = CGRectMake(57, 81, 121, 81);
-    }
-    return gradeRect;
-}
-
-
-- (void)gradeTextSetUp
+- (CGRect)determineGradeLabelsFrameWithGrade:(double)grade
 {
     CGRect gradeLabelsRect;
     if (self.schoolClass.grade >= 100) {
-        gradeLabelsRect = CGRectMake(50, 72, 280, 80);
+        gradeLabelsRect = CGRectMake(54, 80, 280, 80);
     } else {
-        gradeLabelsRect = CGRectMake(20, 72, 280, 80);
+        gradeLabelsRect = CGRectMake(16, 80, 280, 80);
     }
+    return gradeLabelsRect;
+}
+
+- (void)gradeTextSetUp
+{
+    //GradeLabels rect
+    CGRect gradeLabelsRect = [self determineGradeLabelsFrameWithGrade:self.schoolClass.grade];
     AMMClassGradeLabels *gradeLabels = [[AMMClassGradeLabels alloc] initWithFrame:gradeLabelsRect];
     [self.header addSubview:gradeLabels];
     gradeLabels.contentMode = UIViewContentModeRedraw;
@@ -124,11 +108,11 @@
     gradeLabels.wholeNumberLabel.font = [UtilityMethods latoLightFont:65];
     gradeLabels.decNumberLabel.font = [UtilityMethods latoLightFont:45];
     
-    //Whole
+    //Whole Number
     double wholeNum = [UtilityMethods getGradeWholeNumber:self.schoolClass.grade];
     gradeLabels.wholeNumberLabel.text = [NSString stringWithFormat:@"%.0f", wholeNum];
     
-    //Decimal
+    //Decimal Number
     if (self.schoolClass.grade >= 100) {
         gradeLabels.decNumberLabel.text = @"";
     } else {
@@ -180,7 +164,7 @@
     //Header fonts
     self.sectionHeader.font = [UtilityMethods latoRegFont:18];
     self.daysHeader.font = [UtilityMethods latoRegFont:18];
-    self.timesHeader.font = [UtilityMethods latoRegFont:15];
+    self.timesHeader.font = [UtilityMethods latoRegFont:18];
     
     //Info fonts
     self.sectionInfo.font = [UtilityMethods latoLightFont:12];
@@ -191,7 +175,6 @@
     self.sectionInfo.text = self.schoolClass.section;
     self.daysInfo.text = self.schoolClass.daysOfWeek;
     self.timesInfro.text = self.schoolClass.timeOfDay;
-    
 }
 
 - (void)setUpBackButton
@@ -328,6 +311,8 @@
 {
     AMMCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMCategoryCell" forIndexPath:indexPath];
     AssignmentCategory *cat = [self.schoolClass.assignmentCategories objectAtIndex:indexPath.row];
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     //Fonts
     [self setUpCellFonts:cell];

@@ -172,6 +172,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     Assignment *assign = [self.assignCat.assignmentList objectAtIndex:indexPath.row];
     
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
     // Configure the cell...
     cell.textLabel.font = [UtilityMethods latoLightFont:15];
     cell.textLabel.text = [assign description];
