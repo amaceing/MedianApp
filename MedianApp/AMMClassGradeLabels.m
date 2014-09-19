@@ -46,7 +46,7 @@
 
 - (UILabel *)decNumberLabel
 {
-    CGRect decNumLabel = CGRectMake(157, 20, 77, 65);
+    CGRect decNumLabel = CGRectMake(155, 20, 77, 66);
     if (!_decNumberLabel) {
         _decNumberLabel = [[UILabel alloc] initWithFrame:decNumLabel];
     }
