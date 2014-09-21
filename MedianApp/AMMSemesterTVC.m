@@ -220,9 +220,9 @@
 {
     CGRect gradeRect;
     if (grade >= 100) {
-        gradeRect = CGRectMake(20, 34, 41, 25);
+        gradeRect = CGRectMake(20, 35, 41, 25);
     } else {
-        gradeRect = CGRectMake(11, 34, 41, 25);
+        gradeRect = CGRectMake(11, 35, 41, 25);
     }
     return gradeRect;
 }
