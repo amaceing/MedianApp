@@ -76,7 +76,17 @@
     [super viewWillAppear:animated];
     [self.tableView reloadData];
     [self.view reloadInputViews];
+    [self removeGradeLabels];
     [self gradeTextSetUp];
+}
+
+- (void)removeGradeLabels
+{
+    for (UIView *view in [self.header subviews]) {
+        if ([view isKindOfClass:[AMMClassGradeLabels class]]) {
+            [view removeFromSuperview];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,6 +113,9 @@
     AMMClassGradeLabels *gradeLabels = [[AMMClassGradeLabels alloc] initWithFrame:gradeLabelsRect];
     [self.header addSubview:gradeLabels];
     gradeLabels.contentMode = UIViewContentModeRedraw;
+    
+    [gradeLabels.wholeNumberLabel setNeedsDisplay];
+    [gradeLabels.decNumberLabel setNeedsDisplay];
     
     //Text
     gradeLabels.wholeNumberLabel.font = [UtilityMethods latoLightFont:65];
