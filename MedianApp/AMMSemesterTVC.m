@@ -75,7 +75,7 @@
         [[NSBundle mainBundle] loadNibNamed:@"AMMSeasonTitle" owner:self options:nil];
     }
     self.seasonTitle.text = [UtilityMethods determineSeasonAndYear];
-    self.seasonTitle.font = [UtilityMethods latoRegFont:17];
+    self.seasonTitle.font = [UtilityMethods latoRegFont:18];
     self.seasonTitle.textColor = [UIColor colorWithRed:30/255.0
                                                  green:178/255.0
                                                   blue:192/255.0
@@ -108,7 +108,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
-                                                                     [UtilityMethods latoRegFont:21.0], NSFontAttributeName,
+                                                                     [UtilityMethods latoRegFont:24.0], NSFontAttributeName,
                                                                      nil]];
     
     
@@ -300,7 +300,6 @@
         SchoolClass *delete = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
         [[AMMClassStore classStore] removeClass:delete];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView reloadData];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
