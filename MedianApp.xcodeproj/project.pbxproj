@@ -17,6 +17,7 @@
 		A2374C3B19819A1500D0FCCC /* AMMNewAssignmentCat.m in Sources */ = {isa = PBXBuildFile; fileRef = A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */; };
 		A2374C3C19819A1500D0FCCC /* AMMNewAssignmentCat.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */; };
 		A2443B3B197B06E700384034 /* AMMSeasonTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */; };
+		A25033BC19DA8ADD00CCA02C /* AMMTriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25033BB19DA8ADD00CCA02C /* AMMTriangleView.m */; };
 		A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
 		A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E819776E0100E9A757 /* CoreGraphics.framework */; };
 		A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
@@ -93,6 +94,8 @@
 		A2374C3919819A1500D0FCCC /* AMMNewAssignmentCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMNewAssignmentCat.m; sourceTree = "<group>"; };
 		A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMNewAssignmentCat.xib; sourceTree = "<group>"; };
 		A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSeasonTitle.xib; sourceTree = "<group>"; };
+		A25033BA19DA8ADD00CCA02C /* AMMTriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMTriangleView.h; sourceTree = "<group>"; };
+		A25033BB19DA8ADD00CCA02C /* AMMTriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMTriangleView.m; sourceTree = "<group>"; };
 		A25CA0E319776E0100E9A757 /* MedianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25CA0E619776E0100E9A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25CA0E819776E0100E9A757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -303,6 +306,8 @@
 				A2CD54AC19B12F9000790E3F /* SlantyDashedView.h */,
 				A2CD54AD19B12F9000790E3F /* SlantyDashedView.m */,
 				A2274519197EFF4900BB76C4 /* AMMSchoolClassVC.xib */,
+				A25033BA19DA8ADD00CCA02C /* AMMTriangleView.h */,
+				A25033BB19DA8ADD00CCA02C /* AMMTriangleView.m */,
 				A2D4E91019CAAE7F00387B6F /* AMMClassGradeLabels.h */,
 				A2D4E91119CAAE7F00387B6F /* AMMClassGradeLabels.m */,
 				A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */,
@@ -491,6 +496,7 @@
 				A2CD54AE19B12F9000790E3F /* SlantyDashedView.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
 				A2CD54AB19B12F3B00790E3F /* AMMGradeBar.m in Sources */,
+				A25033BC19DA8ADD00CCA02C /* AMMTriangleView.m in Sources */,
 				A231D545197A118E006FD823 /* UtilityMethods.m in Sources */,
 				A2778ED119B130DC00E0FC8F /* AMMNewClass.m in Sources */,
 				A2778EC819B130B900E0FC8F /* AMMClassStore.m in Sources */,

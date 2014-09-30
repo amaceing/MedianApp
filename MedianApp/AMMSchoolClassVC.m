@@ -14,6 +14,7 @@
 #import "AMMAssignCatTVC.h"
 #import "SlantyDashedView.h"
 #import "AMMClassGradeLabels.h"
+#import "AMMTriangleView.h"
 
 @interface AMMSchoolClassVC ()
 
@@ -149,6 +150,10 @@
 
 - (UIView *)header
 {
+    //Triangle
+    AMMTriangleView *tri = [[AMMTriangleView alloc] initWithFrame:CGRectMake(120, 53, 65, 45)];
+    [_header addSubview:tri];
+
     //Font
     self.schoolClassName.font = [UtilityMethods latoLightFont:20];
     self.edit.titleLabel.font = [UtilityMethods latoLightFont:14];
