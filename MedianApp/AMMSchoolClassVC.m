@@ -151,18 +151,22 @@
 - (UIView *)header
 {
     //Triangle
-    AMMTriangleView *tri = [[AMMTriangleView alloc] initWithFrame:CGRectMake(120, 53, 65, 45)];
+    AMMTriangleView *tri = [[AMMTriangleView alloc] initWithFrame:CGRectMake(118, 53, 65, 45)];
     [_header addSubview:tri];
 
     //Font
-    self.schoolClassName.font = [UtilityMethods latoLightFont:20];
+    self.schoolClassName.font = [UtilityMethods latoRegFont:18];
     self.edit.titleLabel.font = [UtilityMethods latoLightFont:14];
     
     //Text
     self.schoolClassName.text = [self schoolClassNameTextSetUp];
     
     //Color
-    self.schoolClassName.textColor = [UIColor blackColor];
+    self.schoolClassName.textColor = [UIColor colorWithRed:38/255.0
+                                                     green:172/255.0
+                                                      blue:198/255.0
+                                                     alpha:1];
+    
     [self.edit setTitleColor:[UIColor colorWithRed:38/255.0
                                         green:172/255.0
                                          blue:198/255.0

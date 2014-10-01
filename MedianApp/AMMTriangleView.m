@@ -33,7 +33,7 @@
     [tri addLineToPoint:p2];
     [[UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1] setFill];
     [tri fill];
-    [[UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1] setStroke];
+    [[UIColor colorWithRed:220.0/255.0 green:220.0/255.0 blue:220.0/255.0 alpha:1] setStroke];
     [tri stroke];
 }
 
