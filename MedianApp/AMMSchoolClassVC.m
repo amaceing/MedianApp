@@ -100,9 +100,9 @@
 {
     CGRect gradeLabelsRect;
     if (self.schoolClass.grade >= 100) {
-        gradeLabelsRect = CGRectMake(54, 80, 280, 80);
+        gradeLabelsRect = CGRectMake(57, 84, 280, 80);
     } else {
-        gradeLabelsRect = CGRectMake(16, 80, 280, 80);
+        gradeLabelsRect = CGRectMake(22, 84, 280, 80);
     }
     return gradeLabelsRect;
 }
@@ -151,7 +151,7 @@
 - (UIView *)header
 {
     //Triangle
-    AMMTriangleView *tri = [[AMMTriangleView alloc] initWithFrame:CGRectMake(118, 53, 65, 45)];
+    AMMTriangleView *tri = [[AMMTriangleView alloc] initWithFrame:CGRectMake(120, 53, 65, 45)];
     [_header addSubview:tri];
 
     //Font
@@ -214,16 +214,13 @@
     self.navigationItem.backBarButtonItem = done;
 }
 
-
-#pragma-mark Logic
-
 - (void)setUpEditButton
 {
     [self.edit setTitle:nil forState:UIControlStateNormal];
     UIImage *pencil = [[UIImage imageNamed:@"pencil6.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [self.edit setImage:pencil forState:UIControlStateNormal];
     if (self.tableView.editing) {
-       [self.edit removeTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
+        [self.edit removeTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
     }
     [self.edit addTarget:self action:@selector(addAssignCat) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -238,6 +235,9 @@
     [self.edit addTarget:self action:@selector(doneEditing) forControlEvents:UIControlEventTouchUpInside];
     [self.edit setNeedsDisplay];
 }
+
+
+#pragma-mark Logic
 
 - (void)addAssignCat
 {

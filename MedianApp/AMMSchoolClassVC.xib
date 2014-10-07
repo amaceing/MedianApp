@@ -41,7 +41,7 @@
                             </state>
                         </button>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxs-in-cYS">
-                            <rect key="frame" x="92" y="161" width="130" height="1"/>
+                            <rect key="frame" x="95" y="164" width="130" height="1"/>
                             <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
