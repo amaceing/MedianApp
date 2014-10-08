@@ -361,8 +361,14 @@
             [self.tableView reloadData];
             [self.schoolClassName setNeedsDisplay];
         } else {
+            //New UIAlertController
+            UIAlertController *editDeleteController = [UIAlertController alertControllerWithTitle:@"Edit or Delete" message:@"Deleted categories cannot be undone" preferredStyle:UIAlertControllerStyleActionSheet];
+            [self presentViewController:editDeleteController animated:YES completion:nil];
+            [self addActionsToAlertController:editDeleteController];
+
+            /*
             UIActionSheet *editDeleteSheet = [[UIActionSheet alloc] initWithTitle:@"Edit or Delete" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Category" otherButtonTitles:@"Edit Category", nil];
-            [editDeleteSheet showInView:self.view.window];
+            [editDeleteSheet showInView:self.view.window]; */
         }
     } else {
         AMMAssignCatTVC *actvc = [[AMMAssignCatTVC alloc] init];
@@ -370,6 +376,36 @@
         actvc.schoolClass = self.schoolClass;
         [self.navigationController pushViewController:actvc animated:YES];
     }
+}
+
+- (void)addActionsToAlertController:(UIAlertController *)controller
+{
+    //Row for actions
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    AssignmentCategory *cat = [self.schoolClass.assignmentCategories objectAtIndex:selectedIndexPath.row];
+    
+    //UIAlertActions
+    UIAlertAction *delete = [UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDestructive
+                                                   handler:^(UIAlertAction *action) {
+                                                       [self.schoolClass removeAssignmentCategory:cat];
+                                                       [self.tableView reloadData];
+                                                       [self removeGradeLabels];
+                                                       [self gradeTextSetUp];
+                                                       [self gradeTextSetUp];
+                                                   }];
+    UIAlertAction *edit = [UIAlertAction actionWithTitle:@"Edit" style:UIAlertActionStyleDefault
+                                                 handler:^(UIAlertAction *action) {
+                                                     AMMNewAssignmentCat *navc = [[AMMNewAssignmentCat alloc] init];
+                                                     navc.assignCat = cat;
+                                                     [self.navigationController pushViewController:navc animated:YES];
+                                                 }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancle" style:UIAlertActionStyleCancel
+                                                   handler:^(UIAlertAction *action) {
+                                                       [controller dismissViewControllerAnimated:YES completion:nil];
+                                                   }];
+    [controller addAction:delete];
+    [controller addAction:edit];
+    [controller addAction:cancel];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
