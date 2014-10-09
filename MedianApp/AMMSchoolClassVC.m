@@ -19,6 +19,7 @@
 @interface AMMSchoolClassVC ()
 
 @property (nonatomic, strong) IBOutlet UIView *header;
+@property (nonatomic, strong) IBOutlet UILabel *footer;
 @property (nonatomic, strong) IBOutlet UILabel *schoolClassName;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) IBOutlet UIButton *edit;
@@ -27,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timesHeader;
 @property (weak, nonatomic) IBOutlet UILabel *sectionInfo;
 @property (weak, nonatomic) IBOutlet UILabel *daysInfo;
-@property (weak, nonatomic) IBOutlet UILabel *timesInfro;
+@property (weak, nonatomic) IBOutlet UILabel *timesInfo;
 
 @end
 
@@ -61,7 +62,7 @@
     [self setUpEditButton];
     
     //Spaces for separator lines
-    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 23, 0, 27)];
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 22, 0, 22)];
     
     //Loading custom cells and registering for reuse
     UINib *nib = [UINib nibWithNibName:@"AMMCategoryCell" bundle:nil];
@@ -188,15 +189,49 @@
     self.daysHeader.font = [UtilityMethods latoRegFont:18];
     self.timesHeader.font = [UtilityMethods latoRegFont:18];
     
+    //Header colors
+    self.sectionHeader.textColor = [UIColor colorWithRed:38/255.0
+                                                   green:172/255.0
+                                                    blue:198/255.0
+                                                   alpha:1];
+    self.daysHeader.textColor = [UIColor colorWithRed:38/255.0
+                                                green:172/255.0
+                                                 blue:198/255.0
+                                                alpha:1];
+    self.timesHeader.textColor = [UIColor colorWithRed:38/255.0
+                                                 green:172/255.0
+                                                  blue:198/255.0
+                                                 alpha:1];
+    
     //Info fonts
-    self.sectionInfo.font = [UtilityMethods latoLightFont:12];
-    self.daysInfo.font = [UtilityMethods latoLightFont:12];
-    self.timesInfro.font = [UtilityMethods latoLightFont:12];
+    self.sectionInfo.font = [UtilityMethods latoLightFont:14];
+    self.daysInfo.font = [UtilityMethods latoLightFont:14];
+    self.timesInfo.font = [UtilityMethods latoLightFont:14];
+    
+    //Info colors
+    self.sectionInfo.textColor = [UIColor colorWithRed:38/255.0
+                                                   green:172/255.0
+                                                    blue:198/255.0
+                                                   alpha:1];
+    self.daysInfo.textColor = [UIColor colorWithRed:38/255.0
+                                                green:172/255.0
+                                                 blue:198/255.0
+                                                alpha:1];
+    self.timesInfo.textColor = [UIColor colorWithRed:38/255.0
+                                                 green:172/255.0
+                                                  blue:198/255.0
+                                                 alpha:1];
     
     //Content
     self.sectionInfo.text = self.schoolClass.section;
     self.daysInfo.text = self.schoolClass.daysOfWeek;
-    self.timesInfro.text = self.schoolClass.timeOfDay;
+    self.timesInfo.text = self.schoolClass.timeOfDay;
+    
+    //Add a top border
+    CALayer *bottomBorder = [CALayer layer];
+    bottomBorder.frame = CGRectMake(0.0f, 0.0f, self.footer.frame.size.width, 1.0f);
+    bottomBorder.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1].CGColor;
+    [self.footer.layer addSublayer:bottomBorder];
 }
 
 - (void)setUpBackButton
@@ -308,10 +343,10 @@
     [cell.catGradeLine setNeedsDisplay];
     
     double length = (cell.catGradeLine.bounds.size.width / 100) * grade;
-    if (length >= 300) {
+    if (length >= 263) {
         length = cell.catGradeLine.bounds.size.width;
     }
-    CGRect rect = CGRectMake(0, 0, length,cell.catGradeLine.bounds.size.height);
+    CGRect rect = CGRectMake(0, 0, length, cell.catGradeLine.bounds.size.height);
     
     SlantyDashedView *gradeBar = [[SlantyDashedView alloc] initWithFrame:rect];
     gradeBar.backgroundColor = [UtilityMethods determineColorShown:grade];

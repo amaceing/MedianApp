@@ -70,7 +70,7 @@
         [[NSBundle mainBundle] loadNibNamed:@"AMMAssignCatHeader" owner:self options:nil];
     }
     //Font
-    self.assignCatName.font = [UtilityMethods latoLightFont:20];
+    self.assignCatName.font = [UtilityMethods latoRegFont:18];
     self.editButton.titleLabel.font = [UtilityMethods latoLightFont:14];
     
     //Text
@@ -78,7 +78,10 @@
     [self setUpEditButton];
     
     //Color
-    self.assignCatName.textColor = [UIColor blackColor];
+    self.assignCatName.textColor = [UIColor colorWithRed:38/255.0
+                                                   green:172/255.0
+                                                    blue:199/255.0
+                                                   alpha:1];
     [self.editButton setTitleColor:[UIColor colorWithRed:38/255.0
                                                    green:172/255.0
                                                     blue:199/255.0
