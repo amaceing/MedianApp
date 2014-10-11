@@ -402,6 +402,7 @@
             UIAlertController *editDeleteController = [UIAlertController alertControllerWithTitle:@"Edit or Delete" message:@"Deleted categories cannot be undone" preferredStyle:UIAlertControllerStyleActionSheet];
             [self presentViewController:editDeleteController animated:YES completion:nil];
             [self addActionsToAlertController:editDeleteController];
+            [self.tableView reloadData];
 
             /*
             UIActionSheet *editDeleteSheet = [[UIActionSheet alloc] initWithTitle:@"Edit or Delete" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Category" otherButtonTitles:@"Edit Category", nil];
@@ -425,9 +426,8 @@
     UIAlertAction *delete = [UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDestructive
                                                    handler:^(UIAlertAction *action) {
                                                        [self.schoolClass removeAssignmentCategory:cat];
-                                                       [self.tableView reloadData];
+                                                       [self.tableView deleteRowsAtIndexPaths:@[selectedIndexPath] withRowAnimation:UITableViewRowAnimationFade];
                                                        [self removeGradeLabels];
-                                                       [self gradeTextSetUp];
                                                        [self gradeTextSetUp];
                                                    }];
     UIAlertAction *edit = [UIAlertAction actionWithTitle:@"Edit" style:UIAlertActionStyleDefault
