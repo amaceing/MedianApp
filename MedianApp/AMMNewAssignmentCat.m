@@ -7,7 +7,7 @@
 //
 
 #import "AMMNewAssignmentCat.h"
-#import "UtilityMethods.h"
+#import "UIFont+AMMLatoFonts.h"
 
 @interface AMMNewAssignmentCat ()
 
@@ -61,8 +61,8 @@
 - (void)setUpTextFields
 {
     //Fonts
-    self.assignCatName.font = [UtilityMethods latoLightFont:14];
-    self.assignCatWeight.font = [UtilityMethods latoLightFont:14];
+    self.assignCatName.font = [UIFont amm_latoLightFont:14];
+    self.assignCatWeight.font = [UIFont amm_latoLightFont:14];
     
     //Keyboards
     self.assignCatWeight.keyboardType = UIKeyboardTypeDecimalPad;

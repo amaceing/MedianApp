@@ -7,6 +7,7 @@
 //
 
 #import "AMMNewAssignment.h"
+#import "UIFont+AMMLatoFonts.h"
 
 @interface AMMNewAssignment ()
 
@@ -53,10 +54,10 @@
 
 - (void)setFont
 {
-    self.assignName.font = [UIFont fontWithName:@"Lato-Light" size:14.0];
-    self.pointsEarnedField.font = [UIFont fontWithName:@"Lato-Light" size:13.0];
-    self.pointsPossField.font = [UIFont fontWithName:@"Lato-Light" size:13.0];
-    self.outOfLabel.font = [UIFont fontWithName:@"Lato-Light" size:13.0];
+    self.assignName.font = [UIFont amm_latoRegFont:13.0];
+    self.pointsEarnedField.font = [UIFont amm_latoRegFont:13.0];
+    self.pointsPossField.font = [UIFont amm_latoRegFont:13.0];
+    self.outOfLabel.font = [UIFont amm_latoRegFont:13.0];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

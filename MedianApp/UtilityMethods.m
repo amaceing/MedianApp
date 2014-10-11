@@ -10,6 +10,7 @@
 
 @implementation UtilityMethods
 
+//Added as category to UIFont
 + (UIFont *)latoLightFont:(CGFloat)size
 {
     return [UIFont fontWithName:@"Lato-Light" size:size];
@@ -25,6 +26,8 @@
     return [UIFont fontWithName:@"Lato-Regular" size:size];
 }
 
+
+//Added as category to NSString
 + (NSString *)determineSeasonAndYear
 {
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
@@ -42,6 +45,7 @@
     return @"";
 }
 
+//Added as category to UIColor
 + (UIColor *)determineColorShown:(double)percentage;
 {
     UIColor *color;
@@ -66,6 +70,7 @@
 {
     double dec = grade - floor(grade);
     if (dec >= 0.95) {
+        //return 0.1 so .0 is displayed and it won't round up
         return 0.1;
     }
     return dec;

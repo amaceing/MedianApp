@@ -8,7 +8,7 @@
 
 #import "AMMNewClass.h"
 #import "AMMClassCircle.h"
-#import "UtilityMethods.h"
+#import "UIFont+AMMLatoFonts.h"
 
 @interface AMMNewClass ()
 
@@ -54,10 +54,10 @@
 
 - (void)setFonts
 {
-    self.nameField.font = [UtilityMethods latoLightFont:14];
-    self.sectionField.font = [UtilityMethods latoLightFont:14];
-    self.daysField.font = [UtilityMethods latoLightFont:14];
-    self.timeField.font = [UtilityMethods latoLightFont:14];
+    self.nameField.font = [UIFont amm_latoLightFont:14];
+    self.sectionField.font = [UIFont amm_latoLightFont:14];
+    self.daysField.font = [UIFont amm_latoLightFont:14];
+    self.timeField.font = [UIFont amm_latoLightFont:14];
 }
 
 - (void)viewWillAppear:(BOOL)animated

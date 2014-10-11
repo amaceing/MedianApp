@@ -13,6 +13,8 @@
 #import "AMMNewClass.h"
 #import "UtilityMethods.h"
 #import "AMMClassPageController.h"
+#import "NSString+AMMSeasonAndYear.h"
+#import "UIFont+AMMLatoFonts.h"
 
 
 @interface AMMSemesterTVC ()
@@ -74,8 +76,8 @@
     if (!_header) {
         [[NSBundle mainBundle] loadNibNamed:@"AMMSeasonTitle" owner:self options:nil];
     }
-    self.seasonTitle.text = [UtilityMethods determineSeasonAndYear];
-    self.seasonTitle.font = [UtilityMethods latoRegFont:18];
+    self.seasonTitle.text = [NSString amm_determineSeasonAndYear];
+    self.seasonTitle.font = [UIFont amm_latoRegFont:18];
     self.seasonTitle.textColor = [UIColor colorWithRed:30/255.0
                                                  green:178/255.0
                                                   blue:192/255.0
@@ -108,7 +110,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
-                                                                     [UtilityMethods latoRegFont:24.0], NSFontAttributeName,
+                                                                     [UIFont amm_latoRegFont:24.0], NSFontAttributeName,
                                                                      nil]];
     
     
@@ -135,7 +137,7 @@
                                                             action:@selector(addSchoolClass:)];
     
     [edit setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                  [UtilityMethods latoLightFont:16], NSFontAttributeName, nil]
+                                  [UIFont amm_latoLightFont:16], NSFontAttributeName, nil]
                                   forState:UIControlStateNormal];
     
     self.navigationItem.rightBarButtonItem = edit;
@@ -210,10 +212,10 @@
 
 - (void)setUpCellFonts:(AMMSchoolClassCell *)cell
 {
-    cell.schoolClassNameLabel.font = [UtilityMethods latoRegFont:20];
-    cell.schoolClassDetailsLabel.font = [UtilityMethods latoLightFont:14];
-    cell.gradeLabel.font = [UtilityMethods latoLightFont:18];
-    cell.decimalLabel.font = [UtilityMethods latoLightFont:13];
+    cell.schoolClassNameLabel.font = [UIFont amm_latoRegFont:20];
+    cell.schoolClassDetailsLabel.font = [UIFont amm_latoLightFont:14];
+    cell.gradeLabel.font = [UIFont amm_latoLightFont:18];
+    cell.decimalLabel.font = [UIFont amm_latoLightFont:13];
 }
 
 - (CGRect)determineGradeLabelFrameWithGrade:(double)grade

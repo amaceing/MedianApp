@@ -8,7 +8,7 @@
 
 #import "AMMCategoryCell.h"
 #import "AMMGradeBar.h"
-#import "UtilityMethods.h"
+#import "UIFont+AMMLatoFonts.h"
 #import "SlantyDashedView.h"
 
 @implementation AMMCategoryCell
@@ -16,9 +16,9 @@
 - (void)awakeFromNib
 {
     // Initialization code
-    self.catWeight.font = [UtilityMethods latoLightFont:12];
-    self.catName.font = [UtilityMethods latoLightFont:17];
-    self.catGrade.font = [UtilityMethods latoLightFont:17];
+    self.catWeight.font = [UIFont amm_latoRegFont:12];
+    self.catName.font = [UIFont amm_latoRegFont:17];
+    self.catGrade.font = [UIFont amm_latoRegFont:17];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

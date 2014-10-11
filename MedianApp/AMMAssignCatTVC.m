@@ -7,8 +7,8 @@
 //
 
 #import "AMMAssignCatTVC.h"
-#import "UtilityMethods.h"
 #import "AMMNewAssignment.h"
+#import "UIFont+AMMLatoFonts.h"
 
 @interface AMMAssignCatTVC ()
 
@@ -70,8 +70,8 @@
         [[NSBundle mainBundle] loadNibNamed:@"AMMAssignCatHeader" owner:self options:nil];
     }
     //Font
-    self.assignCatName.font = [UtilityMethods latoRegFont:18];
-    self.editButton.titleLabel.font = [UtilityMethods latoLightFont:14];
+    self.assignCatName.font = [UIFont amm_latoRegFont:18];
+    self.editButton.titleLabel.font = [UIFont amm_latoLightFont:14];
     
     //Text
     self.assignCatName.text = self.assignCat.name;
@@ -183,7 +183,7 @@
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     // Configure the cell...
-    cell.textLabel.font = [UtilityMethods latoLightFont:15];
+    cell.textLabel.font = [UIFont amm_latoLightFont:15];
     cell.textLabel.text = [assign description];
     
     return cell;

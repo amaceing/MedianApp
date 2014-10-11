@@ -9,7 +9,7 @@
 #import "AMMClassPageController.h"
 #import "AMMSchoolClassVC.h"
 #import "AMMClassStore.h"
-#import "UtilityMethods.h"
+#import "NSString+AMMSeasonAndYear.h"
 
 @interface AMMClassPageController ()
 
@@ -32,7 +32,7 @@
     // Do any additional setup after loading the view.
     
     //Title
-    self.navigationItem.title = [UtilityMethods determineSeasonAndYear];
+    self.navigationItem.title = [NSString amm_determineSeasonAndYear];
     
     //Page View Controller
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll

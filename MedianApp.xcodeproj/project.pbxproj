@@ -18,6 +18,7 @@
 		A2374C3C19819A1500D0FCCC /* AMMNewAssignmentCat.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2374C3A19819A1500D0FCCC /* AMMNewAssignmentCat.xib */; };
 		A2443B3B197B06E700384034 /* AMMSeasonTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */; };
 		A25033BC19DA8ADD00CCA02C /* AMMTriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25033BB19DA8ADD00CCA02C /* AMMTriangleView.m */; };
+		A25357A119E9BB5900F84394 /* NSString+AMMSeasonAndYear.m in Sources */ = {isa = PBXBuildFile; fileRef = A25357A019E9BB5900F84394 /* NSString+AMMSeasonAndYear.m */; };
 		A25CA0E719776E0100E9A757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E619776E0100E9A757 /* Foundation.framework */; };
 		A25CA0E919776E0100E9A757 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0E819776E0100E9A757 /* CoreGraphics.framework */; };
 		A25CA0EB19776E0100E9A757 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25CA0EA19776E0100E9A757 /* UIKit.framework */; };
@@ -65,6 +66,8 @@
 		A2CD54D119B12FF000790E3F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54BF19B12FF000790E3F /* Lato-Thin.ttf */; };
 		A2CD54D219B12FF000790E3F /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2CD54C019B12FF000790E3F /* Lato-ThinItalic.ttf */; };
 		A2D4E91219CAAE7F00387B6F /* AMMClassGradeLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D4E91119CAAE7F00387B6F /* AMMClassGradeLabels.m */; };
+		A2E35B2319E9CDBA0019D652 /* UIFont+AMMLatoFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E35B2219E9CDBA0019D652 /* UIFont+AMMLatoFonts.m */; };
+		A2E35B2619E9CDFF0019D652 /* UIColor+AMMDetermineColorsShown.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E35B2519E9CDFF0019D652 /* UIColor+AMMDetermineColorsShown.m */; };
 		A2F92522197791E60082D38C /* AMMClassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F92520197791E60082D38C /* AMMClassVC.xib */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +99,8 @@
 		A2443B3A197B06E700384034 /* AMMSeasonTitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMSeasonTitle.xib; sourceTree = "<group>"; };
 		A25033BA19DA8ADD00CCA02C /* AMMTriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMTriangleView.h; sourceTree = "<group>"; };
 		A25033BB19DA8ADD00CCA02C /* AMMTriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMTriangleView.m; sourceTree = "<group>"; };
+		A253579F19E9BB5900F84394 /* NSString+AMMSeasonAndYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AMMSeasonAndYear.h"; sourceTree = "<group>"; };
+		A25357A019E9BB5900F84394 /* NSString+AMMSeasonAndYear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AMMSeasonAndYear.m"; sourceTree = "<group>"; };
 		A25CA0E319776E0100E9A757 /* MedianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25CA0E619776E0100E9A757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A25CA0E819776E0100E9A757 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,6 +165,10 @@
 		A2CD54C019B12FF000790E3F /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-ThinItalic.ttf"; path = "../../../Downloads/lato/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		A2D4E91019CAAE7F00387B6F /* AMMClassGradeLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMClassGradeLabels.h; sourceTree = "<group>"; };
 		A2D4E91119CAAE7F00387B6F /* AMMClassGradeLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMClassGradeLabels.m; sourceTree = "<group>"; };
+		A2E35B2119E9CDBA0019D652 /* UIFont+AMMLatoFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+AMMLatoFonts.h"; sourceTree = "<group>"; };
+		A2E35B2219E9CDBA0019D652 /* UIFont+AMMLatoFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+AMMLatoFonts.m"; sourceTree = "<group>"; };
+		A2E35B2419E9CDFF0019D652 /* UIColor+AMMDetermineColorsShown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AMMDetermineColorsShown.h"; sourceTree = "<group>"; };
+		A2E35B2519E9CDFF0019D652 /* UIColor+AMMDetermineColorsShown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AMMDetermineColorsShown.m"; sourceTree = "<group>"; };
 		A2F92520197791E60082D38C /* AMMClassVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMClassVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -330,6 +339,12 @@
 				A2778EC719B130B900E0FC8F /* SchoolClass.m */,
 				A231D543197A118E006FD823 /* UtilityMethods.h */,
 				A231D544197A118E006FD823 /* UtilityMethods.m */,
+				A2E35B2119E9CDBA0019D652 /* UIFont+AMMLatoFonts.h */,
+				A2E35B2219E9CDBA0019D652 /* UIFont+AMMLatoFonts.m */,
+				A2E35B2419E9CDFF0019D652 /* UIColor+AMMDetermineColorsShown.h */,
+				A2E35B2519E9CDFF0019D652 /* UIColor+AMMDetermineColorsShown.m */,
+				A253579F19E9BB5900F84394 /* NSString+AMMSeasonAndYear.h */,
+				A25357A019E9BB5900F84394 /* NSString+AMMSeasonAndYear.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -487,14 +502,17 @@
 				A25CA11E19776E5900E9A757 /* AMMSchoolClassCell.m in Sources */,
 				A2D4E91219CAAE7F00387B6F /* AMMClassGradeLabels.m in Sources */,
 				A2374C3B19819A1500D0FCCC /* AMMNewAssignmentCat.m in Sources */,
+				A25357A119E9BB5900F84394 /* NSString+AMMSeasonAndYear.m in Sources */,
 				A2778EC919B130B900E0FC8F /* Assignment.m in Sources */,
 				A25CA12619776E8A00E9A757 /* AMMClassCircle.m in Sources */,
 				A25CA12E19776F9D00E9A757 /* AMMSemesterTVC.m in Sources */,
 				A2778ECA19B130B900E0FC8F /* AssignmentCategory.m in Sources */,
 				A2778EBE19B1309A00E0FC8F /* AMMCategoryCell.m in Sources */,
 				A20E753D19843A82008BE1D8 /* AMMAssignCatTVC.m in Sources */,
+				A2E35B2319E9CDBA0019D652 /* UIFont+AMMLatoFonts.m in Sources */,
 				A2CD54AE19B12F9000790E3F /* SlantyDashedView.m in Sources */,
 				A25CA0F319776E0100E9A757 /* main.m in Sources */,
+				A2E35B2619E9CDFF0019D652 /* UIColor+AMMDetermineColorsShown.m in Sources */,
 				A2CD54AB19B12F3B00790E3F /* AMMGradeBar.m in Sources */,
 				A25033BC19DA8ADD00CCA02C /* AMMTriangleView.m in Sources */,
 				A231D545197A118E006FD823 /* UtilityMethods.m in Sources */,

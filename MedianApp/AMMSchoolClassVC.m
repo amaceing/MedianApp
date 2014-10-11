@@ -15,6 +15,8 @@
 #import "SlantyDashedView.h"
 #import "AMMClassGradeLabels.h"
 #import "AMMTriangleView.h"
+#import "UIColor+AMMDetermineColorsShown.h"
+#import "UIFont+AMMLatoFonts.h"
 
 @interface AMMSchoolClassVC ()
 
@@ -120,8 +122,8 @@
     [gradeLabels.decNumberLabel setNeedsDisplay];
     
     //Text
-    gradeLabels.wholeNumberLabel.font = [UtilityMethods latoLightFont:65];
-    gradeLabels.decNumberLabel.font = [UtilityMethods latoLightFont:45];
+    gradeLabels.wholeNumberLabel.font = [UIFont amm_latoLightFont:65];
+    gradeLabels.decNumberLabel.font = [UIFont amm_latoLightFont:45];
     
     //Whole Number
     double wholeNum = [UtilityMethods getGradeWholeNumber:self.schoolClass.grade];
@@ -136,8 +138,8 @@
     }
     
     //Color
-    gradeLabels.wholeNumberLabel.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
-    gradeLabels.decNumberLabel.textColor = [UtilityMethods determineColorShown:self.schoolClass.grade];
+    gradeLabels.wholeNumberLabel.textColor = [UIColor amm_determineColorShown:self.schoolClass.grade];
+    gradeLabels.decNumberLabel.textColor = [UIColor amm_determineColorShown:self.schoolClass.grade];
 }
 
 - (NSString *)schoolClassNameTextSetUp
@@ -156,8 +158,8 @@
     [_header addSubview:tri];
 
     //Font
-    self.schoolClassName.font = [UtilityMethods latoRegFont:18];
-    self.edit.titleLabel.font = [UtilityMethods latoLightFont:14];
+    self.schoolClassName.font = [UIFont amm_latoRegFont:18];
+    self.edit.titleLabel.font = [UIFont amm_latoLightFont:14];
     
     //Text
     self.schoolClassName.text = [self schoolClassNameTextSetUp];
@@ -185,9 +187,9 @@
 - (void)classDetailsLabels
 {
     //Header fonts
-    self.sectionHeader.font = [UtilityMethods latoRegFont:18];
-    self.daysHeader.font = [UtilityMethods latoRegFont:18];
-    self.timesHeader.font = [UtilityMethods latoRegFont:18];
+    self.sectionHeader.font = [UIFont amm_latoRegFont:18];
+    self.daysHeader.font = [UIFont amm_latoRegFont:18];
+    self.timesHeader.font = [UIFont amm_latoRegFont:18];
     
     //Header colors
     self.sectionHeader.textColor = [UIColor colorWithRed:38/255.0
@@ -204,9 +206,9 @@
                                                  alpha:1];
     
     //Info fonts
-    self.sectionInfo.font = [UtilityMethods latoLightFont:14];
-    self.daysInfo.font = [UtilityMethods latoLightFont:14];
-    self.timesInfo.font = [UtilityMethods latoLightFont:14];
+    self.sectionInfo.font = [UIFont amm_latoLightFont:14];
+    self.daysInfo.font = [UIFont amm_latoLightFont:14];
+    self.timesInfo.font = [UIFont amm_latoLightFont:14];
     
     //Info colors
     self.sectionInfo.textColor = [UIColor colorWithRed:38/255.0
@@ -333,9 +335,9 @@
 
 - (void)setUpCellFonts:(AMMCategoryCell *)cell
 {
-    cell.catName.font = [UtilityMethods latoLightFont:20];
-    cell.catGrade.font = [UtilityMethods latoLightFont:17];
-    cell.catWeight.font = [UtilityMethods latoLightFont:12];
+    cell.catName.font = [UIFont amm_latoLightFont:20];
+    cell.catGrade.font = [UIFont amm_latoLightFont:17];
+    cell.catWeight.font = [UIFont amm_latoLightFont:12];
 }
 
 - (void)addGradeBarToCell:(AMMCategoryCell *)cell catGrade:(double)grade
@@ -349,7 +351,7 @@
     CGRect rect = CGRectMake(0, 0, length, cell.catGradeLine.bounds.size.height);
     
     SlantyDashedView *gradeBar = [[SlantyDashedView alloc] initWithFrame:rect];
-    gradeBar.backgroundColor = [UtilityMethods determineColorShown:grade];
+    gradeBar.backgroundColor = [UIColor amm_determineColorShown:grade];
     gradeBar.dashColor = [self determineDashColor:grade];
     gradeBar.dashWidth = 10.0;
     gradeBar.dashSpacing = 10.0;
