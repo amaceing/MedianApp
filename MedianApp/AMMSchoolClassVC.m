@@ -399,7 +399,7 @@
             [self.schoolClassName setNeedsDisplay];
         } else {
             //New UIAlertController
-            UIAlertController *editDeleteController = [UIAlertController alertControllerWithTitle:@"Edit or Delete" message:@"Deleted categories cannot be undone" preferredStyle:UIAlertControllerStyleActionSheet];
+            UIAlertController *editDeleteController = [UIAlertController alertControllerWithTitle:@"Edit or Delete" message:@"Deleting categories cannot be undone" preferredStyle:UIAlertControllerStyleActionSheet];
             [self presentViewController:editDeleteController animated:YES completion:nil];
             [self addActionsToAlertController:editDeleteController];
             [self.tableView reloadData];
@@ -436,7 +436,7 @@
                                                      navc.assignCat = cat;
                                                      [self.navigationController pushViewController:navc animated:YES];
                                                  }];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancle" style:UIAlertActionStyleCancel
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel
                                                    handler:^(UIAlertAction *action) {
                                                        [controller dismissViewControllerAnimated:YES completion:nil];
                                                    }];
