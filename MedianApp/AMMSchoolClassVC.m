@@ -236,21 +236,6 @@
     [self.footer.layer addSublayer:bottomBorder];
 }
 
-- (void)setUpBackButton
-{
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@""
-                                                             style:UIBarButtonItemStylePlain
-                                                            target:self
-                                                            action:nil];
-    self.navigationItem.backBarButtonItem = back;
-}
-
-- (void)setUpDoneButton
-{
-    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:nil];
-    self.navigationItem.backBarButtonItem = done;
-}
-
 - (void)setUpEditButton
 {
     [self.edit setTitle:nil forState:UIControlStateNormal];
@@ -358,12 +343,6 @@
     gradeBar.horizontalTranslation = 10.0;
     
     [cell.catGradeLine addSubview:gradeBar];
-    
-    /*
-    AMMGradeBar *gradeBar = [[AMMGradeBar alloc] initWithFrame:cell.catGradeLine.bounds];
-    gradeBar.grade = grade;
-    [cell.catGradeLine addSubview:gradeBar];
-     */
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -400,13 +379,9 @@
         } else {
             //New UIAlertController
             UIAlertController *editDeleteController = [UIAlertController alertControllerWithTitle:@"Edit or Delete" message:@"Deleting categories cannot be undone" preferredStyle:UIAlertControllerStyleActionSheet];
-            [self presentViewController:editDeleteController animated:YES completion:nil];
             [self addActionsToAlertController:editDeleteController];
+            [self presentViewController:editDeleteController animated:YES completion:nil];
             [self.tableView reloadData];
-
-            /*
-            UIActionSheet *editDeleteSheet = [[UIActionSheet alloc] initWithTitle:@"Edit or Delete" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Category" otherButtonTitles:@"Edit Category", nil];
-            [editDeleteSheet showInView:self.view.window]; */
         }
     } else {
         AMMAssignCatTVC *actvc = [[AMMAssignCatTVC alloc] init];
@@ -443,22 +418,6 @@
     [controller addAction:delete];
     [controller addAction:edit];
     [controller addAction:cancel];
-}
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-    AssignmentCategory *cat = [self.schoolClass.assignmentCategories objectAtIndex:selectedIndexPath.row];
-    if (buttonIndex == actionSheet.destructiveButtonIndex) {
-        [self.schoolClass removeAssignmentCategory:cat];
-        [self.tableView reloadData];
-        [self gradeTextSetUp];
-    } else if (buttonIndex == 1) {
-        AMMNewAssignmentCat *navc = [[AMMNewAssignmentCat alloc] init];
-        navc.assignCat = cat;
-        [self.navigationController pushViewController:navc animated:YES];
-        [self.tableView reloadData];
-    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
