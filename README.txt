@@ -1,0 +1,5 @@
+This is my first iOS App. I noticed one semester that I had a Professor who that hated giving his students updates on their grades. Throughout the entire semester we got two grade sheets containing our Student ID #’s followed by a summary of our grades. Not once were the grades accurate. The professor mixed up student assignments and sometimes just forgot to enter a grade. This sprouted an idea in my brain for Median.
+
+Median is an iOS App that allows users to keep track of their school class grades. It focuses on accommodating weighted grading systems (unweighted coming soon. although there is an easy work around available inherently). Users can add classes with a class name, days of the week a class occurs, time of day, and section number. Students can then add assignment categories to classes with appropriate weights (0-100). Once the categories have been created, students can then input assignments and grades. Median will do the rest! Median presents students grades in a clean, fun U.
+
+This is an ongoing project and my biggest personal project to date.
