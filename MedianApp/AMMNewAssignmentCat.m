@@ -63,11 +63,6 @@
     //Fonts
     self.assignCatName.font = [UIFont amm_latoLightFont:14];
     self.assignCatWeight.font = [UIFont amm_latoLightFont:14];
-    
-    //Keyboards
-    self.assignCatWeight.keyboardType = UIKeyboardTypeDecimalPad;
-    self.assignCatName.keyboardType = UIKeyboardTypeAlphabet;
-    self.assignCatName.returnKeyType = UIReturnKeyDone;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

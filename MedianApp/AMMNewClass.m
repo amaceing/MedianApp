@@ -45,11 +45,8 @@
     } else {
         self.navigationItem.title = self.classToAdd.name;
     }
-    
-    //Fonts
+
     [self setFonts];
-    
-    self.timeField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 }
 
 - (void)setFonts

@@ -185,14 +185,6 @@
 
 #pragma mark - Table view data source
 
-- (AMMClassCircle *)makeCircleForCellWithGrade:(double)grade
-{
-    CGRect circleRect = CGRectMake(5, 20, 85, 85);
-    AMMClassCircle *classCircle = [[AMMClassCircle alloc] initWithFrame:circleRect];
-    classCircle.grade = grade;
-    return classCircle;
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -226,6 +218,14 @@
         gradeRect = CGRectMake(11, 35, 41, 25);
     }
     return gradeRect;
+}
+
+- (AMMClassCircle *)makeCircleForCellWithGrade:(double)grade
+{
+    CGRect circleRect = CGRectMake(5, 20, 85, 85);
+    AMMClassCircle *classCircle = [[AMMClassCircle alloc] initWithFrame:circleRect];
+    classCircle.grade = grade;
+    return classCircle;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
