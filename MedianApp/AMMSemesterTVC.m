@@ -235,47 +235,49 @@
 
     [self setUpCellFonts:cell];
 
-    SchoolClass *display = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
+    SchoolClass *classDisplayed = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
     
     //Creating circle
-    AMMClassCircle *classCirc = [self makeCircleForCellWithGrade:display.grade];
+    AMMClassCircle *classCirc = [self makeCircleForCellWithGrade:classDisplayed.grade];
     [cell.contentView addSubview:classCirc];
     
     //Determine which frame to have for grade label
-    cell.gradeLabel.frame = [self determineGradeLabelFrameWithGrade:display.grade];
+    cell.gradeLabel.frame = [self determineGradeLabelFrameWithGrade:classDisplayed.grade];
     
-    [self fillCell:cell withContentFromClass:display];
+    [self fillCell:cell withContentFromClass:classDisplayed];
 
     return cell;
 }
 
-- (void)fillCell:(AMMSchoolClassCell *)cell withContentFromClass:(SchoolClass *)display
+- (void)fillCell:(AMMSchoolClassCell *)cell withContentFromClass:(SchoolClass *)classDisplayed
 {
-    cell.schoolClassNameLabel.text = display.name;
-    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@  ∙  %@  ∙  %@", display.section, display.daysOfWeek, display.timeOfDay];
-    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeWholeNumber:display.grade]];
-    if (display.grade >= 100) {
+    cell.schoolClassNameLabel.text = classDisplayed.name;
+    cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@  ∙  %@  ∙  %@", classDisplayed.section,
+                                         classDisplayed.daysOfWeek, classDisplayed.timeOfDay];
+    cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeWholeNumber:classDisplayed.grade]];
+    if (classDisplayed.grade >= 100) {
         cell.decimalLabel.text = @"";
     } else {
-        cell.decimalLabel.text = [NSString stringWithFormat:@".%.0f", [UtilityMethods getGradeDecimal:display.grade] * 10];
+        cell.decimalLabel.text = [NSString stringWithFormat:@".%.0f", [UtilityMethods getGradeDecimal:classDisplayed.grade] * 10];
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SchoolClass *sc = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
+    SchoolClass *schoolClassToPresent = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
+    NSInteger classIndex = indexPath.row;
     
     if (self.editing) {
-        [self pushAMMNewClassVCWithClass:sc];
+        [self pushAMMNewClassVCWithClass:schoolClassToPresent];
     } else {
-        [self pushSchoolClassWithIndex:indexPath.row];
+        [self pushSchoolClassWithIndex:classIndex];
     }
 }
 
-- (void)pushAMMNewClassVCWithClass:(SchoolClass *)sc
+- (void)pushAMMNewClassVCWithClass:(SchoolClass *)schoolClassToPresent
 {
     AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
-    ncvc.classToAdd = sc;
+    ncvc.classToAdd = schoolClassToPresent;
     [self setUpDoneButton];
     [self.navigationController pushViewController:ncvc animated:YES];
     [self.tableView reloadData];
@@ -283,7 +285,7 @@
 
 - (void)pushSchoolClassWithIndex:(NSInteger)index
 {
-    NSInteger classIndex  = index;
+    NSInteger classIndex = index;
     AMMClassPageController *cpvc = [[AMMClassPageController alloc] init];
     cpvc.classIndex = classIndex;
     [self setUpBackButton];
@@ -315,43 +317,5 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-
-/*
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(self.editing && indexPath.row == 0) {
-        return UITableViewCellEditingStyleInsert;
-    } else {
-        return UITableViewCellEditingStyleDelete;
-    }
-}*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
