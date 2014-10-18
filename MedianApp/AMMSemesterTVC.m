@@ -65,30 +65,40 @@
     [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 15, 0, 15)];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (UIView *)header
 {
     if (!_header) {
         [[NSBundle mainBundle] loadNibNamed:@"AMMSeasonTitle" owner:self options:nil];
     }
+    
+    [self setSeasonTitleTextAndFont];
+    [self addBottomBorderToSeasonTitle];
+    
+    return _header;
+}
+
+- (void)setSeasonTitleTextAndFont
+{
     self.seasonTitle.text = [NSString amm_determineSeasonAndYear];
     self.seasonTitle.font = [UIFont amm_latoRegFont:18];
     self.seasonTitle.textColor = [UIColor colorWithRed:30/255.0
                                                  green:178/255.0
                                                   blue:192/255.0
                                                  alpha:1];
-    // Add a bottomBorder to season title
+}
+
+- (void)addBottomBorderToSeasonTitle
+{
     CALayer *bottomBorder = [CALayer layer];
     bottomBorder.frame = CGRectMake(0.0f, 63.0f, self.seasonTitle.frame.size.width, 1.0f);
     bottomBorder.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1].CGColor;
     [self.seasonTitle.layer addSublayer:bottomBorder];
-    
-    return _header;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
 }
 
 - (void)setColorValuesForNavBar
@@ -98,29 +108,14 @@
                                                                             blue:192/255.0
                                                                            alpha:1];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    
-    
     self.navigationController.navigationBar.translucent = NO;
-    
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                      [UIColor whiteColor], NSForegroundColorAttributeName,
                                                                      [UIFont amm_latoRegFont:24.0], NSFontAttributeName,
                                                                      nil]];
-    
-    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor lightGrayColor];
-    
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Adding a class
 
 - (void)setUpEditButton
 {
@@ -132,10 +127,18 @@
     
     [edit setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [UIFont amm_latoLightFont:16], NSFontAttributeName, nil]
-                                  forState:UIControlStateNormal];
+                        forState:UIControlStateNormal];
     
     self.navigationItem.rightBarButtonItem = edit;
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Adding a class
 
 - (void)addSchoolClass:(id)sender
 {
@@ -182,7 +185,7 @@
 
 #pragma mark - Table view data source
 
-- (AMMClassCircle *)makeCircleForCell:(double)grade
+- (AMMClassCircle *)makeCircleForCellWithGrade:(double)grade
 {
     CGRect circleRect = CGRectMake(5, 20, 85, 85);
     AMMClassCircle *classCircle = [[AMMClassCircle alloc] initWithFrame:circleRect];
@@ -214,6 +217,8 @@
 
 - (CGRect)determineGradeLabelFrameWithGrade:(double)grade
 {
+    //Changes the frame of the grade label
+    //so it centers if it's over or under 100
     CGRect gradeRect;
     if (grade >= 100) {
         gradeRect = CGRectMake(20, 35, 41, 25);
@@ -227,32 +232,33 @@
 {
     AMMSchoolClassCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AMMSchoolClassCell" forIndexPath:indexPath];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    
-    //Font
+
     [self setUpCellFonts:cell];
-    
-    //SchoolClass
+
     SchoolClass *display = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
     
     //Creating circle
-    AMMClassCircle *classCirc = [self makeCircleForCell:display.grade];
+    AMMClassCircle *classCirc = [self makeCircleForCellWithGrade:display.grade];
     [cell.contentView addSubview:classCirc];
     
-    //GradeLabel
+    //Determine which frame to have for grade label
     cell.gradeLabel.frame = [self determineGradeLabelFrameWithGrade:display.grade];
     
-    //Content
+    [self fillCell:cell withContentFromClass:display];
+
+    return cell;
+}
+
+- (void)fillCell:(AMMSchoolClassCell *)cell withContentFromClass:(SchoolClass *)display
+{
     cell.schoolClassNameLabel.text = display.name;
     cell.schoolClassDetailsLabel.text = [NSString stringWithFormat:@"%@  ∙  %@  ∙  %@", display.section, display.daysOfWeek, display.timeOfDay];
     cell.gradeLabel.text = [NSString stringWithFormat:@"%.0f", [UtilityMethods getGradeWholeNumber:display.grade]];
-    
     if (display.grade >= 100) {
         cell.decimalLabel.text = @"";
     } else {
         cell.decimalLabel.text = [NSString stringWithFormat:@".%.0f", [UtilityMethods getGradeDecimal:display.grade] * 10];
     }
-
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -260,19 +266,28 @@
     SchoolClass *sc = [[[AMMClassStore classStore] allClasses] objectAtIndex:indexPath.row];
     
     if (self.editing) {
-        AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
-        ncvc.classToAdd = sc;
-        [self setUpDoneButton];
-        [self.navigationController pushViewController:ncvc animated:YES];
-        [self.tableView reloadData];
+        [self pushAMMNewClassVCWithClass:sc];
     } else {
-        //Push School Class
-        NSInteger classIndex  = indexPath.row;
-        AMMClassPageController *cpvc = [[AMMClassPageController alloc] init];
-        cpvc.classIndex = classIndex;
-        [self setUpBackButton];
-        [self.navigationController pushViewController:cpvc animated:YES];
+        [self pushSchoolClassWithIndex:indexPath.row];
     }
+}
+
+- (void)pushAMMNewClassVCWithClass:(SchoolClass *)sc
+{
+    AMMNewClass *ncvc = [[AMMNewClass alloc] initWithNibName:@"AMMNewClass" bundle:nil];
+    ncvc.classToAdd = sc;
+    [self setUpDoneButton];
+    [self.navigationController pushViewController:ncvc animated:YES];
+    [self.tableView reloadData];
+}
+
+- (void)pushSchoolClassWithIndex:(NSInteger)index
+{
+    NSInteger classIndex  = index;
+    AMMClassPageController *cpvc = [[AMMClassPageController alloc] init];
+    cpvc.classIndex = classIndex;
+    [self setUpBackButton];
+    [self.navigationController pushViewController:cpvc animated:YES];
 }
 
 
