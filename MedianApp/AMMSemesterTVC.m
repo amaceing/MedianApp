@@ -120,16 +120,16 @@
 - (void)setUpEditButton
 {
     UIImage *pencil = [[UIImage imageNamed:@"pencil3.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithImage:pencil
+    UIBarButtonItem *pencilEditButton = [[UIBarButtonItem alloc] initWithImage:pencil
                                                              style:UIBarButtonItemStylePlain
                                                             target:self
                                                             action:@selector(addSchoolClass:)];
     
-    [edit setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+    [pencilEditButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                   [UIFont amm_latoLightFont:16], NSFontAttributeName, nil]
                         forState:UIControlStateNormal];
     
-    self.navigationItem.rightBarButtonItem = edit;
+    self.navigationItem.rightBarButtonItem = pencilEditButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,8 +142,8 @@
 
 - (void)addSchoolClass:(id)sender
 {
-    SchoolClass *dummy = [[SchoolClass alloc] initWithName:@"Click to Add" section:@"101" daysOfWeek:@"Days" timeOfDay:@"Time"];
-    [[AMMClassStore classStore] addClass:dummy atIndex:0];
+    SchoolClass *clickToAdd = [[SchoolClass alloc] initWithName:@"Click to Add" section:@"101" daysOfWeek:@"Days" timeOfDay:@"Time"];
+    [[AMMClassStore classStore] addClass:clickToAdd atIndex:0];
     
     //Insertion Animation
     NSInteger row = 0;
@@ -158,9 +158,9 @@
 
 - (void)doneEditing:(id)sender
 {
-    SchoolClass *dummy = [[[AMMClassStore classStore] allClasses] objectAtIndex:0];
-    if ([dummy.name isEqualToString:@"Click to Add"]) {
-        [[AMMClassStore classStore] removeClass:dummy];
+    SchoolClass *clickToAdd = [[[AMMClassStore classStore] allClasses] objectAtIndex:0];
+    if ([clickToAdd.name isEqualToString:@"Click to Add"]) {
+        [[AMMClassStore classStore] removeClass:clickToAdd];
         
         //Deletion animation
         NSInteger row = 0;
@@ -173,14 +173,14 @@
 
 - (void)setUpDoneButton
 {
-    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneEditing:)];
-    self.navigationItem.rightBarButtonItem = done;
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneEditing:)];
+    self.navigationItem.rightBarButtonItem = doneButton;
 }
 
 - (void)setUpBackButton
 {
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
-    self.navigationItem.backBarButtonItem = back;
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
 }
 
 #pragma mark - Table view data source
