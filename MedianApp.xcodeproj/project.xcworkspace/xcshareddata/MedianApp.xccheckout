@@ -12,17 +12,13 @@
 	<dict>
 		<key>0510396096A152528C681A1966037082DCBF322C</key>
 		<string>https://github.com/amaceing/MedianApp.git</string>
-		<key>8AC8AE8B-93AC-4825-AA22-F28336A4650B</key>
-		<string>https://github.com/amaceing/Median.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MedianApp.xcodeproj/project.xcworkspace</string>
+	<string>MedianApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0510396096A152528C681A1966037082DCBF322C</key>
 		<string>../..</string>
-		<key>8AC8AE8B-93AC-4825-AA22-F28336A4650B</key>
-		<string>../../../App/Median</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/amaceing/MedianApp.git</string>
@@ -32,14 +28,6 @@
 	<string>0510396096A152528C681A1966037082DCBF322C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8AC8AE8B-93AC-4825-AA22-F28336A4650B</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Median</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
