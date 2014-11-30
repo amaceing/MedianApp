@@ -143,7 +143,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "206"
             endingLineNumber = "206"
-            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkName = "-setUpCellFonts:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "435134977.813454"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "479"
@@ -424,7 +424,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "435134977.813454"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "384"
@@ -440,7 +440,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "435134977.813454"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "383"
@@ -472,7 +472,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "434754329.302398"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "305"
@@ -488,7 +488,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "434754329.302398"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "312"
@@ -504,7 +504,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "434754329.302398"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "326"
@@ -520,7 +520,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "434754329.302398"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "298"
@@ -536,7 +536,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "434754329.302398"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "309"
@@ -600,7 +600,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "435134977.813454"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "347"
@@ -648,7 +648,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MedianApp/AMMSchoolClassVC.m"
-            timestampString = "434754329.302398"
+            timestampString = "439022240.141553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
@@ -701,7 +701,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "225"
             endingLineNumber = "225"
-            landmarkName = "-determineGradeLabelFrameWithGrade:"
+            landmarkName = "-makeCircleForCellWithGrade:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -813,7 +813,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "215"
             endingLineNumber = "215"
-            landmarkName = "-setUpCellFonts:"
+            landmarkName = "-determineGradeLabelFrameWithGrade:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -942,6 +942,118 @@
             startingLineNumber = "269"
             endingLineNumber = "269"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedianApp/AMMSchoolClassVC.m"
+            timestampString = "439022240.141553"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
+            landmarkName = "-addGradeBarToCell:catGrade:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedianApp/AMMSchoolClassVC.m"
+            timestampString = "439022240.141553"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
+            landmarkName = "-addGradeBarToCell:catGrade:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedianApp/AMMSchoolClassVC.m"
+            timestampString = "439021147.063599"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-gradeTextSetUp"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedianApp/AMMSchoolClassVC.m"
+            timestampString = "439021725.235266"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "-gradeTextSetUp"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedianApp/AMMSchoolClassVC.m"
+            timestampString = "439022461.635995"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedianApp/AMMSchoolClassVC.m"
+            timestampString = "439022462.833587"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MedianApp/AMMSchoolClassVC.m"
+            timestampString = "439022554.437527"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-determineGradeLabelsFrameWithGrade:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

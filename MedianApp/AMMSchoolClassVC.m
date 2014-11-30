@@ -102,7 +102,7 @@
 - (CGRect)determineGradeLabelsFrameWithGrade:(double)grade
 {
     CGRect gradeLabelsRect;
-    if (self.schoolClass.grade >= 100) {
+    if (self.schoolClass.grade >= 99.95) {
         gradeLabelsRect = CGRectMake(57, 84, 280, 80);
     } else {
         gradeLabelsRect = CGRectMake(22, 84, 280, 80);
@@ -130,7 +130,7 @@
     gradeLabels.wholeNumberLabel.text = [NSString stringWithFormat:@"%.0f", wholeNum];
     
     //Decimal Number
-    if (self.schoolClass.grade >= 100) {
+    if (self.schoolClass.grade >= 99.95) {
         gradeLabels.decNumberLabel.text = @"";
     } else {
         double decToDisplay = [UtilityMethods getGradeDecimal:self.schoolClass.grade] * 10;
